@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
+    public bool canSprint;
 
     public float groundGrab;
 
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public MovementState state;
-    
+
     public enum MovementState
     {
         walking,
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        canSprint = true;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -87,36 +89,38 @@ public class PlayerMovement : MonoBehaviour
         //Start Crouch
         if (Input.GetKeyDown(crouchKey))
         {
-            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);   
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            canSprint = false;
         }
 
         //Stop Crouch
         if (Input.GetKeyUp(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            canSprint = true;
         }
     }
 
     private void StateHandler()
     {
         //Mode - Crouching
-        if(Input.GetKey(crouchKey))
+        if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
-            moveSpeed = crouchSpeed;    
+            moveSpeed = crouchSpeed;
         }
-        
-        
+
+
         //Mode - Sprinting
-        if(grounded && Input.GetKey(sprintKey))
+        if (grounded && Input.GetKey(sprintKey) && canSprint)
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
         }
 
         //Mode - Walking
-        else if (grounded)
+        else if (grounded && !Input.GetKey(crouchKey))
         {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
@@ -139,8 +143,8 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
-    
-    
+
+
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);

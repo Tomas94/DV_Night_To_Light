@@ -231,7 +231,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 628565997}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -281,7 +281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 408974128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 628565993}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &408974128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,8 +562,8 @@ RectTransform:
   - {fileID: 1038303907}
   - {fileID: 593225697}
   - {fileID: 1672676013}
-  - {fileID: 408974126}
   - {fileID: 1100740527}
+  - {fileID: 408974126}
   - {fileID: 1550031228}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -681,11 +693,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 628565997}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.946, y: -180}
+  m_AnchoredPosition: {x: 2.946, y: -197}
   m_SizeDelta: {x: 180.5, y: 70.732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100740528

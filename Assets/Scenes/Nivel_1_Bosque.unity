@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 10
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 5362d44aa47d533438e021f04ac72ab2, type: 2}
 --- !u!1 &325016480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1175331865632600, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
@@ -518,6 +518,8 @@ GameObject:
   - component: {fileID: 1412902470}
   - component: {fileID: 1412902469}
   - component: {fileID: 1412902468}
+  - component: {fileID: 1412902474}
+  - component: {fileID: 1412902475}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -532,16 +534,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412902467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ca10efd43436b43908d0316d8ca906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  walkSpeed: 3
-  sprintSpeed: 5
+  walkSpeed: 10
+  sprintSpeed: 0
   canSprint: 0
-  groundGrab: 7
+  groundGrab: 0
   crouchSpeed: 2
   crouchYScale: 0.5
   sprintKey: 304
@@ -549,7 +551,7 @@ MonoBehaviour:
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 129
   orientation: {fileID: 918725654}
   state: 0
 --- !u!54 &1412902469
@@ -649,6 +651,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -190, z: 0}
+--- !u!114 &1412902474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412902467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eda09db9647ca948be30fbe5c52b404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerState: 0
+  _orientation: {fileID: 918725654}
+  _moveSpeed: 0
+  _walkSpeed: 10
+  _sprintSpeed: 0
+  _crouchSpeed: 0
+  _isCrouch: 0
+  _isGrounded: 0
+  sprintKey: 304
+  crouchKey: 306
+  groundDrag: 5
+--- !u!195 &1412902475
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412902467}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5000001
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1743012990
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +707,7 @@ GameObject:
   - component: {fileID: 1743012993}
   - component: {fileID: 1743012992}
   - component: {fileID: 1743012991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

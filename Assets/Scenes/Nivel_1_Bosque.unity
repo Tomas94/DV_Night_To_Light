@@ -501,6 +501,14 @@ PrefabInstance:
       propertyPath: FlashlightLight
       value: 
       objectReference: {fileID: 1500823870}
+    - target: {fileID: 4479046762550934825, guid: 81cb3f74411975d4ca35b78fb0467ddb, type: 3}
+      propertyPath: _crouchSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479046762550934825, guid: 81cb3f74411975d4ca35b78fb0467ddb, type: 3}
+      propertyPath: _sprintSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4479046762550934827, guid: 81cb3f74411975d4ca35b78fb0467ddb, type: 3}
       propertyPath: m_RootOrder
       value: 1

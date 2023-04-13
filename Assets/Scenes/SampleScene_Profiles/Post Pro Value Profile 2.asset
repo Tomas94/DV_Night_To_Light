@@ -1360,10 +1360,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.75
+    value: 1
   color:
     overrideState: 1
-    value: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    value: {r: 0, g: 0, b: 0, a: 1}
   ambientOnly:
     overrideState: 1
     value: 1
@@ -1378,7 +1378,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2
+    value: 4
   directLightingStrength:
     overrideState: 1
     value: 0
@@ -1424,7 +1424,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 270
+    value: 251
   sampleCount:
     overrideState: 1
     value: 10
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   rounded:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mask:
     overrideState: 1

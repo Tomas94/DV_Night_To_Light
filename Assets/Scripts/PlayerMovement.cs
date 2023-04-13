@@ -47,8 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
-        crouching,
-        air
+        crouching  
     }
 
     private void Start()
@@ -126,11 +125,6 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
 
-        //Mode - Air
-        else
-        {
-            state = MovementState.air;
-        }
     }
 
 

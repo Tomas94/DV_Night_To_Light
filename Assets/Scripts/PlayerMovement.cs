@@ -1,78 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal.VersionControl;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] float moveSpeed;
-    public float walkSpeed;
-    public float sprintSpeed;
-    public bool canSprint;
 
-    public float groundGrab;
+    public enum MovementState { walking, sprinting, crouching, air }
+    public MovementState _playerState;
 
-    [Header("Crouching")]
-    public float crouchSpeed;
-    public float crouchYScale;
-    float startYScale;
+    [Header("References")]
+    [Tooltip("Camera Orientation")]
+    [SerializeField] Transform _orientation; //Orientation
+    Rigidbody _rb;
+    
+    [Header("Inputs & Direction")]
+    float _horizontalInput;
+    float _verticalInput;
+    Vector3 _moveDirection;
 
-    [Header("ImportanKeys")]
+    [Header("Speed")]
+    [SerializeField] float _moveSpeed;
+    [SerializeField] float _walkSpeed;
+    [SerializeField] float _sprintSpeed;
+    [SerializeField] float _crouchSpeed;
+    
+    [Header("Booleans")]
+    [SerializeField] bool _isCrouch;
+    [SerializeField] bool _isGrounded;
+
+    [Header("Action Keys")]
     public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
 
-    [Header("Ground check")]
-    public float playerHeight;
-    public LayerMask whatIsGround;
-    bool grounded;
-
-    //Orientation
-    public Transform orientation;
-
-
-    //Inputs
-    float horizontalInput;
-    float verticalInput;
-
-    Vector3 moveDirection;
-
-
-    //Rigidbody Reference
-    Rigidbody rb;
-
-    public MovementState state;
-
-    public enum MovementState
-    {
-        walking,
-        sprinting,
-        crouching  
-    }
-
+    Vector3 playerSize;
+    [SerializeField]float groundDrag;
+    LayerMask whatIsGround;
+        
     private void Start()
-    {
-        canSprint = true;
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
-
-        startYScale = transform.localScale.y;
+    {       
+        _rb = GetComponent<Rigidbody>();
+        _rb.freezeRotation = true;
+        playerSize = transform.localScale;
+        whatIsGround = LayerMask.GetMask("Floor");
     }
 
     private void Update()
-    {
-        //Ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-
+    {     
+        transform.localScale = playerSize;
+       
+        Myinputs();
         SpeedControl();
-        Myinput();
-        StateHandler();
-
-        //Handle drag
-        if (grounded)
-            rb.drag = groundGrab;
-        else
-            rb.drag = 0;
+        GroundDrag();
     }
 
     private void FixedUpdate()
@@ -80,74 +58,92 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
-    private void Myinput()
+    private void Myinputs()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        _horizontalInput = Input.GetAxisRaw("Horizontal");
+        _verticalInput = Input.GetAxisRaw("Vertical");
 
+        if (_isGrounded)
+        {
+            CrouchControl();
+            SprintControl();
+        }      
+    }
+
+    private void CrouchControl()
+    {
         //Start Crouch
         if (Input.GetKeyDown(crouchKey))
         {
-            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-            canSprint = false;
+            playerSize.y /= 2f;
+            _rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            _isCrouch = true;
         }
 
-        //Stop Crouch
-        if (Input.GetKeyUp(crouchKey))
-        {
-            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-            canSprint = true;
-        }
-    }
-
-    private void StateHandler()
-    {
-        //Mode - Crouching
+        //Crouching
         if (Input.GetKey(crouchKey))
         {
-            state = MovementState.crouching;
-            moveSpeed = crouchSpeed;
+            _crouchSpeed = _walkSpeed * 0.7f;
+            _moveSpeed = _crouchSpeed;
+            _playerState = MovementState.crouching;
         }
-
-
-        //Mode - Sprinting
-        if (grounded && Input.GetKey(sprintKey) && canSprint)
+        
+        //End Crouch
+        if (Input.GetKeyUp(crouchKey))
         {
-            state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            _moveSpeed = _walkSpeed;
+            playerSize.y *= 2f;
+            _isCrouch = false;
         }
-
-        //Mode - Walking
-        else if (grounded && !Input.GetKey(crouchKey))
-        {
-            state = MovementState.walking;
-            moveSpeed = walkSpeed;
-        }
-
     }
 
+    private void SprintControl()
+    {
+        if (!_isCrouch)
+        {
+            //Sprint
+            if (Input.GetKey(sprintKey))
+            {
+                _sprintSpeed = _walkSpeed * 1.8f;
+                _moveSpeed = _sprintSpeed;
+                _playerState = MovementState.sprinting;
+            }
+            //Walk
+            else
+            {
+                _moveSpeed = _walkSpeed;
+                _playerState = MovementState.walking;
+            }
+        }
+        
+    }
 
+    private void GroundDrag()
+    {
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, transform.localScale.y + 0.2f, whatIsGround);
+        if (_isGrounded) { _rb.drag = groundDrag;}
+        else { _rb.drag = 0;}
+    }
+   
     private void MovePlayer()
     {
         //Calculate movement direction
+        float rbAceleration = 10f;
+        _moveDirection = _orientation.forward * _verticalInput + _orientation.right * _horizontalInput;
 
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        _rb.AddForce(_moveDirection.normalized * (_moveSpeed * rbAceleration), ForceMode.Force);
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
-
-
 
     private void SpeedControl()
     {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 flatVel = new(_rb.velocity.x, 0f, _rb.velocity.z);
 
         //Limit velocity if needed
-        if (flatVel.magnitude > moveSpeed)
+        if (flatVel.magnitude > _moveSpeed)
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            Vector3 limitedVel = flatVel.normalized * _moveSpeed;
+            _rb.velocity = new Vector3(limitedVel.x, _rb.velocity.y, limitedVel.z);
         }
     }
 }

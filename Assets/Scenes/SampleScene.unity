@@ -1035,24 +1035,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781814772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19ca10efd43436b43908d0316d8ca906, type: 3}
+  m_Script: {fileID: 11500000, guid: de7b64082c6e2d443b114a571f7bffc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  walkSpeed: 3
-  sprintSpeed: 5
-  canSprint: 0
-  groundGrab: 7
-  crouchSpeed: 2
-  crouchYScale: 0.5
+  _playerState: 0
+  _orientation: {fileID: 0}
+  _moveSpeed: 0
+  _walkSpeed: 0
+  _sprintSpeed: 0
+  _crouchSpeed: 0
+  _isCrouch: 0
+  _isGrounded: 0
   sprintKey: 304
   crouchKey: 306
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  orientation: {fileID: 1192198242}
-  state: 0
+  groundDrag: 0
 --- !u!1 &2097399158
 GameObject:
   m_ObjectHideFlags: 0

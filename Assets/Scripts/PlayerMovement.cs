@@ -75,24 +75,27 @@ public class PlayerMovement : MonoBehaviour
         //Start Crouch
         if (Input.GetKeyDown(crouchKey))
         {
-            playerSize.y /= 2f;
+            playerSize.y = 0.5f;
             _rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            _crouchSpeed = _walkSpeed * 0.7f;
+            _moveSpeed = _crouchSpeed;
+            _playerState = MovementState.crouching;
             _isCrouch = true;
         }
 
         //Crouching
-        if (Input.GetKey(crouchKey))
+        /*if (Input.GetKey(crouchKey))
         {
             _crouchSpeed = _walkSpeed * 0.7f;
             _moveSpeed = _crouchSpeed;
             _playerState = MovementState.crouching;
-        }
+        }*/
         
         //End Crouch
-        if (Input.GetKeyUp(crouchKey))
+        if (Input.GetKeyUp(crouchKey) && _isCrouch)
         {
             _moveSpeed = _walkSpeed;
-            playerSize.y *= 2f;
+            playerSize.y = 1f;
             _isCrouch = false;
         }
     }

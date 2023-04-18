@@ -4,29 +4,50 @@ using UnityEngine;
 
 public class FlashlightScript : MonoBehaviour
 {
-    [SerializeField] GameObject FlashlightLight;
-    private bool FlashlightActive = false;
+    public GameObject flashlightLight;
+    public GameObject laser;
+    private bool _flashlightActive = false;
 
     void Start()
     {
-        FlashlightLight.gameObject.SetActive(false);
+        flashlightLight.gameObject.SetActive(false);
+        laser.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        FlashligthOnOff();
+        AmplifiedLight();
+    }
+
+    void FlashligthOnOff()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && laser.activeSelf == false)
         {
-            if (FlashlightActive == false)
+            if (_flashlightActive == false)
             {
-                FlashlightLight.gameObject.SetActive(true);
-                FlashlightActive = true;
+                flashlightLight.gameObject.SetActive(true);
+                _flashlightActive = true;            
             }
             else
             {
-                FlashlightLight.gameObject.SetActive(false);
-                FlashlightActive = false;
+                flashlightLight.gameObject.SetActive(false);
+                _flashlightActive = false;
             }
         }
     }
 
+    void AmplifiedLight()
+    {
+        if(Input.GetMouseButton(1) && _flashlightActive)
+        {
+            flashlightLight.gameObject.SetActive(false);
+            laser.gameObject.SetActive(true);
+        }
+        else if (_flashlightActive)
+        {
+            flashlightLight.gameObject.SetActive(true);
+            laser.gameObject.SetActive(false);
+        }
+    }
 }

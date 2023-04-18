@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundDrag()
     {
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, transform.localScale.y + 0.2f, whatIsGround);
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, transform.localScale.y + 0.7f, whatIsGround);
         if (_isGrounded) { _rb.drag = groundDrag;}
         else { _rb.drag = 0;}
     }

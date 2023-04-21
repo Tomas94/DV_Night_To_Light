@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 103
+  controlID: 118
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 104
+  controlID: 119
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 82
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c262c1329a02fa49b5cb4c297106f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 133, y: 30}
+  m_MinSize: {x: 136, y: 30}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: ProBuilder
@@ -682,9 +682,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 394.22076, y: -191.48071, z: 457.66904}
+    m_Target: {x: 256.1658, y: 11.768746, z: 36.30356}
     speed: 2
-    m_Value: {x: 394.22076, y: -191.48071, z: 457.66904}
+    m_Value: {x: 256.1658, y: 11.768746, z: 36.30356}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -731,13 +731,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3305991, y: -0.01479526, z: 0.0049493494, w: -0.943893}
+    m_Target: {x: 0.06799132, y: 0.61065996, z: -0.0531549, w: 0.7873686}
     speed: 2
-    m_Value: {x: -0.331936, y: -0.014784314, z: 0.0049703815, w: -0.94317293}
+    m_Value: {x: 0.06806066, y: 0.6093859, z: -0.05304482, w: 0.78816426}
   m_Size:
-    m_Target: 563.55566
+    m_Target: 12.149114
     speed: 2
-    m_Value: 539.2877
+    m_Value: 11.625946
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -793,23 +793,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fad80000
-      m_LastClickedID: 55546
-      m_ExpandedIDs: 4a46fcff9247fcff7650fcffe851fcffea51fcff7453fcff1c55fcff1e55fcffd655fcff4057fcff50b9fcffa8bafcff5a7dfdff8a80fdff8849feff8ab5ffffa2b6ffff
+      m_SelectedIDs: 22680000
+      m_LastClickedID: 26658
+      m_ExpandedIDs: c6f4ffffc8f4ffff2268000028680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: ' Post Pro Value'
-        m_OriginalName: ' Post Pro Value'
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -240270
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -860,22 +860,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 44
+  m_StartGridSize: 85
   m_LastFolders:
-  - Assets/Scenes
-  m_LastFoldersGridSize: 44
-  m_LastProjectPath: D:\GitHub Repository\Juego-DV
+  - Assets/Scripts
+  m_LastFoldersGridSize: 85
+  m_LastProjectPath: D:\Tomas\Juego-DV
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8ca10000
-    m_LastClickedID: 41356
-    m_ExpandedIDs: 000000007ea100003ece00004cce0000
+    m_SelectedIDs: aa6b0000
+    m_LastClickedID: 27562
+    m_ExpandedIDs: 00000000646b0000666b0000686b00006a6b00006c6b00006e6b0000706b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -903,7 +903,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000646b0000666b0000686b00006a6b00006c6b00006e6b0000706b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -956,7 +956,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 44
+    m_GridSize: 85
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 158
 --- !u!114 &18

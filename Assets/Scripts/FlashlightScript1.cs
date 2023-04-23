@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlashlightScript : MonoBehaviour
+public class FlashlightScript1 : MonoBehaviour
 {
     public GameObject flashlightLight;
     public GameObject laser;
+    public UI_Player uI;
     private bool _flashlightActive = false;
 
     void Start()
@@ -27,12 +28,14 @@ public class FlashlightScript : MonoBehaviour
             if (_flashlightActive == false)
             {
                 flashlightLight.gameObject.SetActive(true);
-                _flashlightActive = true;            
+                _flashlightActive = true;
+                uI.FlashLightState(true);
             }
             else
             {
                 flashlightLight.gameObject.SetActive(false);
                 _flashlightActive = false;
+                uI.FlashLightState(false);
             }
         }
     }

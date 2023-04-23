@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
+
+    [Header("Movimiento")]
+
+    [SerializeField] PlayerInventory inventario;
+    [SerializeField] CharacterController controller;
+    [SerializeField] FlashlightScript1 flashlight;
+    [SerializeField] UI_Player playerUI;
 
     public float speed = 12f;
     public float runSpeed = 16f;
@@ -18,35 +24,101 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    [Header("Stats")]
+
+    public int maxHP;
+    public int currentHP;
+    public int bats;
+    public int cures;
+
+    Pickable pickables;
+
+    private void Start()
+    {
+        maxHP = 3;
+        currentHP = maxHP;
+        bats = 0;
+        cures = 0;
+    }
+
+
     void Update()
+    {
+        Movement();
+        ResourcesUpdate();
+        ObjectUse();
+
+        playerUI.CureState(cures);
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            currentHP--;
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            inventario.totalBaterias++;
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            inventario.totalVendajes++;
+        }
+
+    }
+
+    void Movement()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+        if (isGrounded && velocity.y < 0) velocity.y = -2f;
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
-        {
-            controller.Move(move * runSpeed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.LeftControl))
-        {
-            controller.Move(move * crouchSpeed * Time.deltaTime);
-        }
-        else
-        {
-            controller.Move(move * speed * Time.deltaTime);
-        }
-        
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded) controller.Move(move * runSpeed * Time.deltaTime);
+        else if (Input.GetKey(KeyCode.LeftControl)) controller.Move(move * crouchSpeed * Time.deltaTime);
+        else controller.Move(move * speed * Time.deltaTime);
+
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }
+
+    void ResourcesUpdate()
+    {
+        bats = inventario.totalBaterias;
+        cures = inventario.totalVendajes;
+    }
+
+    void ObjectUse()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && cures != 0 && currentHP != maxHP)
+        {
+            currentHP++;
+            inventario.totalVendajes--;
+        }
+
+        if(Input.GetKeyDown(KeyCode.R) && bats != 0)
+        {
+            flashlight.currentCharge = flashlight._maxBatteryCharge;
+            inventario.totalBaterias--;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Pickable")
+        {
+            pickables = other.GetComponent<Pickable>();
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                pickables.PickupObject(other.name);
+                Destroy(other.gameObject);
+            }
+        }
+    }
+
+
+
 }

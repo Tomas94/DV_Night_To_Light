@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4139161211200526044}
   - component: {fileID: 1071463797968984441}
   - component: {fileID: 2970807765954538931}
-  - component: {fileID: 8474468890745949420}
+  - component: {fileID: 1511465105024886721}
   m_Layer: 8
   m_Name: espejo
   m_TagString: Mirror
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8474468890745949420
-BoxCollider:
+--- !u!64 &1511465105024886721
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.056979366, y: 0.0029112338, z: 0.048796628}
-  m_Center: {x: -0.0000000027221054, y: 0.0013955026, z: -0.000000035356564}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3369316746193770658, guid: c438e9c1266b105429fac4b6ed7ba49d, type: 3}

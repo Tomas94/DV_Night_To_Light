@@ -12,9 +12,11 @@ public class CinematicCamTittleScreen : MonoBehaviour
 
     private void Update()
     {
-        if (_indesWayPoints >= waypoints.Length)
+        if (_indesWayPoints >= waypoints.Length) { 
+            _indesWayPoints = 0;
             return;
-        
+        }
+
         transform.position = Vector3.Lerp(transform.position, waypoints[_indesWayPoints].position, speed * Time.deltaTime);
 
         transform.forward = Vector3.Lerp(transform.forward, waypoints[_indesWayPoints].forward, speed * Time.deltaTime);

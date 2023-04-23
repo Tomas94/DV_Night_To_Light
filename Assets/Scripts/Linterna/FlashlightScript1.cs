@@ -8,17 +8,27 @@ public class FlashlightScript1 : MonoBehaviour
     public GameObject laser;
     public UI_Player uI;
     private bool _flashlightActive = false;
+    public float currentCharge;
+    [SerializeField] float _maxChargeTime;
+    public float _maxBatteryCharge;
+
 
     void Start()
     {
-        flashlightLight.gameObject.SetActive(false);
-        laser.gameObject.SetActive(false);
+        _maxChargeTime = 5f;
+        _maxBatteryCharge = _maxChargeTime * 60f;
+        currentCharge = _maxBatteryCharge;
+        flashlightLight.SetActive(false);
+        laser.SetActive(false);
     }
 
     void Update()
     {
         FlashligthOnOff();
         AmplifiedLight();
+        BatteryPercent();
+        uI.BatteryState(currentCharge, _maxBatteryCharge);
+
     }
 
     void FlashligthOnOff()
@@ -27,13 +37,13 @@ public class FlashlightScript1 : MonoBehaviour
         {
             if (_flashlightActive == false)
             {
-                flashlightLight.gameObject.SetActive(true);
+                flashlightLight.SetActive(true);
                 _flashlightActive = true;
                 uI.FlashLightState(true);
             }
             else
             {
-                flashlightLight.gameObject.SetActive(false);
+                flashlightLight.SetActive(false);
                 _flashlightActive = false;
                 uI.FlashLightState(false);
             }
@@ -42,15 +52,23 @@ public class FlashlightScript1 : MonoBehaviour
 
     void AmplifiedLight()
     {
-        if(Input.GetMouseButton(1) && _flashlightActive)
+        if (Input.GetMouseButton(1) && _flashlightActive)
         {
-            flashlightLight.gameObject.SetActive(false);
-            laser.gameObject.SetActive(true);
+            flashlightLight.SetActive(false);
+            laser.SetActive(true);
         }
         else if (_flashlightActive)
         {
-            flashlightLight.gameObject.SetActive(true);
-            laser.gameObject.SetActive(false);
+            flashlightLight.SetActive(true);
+            laser.SetActive(false);
+        }
+    }
+
+    void BatteryPercent()
+    {
+        if (_flashlightActive && currentCharge > 0)
+        {
+            currentCharge -= Time.deltaTime;
         }
     }
 }

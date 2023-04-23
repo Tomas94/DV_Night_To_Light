@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mirror
   - Button
+  - Pickable
   layers:
   - Default
   - TransparentFX

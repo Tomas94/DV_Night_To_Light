@@ -425,8 +425,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7740967956537681090}
-  m_LocalRotation: {x: -0.08386192, y: 0.70252943, z: -0.063306555, w: 0.70385504}
-  m_LocalPosition: {x: 1.31, y: -1.1, z: 1.57}
+  m_LocalRotation: {x: -0.082945, y: 0.7026383, z: -0.06238792, w: 0.70393705}
+  m_LocalPosition: {x: 1.3, y: -1.3, z: 2.1}
   m_LocalScale: {x: 19.41071, y: 19.41071, z: 19.41071}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -434,7 +434,7 @@ Transform:
   - {fileID: 2515081224679082703}
   m_Father: {fileID: 7740967955788883399}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.668, y: 90.067, z: -11.949}
+  m_LocalEulerAnglesHint: {x: -1.668, y: 90.067, z: -11.799}
 --- !u!33 &7740967956537681086
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -499,6 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashlightLight: {fileID: 7740967956694675231}
   laser: {fileID: 2515081224679082702}
+  uI: {fileID: 0}
 --- !u!1 &7740967956601591812
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7740967956694675231}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.055, y: -0, z: 0}
+  m_LocalPosition: {x: 0.077, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,8 +659,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 0.18431373}
   m_Intensity: 10
-  m_Range: 47.064697
-  m_SpotAngle: 21.372839
+  m_Range: 30
+  m_SpotAngle: 35.8
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] FlashlightScript1 flashlight;
     [SerializeField] UI_Player playerUI;
+    [SerializeField] Animator animator;
 
     public float speed = 12f;
     public float runSpeed = 16f;
@@ -104,6 +105,11 @@ public class PlayerController : MonoBehaviour
             flashlight.currentCharge = flashlight._maxBatteryCharge;
             inventario.totalBaterias--;
         }
+    }
+
+   public void OpenDoor()
+    {      
+        if(Input.GetKeyDown(KeyCode.E)) animator.SetBool("Abierta", true);
     }
     private void OnTriggerStay(Collider other)
     {

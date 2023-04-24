@@ -500,6 +500,9 @@ MonoBehaviour:
   flashlightLight: {fileID: 7740967956694675231}
   laser: {fileID: 2515081224679082702}
   uI: {fileID: 0}
+  currentCharge: 0
+  _maxChargeTime: 0
+  _maxBatteryCharge: 0
 --- !u!1 &7740967956601591812
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +726,7 @@ GameObject:
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -775,7 +778,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da4788c8e29e01419a070e4079d499b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventario: {fileID: 0}
   controller: {fileID: 7740967957209574469}
+  flashlight: {fileID: 0}
+  playerUI: {fileID: 0}
   speed: 12
   runSpeed: 16
   crouchSpeed: 6
@@ -785,6 +791,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  maxHP: 0
+  currentHP: 0
+  bats: 0
+  cures: 0
 --- !u!114 &2515081224688812388
 MonoBehaviour:
   m_ObjectHideFlags: 0

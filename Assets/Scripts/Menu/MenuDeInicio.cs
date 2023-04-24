@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuDeInicio : MonoBehaviour
 {
-    public void Jugar()
+   public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(sceneName);
     }
 
 

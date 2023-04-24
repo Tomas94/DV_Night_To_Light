@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3535713700359914319}
   - component: {fileID: 1654395191500453765}
   - component: {fileID: 29448333997961707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: silla
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}

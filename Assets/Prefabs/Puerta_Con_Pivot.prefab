@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3828229579206524138}
   - component: {fileID: 2091571736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Puerta_Con_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

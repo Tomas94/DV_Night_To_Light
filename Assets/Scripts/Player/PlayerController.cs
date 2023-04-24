@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
-    bool isGrounded;
+    [SerializeField]bool isGrounded;
 
     [Header("Stats")]
 
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Pickable")
+        if(other.tag == "Pickeable")
         {
             pickables = other.GetComponent<Pickable>();
 

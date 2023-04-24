@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7504536446110960621}
   - component: {fileID: 3452546591774542458}
   - component: {fileID: 8508012865496629331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6498851322686648875}
   - component: {fileID: 8853744633746217438}
   - component: {fileID: 931905403591221594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: caja_abierta
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 7142293726493438917}
   - component: {fileID: 1014274784873869899}
   - component: {fileID: 1599112985562436497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

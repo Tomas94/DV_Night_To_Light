@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4435489580725774133}
   - component: {fileID: 1903598843170903039}
   - component: {fileID: 1666592723351052399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barco
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}

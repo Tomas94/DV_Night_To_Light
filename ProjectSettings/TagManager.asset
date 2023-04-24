@@ -7,16 +7,20 @@ TagManager:
   - Mirror
   - Button
   - Pickable
+  - Espejo
+  - Boton
+  - Pickeable
+  - Liso
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Floor
+  - Ground
   - Water
   - UI
   - PostPro
-  - Reflect
-  - Obstacle
+  - 
+  - Surface
   - Player
   - Limits
   - 

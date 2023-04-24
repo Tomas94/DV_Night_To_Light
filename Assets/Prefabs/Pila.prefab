@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9049356034012949567}
   - component: {fileID: 8697986936954431278}
   - component: {fileID: 3510904705693519487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pila
   m_TagString: Untagged
   m_Icon: {fileID: 0}

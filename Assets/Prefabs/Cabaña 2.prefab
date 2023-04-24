@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061590279739971705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Caba\xF1a 2"
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 662380718690209154}
   - component: {fileID: 662380718690208893}
   - component: {fileID: 662380718690208892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 5823145944411095299}
   - component: {fileID: 6401448495996304561}
   - component: {fileID: 662380718983266204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

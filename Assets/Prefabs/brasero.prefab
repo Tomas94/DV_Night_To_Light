@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 38407336}
   - component: {fileID: 38407338}
   - component: {fileID: 38407337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 48770440}
   - component: {fileID: 48770442}
   - component: {fileID: 48770441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 197616056}
   - component: {fileID: 197616058}
   - component: {fileID: 197616057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14447,7 +14447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360096049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14481,7 +14481,7 @@ GameObject:
   - component: {fileID: 518953907}
   - component: {fileID: 518953909}
   - component: {fileID: 518953908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19292,7 +19292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 594088167}
   - component: {fileID: 594088168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Iluminacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19387,7 +19387,7 @@ GameObject:
   - component: {fileID: 892998098}
   - component: {fileID: 892998100}
   - component: {fileID: 892998099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24199,7 +24199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1005787391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24234,7 +24234,7 @@ GameObject:
   - component: {fileID: 1985092831}
   - component: {fileID: 1985092833}
   - component: {fileID: 1985092832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29046,7 +29046,7 @@ GameObject:
   - component: {fileID: 4740045472807833318}
   - component: {fileID: 2403389350357578480}
   - component: {fileID: 4079884958445400362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29129,7 +29129,7 @@ GameObject:
   - component: {fileID: 1502256507777621920}
   - component: {fileID: 1392649299831552078}
   - component: {fileID: 1392649299831552073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brasero
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -29192,7 +29192,7 @@ GameObject:
   - component: {fileID: 4187124779292841805}
   - component: {fileID: 5050654674268062487}
   - component: {fileID: 6313437756166971568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pCylinder4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

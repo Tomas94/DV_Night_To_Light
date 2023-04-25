@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controles.unity
     guid: 2a295f4ee6091bf46bd3c1402941fdd1
+  - enabled: 1
+    path: Assets/Scenes/Moriste.unity
+    guid: 4fbaa4b0e6aefcf4fa55b8c69757c4f7
   m_configObjects: {}

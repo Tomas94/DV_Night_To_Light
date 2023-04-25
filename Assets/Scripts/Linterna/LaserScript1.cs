@@ -13,6 +13,8 @@ public class LaserScript1 : MonoBehaviour
     private LineRenderer _lineRenderer;
     private RaycastHit hit;
 
+    public Activada esfera1;
+
     private Ray ray;
     private Vector3 direction;
 
@@ -57,6 +59,10 @@ public class LaserScript1 : MonoBehaviour
                     _lineRenderer.positionCount += 1;
                     _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
                     AudioManager.Instance.PlaySFX("Cuervos");
+                    if (hit.transform.name == "Esfera1")
+                    {
+                        esfera1.Activado();
+                    }
                 }
                 else if (hit.transform.tag == "Liso")
                 {

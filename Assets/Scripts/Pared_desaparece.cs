@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Pared_desaparece : MonoBehaviour
 {
+    public Activada esfera1;
+
     private void Update()
     {
-        ParedFuera();
-    }
-
-    private void ParedFuera()
-    {
-
+        if (esfera1.activado)
+        {
+            Destroy(gameObject);
+        }
     }
 }

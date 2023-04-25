@@ -16,7 +16,7 @@ public class Nictofobia : MonoBehaviour
 
     private void Update()
     {
-        
+        IsFeared();
     }
 
     private void OnTriggerStay(Collider other)

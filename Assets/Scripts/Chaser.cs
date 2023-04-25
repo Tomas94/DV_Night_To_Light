@@ -60,12 +60,13 @@ public class Chaser : MonoBehaviour
                 {
                     detectado = false;
                 }
-                anim.SetBool("correr", false);
+               
             }
         }
         else
         {
             detectado = false;
+            anim.SetBool("correr", false);
         }
     }
 

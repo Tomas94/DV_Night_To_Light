@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         maxHP = 3;
         currentHP = maxHP;
         bats = 0;
@@ -148,29 +150,22 @@ public class PlayerController : MonoBehaviour
 
         if (currentHP == maxHP)
         {
-            vida2.Pause();
-            vida1.Pause();
+           
         }
         if (currentHP == 2)
         {
-            vida2.loop = true;
-            vida1.Pause();
-            vida2.Play();
-            
+          
         }
         if (currentHP == 1)
         {
-            vida1.loop = true;
-            vida2.Pause();
-            vida1.Play();
-            
 
         }
 
 
         if (currentHP <= 0)
         {
-
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Moriste");
         }
     }
 

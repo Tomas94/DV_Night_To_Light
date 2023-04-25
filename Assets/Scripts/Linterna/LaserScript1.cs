@@ -62,6 +62,7 @@ public class LaserScript1 : MonoBehaviour
                     if (hit.transform.name == "Esfera1")
                     {
                         esfera1.Activado();
+                        Destroy(esfera1.gameObject);
                     }
                 }
                 else if (hit.transform.tag == "Liso")

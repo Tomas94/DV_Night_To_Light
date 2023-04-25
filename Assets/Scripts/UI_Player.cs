@@ -42,18 +42,22 @@ public class UI_Player : MonoBehaviour
         {
             case float n when n >= (maxCharge * 0.75):
                 DesactivarHijos(battery.transform.GetChild(4).gameObject, battery);
+                //battery.GetChild(4).gameObject.SetActive(true);
                 break;
 
             case float n when n >= 50:
                 DesactivarHijos(battery.transform.GetChild(3).gameObject, battery);
+                //battery.GetChild(4).gameObject.SetActive(false);
                 break;
 
             case float n when n >= 25:
                 DesactivarHijos(battery.transform.GetChild(2).gameObject, battery);
+                // battery.GetChild(3).gameObject.SetActive(false);
                 break;
 
             case float n when n > 0:
                 DesactivarHijos(battery.transform.GetChild(1).gameObject, battery);
+                // battery.GetChild(2).gameObject.SetActive(false);
                 break;
 
             case float n when n <= 0:
@@ -91,27 +95,6 @@ public class UI_Player : MonoBehaviour
         cantVendajes.text = vendajesInv;
     }
 
-    public void LifeBar(int vidaActual)
-    {
-        GameObject life = canvasUI.transform.GetChild(5).gameObject;
-
-        switch (vidaActual)
-        {
-            case 3:
-                DesactivarHijos(life.transform.GetChild(2).gameObject, life);
-                break;
-            case 2:
-                DesactivarHijos(life.transform.GetChild(1).gameObject, life);
-                break;
-            case 1:
-                DesactivarHijos(life.transform.GetChild(0).gameObject, life);
-                break;
-            case 0:
-                life.transform.GetChild(0).gameObject.SetActive(false);
-                break;
-        }
-
-    }
 
     void DesactivarHijos(GameObject gO_Index, GameObject parent)
     {

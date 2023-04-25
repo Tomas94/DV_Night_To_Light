@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Chaser : MonoBehaviour
 {
+    public Animator anim;
+    
     public GameObject player;                               //Referencia al objeto Jugador
     public float rango;                                     //Rango de deteccion del enemigo
     public bool detectado;
@@ -50,6 +52,7 @@ public class Chaser : MonoBehaviour
                     detectado = true;
                 }
 
+                anim.SetBool("correr", true);
             }
             else
             {
@@ -57,6 +60,7 @@ public class Chaser : MonoBehaviour
                 {
                     detectado = false;
                 }
+                anim.SetBool("correr", false);
             }
         }
         else
@@ -64,4 +68,6 @@ public class Chaser : MonoBehaviour
             detectado = false;
         }
     }
+
+  
 }

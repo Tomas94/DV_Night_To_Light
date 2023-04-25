@@ -56,6 +56,7 @@ public class LaserScript1 : MonoBehaviour
                 {
                     _lineRenderer.positionCount += 1;
                     _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+                    AudioManager.Instance.PlaySFX("Cuervos");
                 }
                 else if (hit.transform.tag == "Liso")
                 {

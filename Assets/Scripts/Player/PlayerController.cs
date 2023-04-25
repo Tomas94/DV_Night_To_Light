@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movimiento")]
 
+
     [SerializeField] PlayerInventory inventario;
     [SerializeField] CharacterController controller;
     [SerializeField] FlashlightScript1 flashlight;

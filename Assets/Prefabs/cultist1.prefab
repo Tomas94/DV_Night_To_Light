@@ -1085,6 +1085,8 @@ GameObject:
   - component: {fileID: 7345023978378360850}
   - component: {fileID: 3784239529724429700}
   - component: {fileID: 3784239529724429701}
+  - component: {fileID: 140561666}
+  - component: {fileID: 140561667}
   m_Layer: 8
   m_Name: cultist1
   m_TagString: Liso
@@ -1101,7 +1103,7 @@ Transform:
   m_GameObject: {fileID: 4054708734947653842}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 221.25, y: 6.82, z: 34.87761}
-  m_LocalScale: {x: 5.879, y: 5.879, z: 5.879}
+  m_LocalScale: {x: 4.3783827, y: 4.3783827, z: 4.3783827}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1885960019764699324}
@@ -1121,7 +1123,7 @@ Animator:
   m_GameObject: {fileID: 4054708734947653842}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b116b4977ead7154fbd84d2b130b4db1, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32ffb9e5461ae82489e1b4af7bf555ef, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1140,7 +1142,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4054708734947653842}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.2606587
   m_Height: 1.8307254
   m_Direction: 1
@@ -1159,8 +1161,48 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &140561666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054708734947653842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb44a9bf82f5474cb30678d1d877bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 7345023978378360850}
+  player: {fileID: 0}
+  rango: 20
+  detectado: 0
+  distanceToPlayer: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!195 &140561667
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054708734947653842}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.8
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4675159159480000718
 GameObject:
   m_ObjectHideFlags: 0

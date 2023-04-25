@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3828229579206524138}
   - component: {fileID: 2091571736}
-  m_Layer: 8
+  - component: {fileID: 769035425559710377}
+  - component: {fileID: 8915665750715575785}
+  m_Layer: 7
   m_Name: Puerta_Con_Pivot
   m_TagString: Liso
   m_Icon: {fileID: 0}
@@ -41,7 +43,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2980232272148512203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 05cc8c5612ef19047bee9d978c6c080b, type: 2}
   m_CullingMode: 0
@@ -53,6 +55,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &769035425559710377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980232272148512203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4856033, y: 5.662334, z: 2.669741}
+  m_Center: {x: 1.3170204, y: 2.3311672, z: 0.624277}
+--- !u!54 &8915665750715575785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980232272148512203}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1001 &4776103375837922487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63,6 +94,14 @@ PrefabInstance:
     - target: {fileID: 5909617496490638767, guid: 3c00b4ba1d53d5b4fbb7ba5693c39a60, type: 3}
       propertyPath: m_Name
       value: puerta
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909617496490638767, guid: 3c00b4ba1d53d5b4fbb7ba5693c39a60, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909617496490638767, guid: 3c00b4ba1d53d5b4fbb7ba5693c39a60, type: 3}
+      propertyPath: m_TagString
+      value: Puerta
       objectReference: {fileID: 0}
     - target: {fileID: 6433670664752834325, guid: 3c00b4ba1d53d5b4fbb7ba5693c39a60, type: 3}
       propertyPath: m_RootOrder

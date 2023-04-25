@@ -128,6 +128,11 @@ public class PlayerController : MonoBehaviour
             }
            
         }
+
+        if(other.tag == "Puerta")
+        {
+            other.GetComponent<Animator>().SetBool("Abierta", true);
+        }
     }
 
     

@@ -45,35 +45,28 @@ public class LaserScript1 : MonoBehaviour
             {
                 if (hit.transform.tag == "Espejo")
                 {
-                    if (hit.transform.tag == "Espejo")
-                    {
 
-                        _lineRenderer.positionCount += 1;
-                        _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+                    _lineRenderer.positionCount += 1;
+                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
 
-                        remainLenght -= Vector3.Distance(ray.origin, hit.point);
-                        ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
-                    }
-                    else if (hit.transform.tag == "Boton")
-                    {
-                        _lineRenderer.positionCount += 1;
-                        _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
-
-                        //hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
-                    }
-                    else if (hit.transform.tag == "Liso")
-                    {
-                        _lineRenderer.positionCount += 1;
-                        _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
-                    }
+                    remainLenght -= Vector3.Distance(ray.origin, hit.point);
+                    ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
+                }
+                else if (hit.transform.tag == "Boton")
+                {
+                    _lineRenderer.positionCount += 1;
+                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+                }
+                else if (hit.transform.tag == "Liso")
+                {
+                    _lineRenderer.positionCount += 1;
+                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
                 }
                 else
                 {
                     _lineRenderer.positionCount += 1;
                     _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ray.origin + (ray.direction * remainLenght));
                 }
-
-
             }
         }
     }

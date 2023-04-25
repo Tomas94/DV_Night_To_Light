@@ -12,6 +12,7 @@ TagManager:
   - Pickeable
   - Liso
   - Puerta
+  - LuzTrigger
   layers:
   - Default
   - TransparentFX

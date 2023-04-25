@@ -20,13 +20,28 @@ public class InteractRaycast : MonoBehaviour
 
     void Update()
     {
-        RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit , 7f, interactable))
         {
-            Debug.Log("Objeto detectado: " + hit.collider.name);
+            if(hit.transform.tag == "Pickeable")
+            {
+                Debug.Log("Objeto detectado: " + hit.collider.name);
+                Interactuable();
+            }
+            
         }
         Debug.DrawRay(transform.position, transform.forward*7f , Color.red);
     }
+    
+    
+    void Interactuable()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(hit.transform.gameObject);
+        }
+    }
+    
+    
     // Update is called once per frame
     /*void Update()
     {

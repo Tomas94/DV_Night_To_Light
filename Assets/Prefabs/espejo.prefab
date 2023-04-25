@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1511465105024886721}
   m_Layer: 8
   m_Name: espejo
-  m_TagString: Mirror
+  m_TagString: Espejo
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

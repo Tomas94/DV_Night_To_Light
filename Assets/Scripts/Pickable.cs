@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickable : MonoBehaviour
 {
     [SerializeField]PlayerInventory inventario;
+    public bool isVisible = false;
 
     private void Start()
     {
@@ -13,11 +14,18 @@ public class Pickable : MonoBehaviour
 
     public void PickupObject(string pickedObject)
     {
-        if (pickedObject == "Venda") inventario.totalVendajes++;
+        if (pickedObject == "Vendaje") inventario.totalVendajes++;
 
-        if (pickedObject == "Bateria") inventario.totalBaterias++;
+        if (pickedObject == "Pila") inventario.totalBaterias++;
+    }    
+
+    private void OnBecameVisible()
+    {
+        isVisible = true;
     }
 
-
-
+    private void OnBecameInvisible()
+    {
+        isVisible = false;
+    }
 }

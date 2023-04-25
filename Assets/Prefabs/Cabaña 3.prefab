@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 5203659685138485940}
   m_Layer: 8
   m_Name: "Caba\xF1a 3"
-  m_TagString: Untagged
+  m_TagString: Liso
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

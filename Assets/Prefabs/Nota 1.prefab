@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6377058196956702112}
   m_Layer: 8
   m_Name: Nota 1
-  m_TagString: Untagged
+  m_TagString: Pickeable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

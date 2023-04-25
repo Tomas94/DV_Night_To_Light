@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
-    [SerializeField]bool isGrounded;
+    [SerializeField] bool isGrounded;
 
     [Header("Stats")]
 
@@ -100,31 +100,37 @@ public class PlayerController : MonoBehaviour
             inventario.totalVendajes--;
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && bats != 0)
+        if (Input.GetKeyDown(KeyCode.R) && bats != 0)
         {
             flashlight.currentCharge = flashlight._maxBatteryCharge;
             inventario.totalBaterias--;
         }
     }
 
-   public void OpenDoor()
-    {      
-        if(Input.GetKeyDown(KeyCode.E)) animator.SetBool("Abierta", true);
+    public void OpenDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.E)) animator.SetBool("Abierta", true);
     }
+
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Pickeable")
+        if (other.tag == "Pickeable")
         {
             pickables = other.GetComponent<Pickable>();
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (pickables.isVisible)
             {
-                pickables.PickupObject(other.name);
-                Destroy(other.gameObject);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    pickables.PickupObject(other.name);
+                    Destroy(other.gameObject);
+                }
             }
+           
         }
     }
 
+    
 
 
 }

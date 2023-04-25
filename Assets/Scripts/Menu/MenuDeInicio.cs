@@ -10,7 +10,7 @@ public class MenuDeInicio : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-
+   
     public void Salir()
     {
         Debug.Log("Salir...");

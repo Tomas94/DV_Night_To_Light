@@ -35,11 +35,13 @@ public class FlashlightScript1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && laser.activeSelf == false)
         {
+            
             if (_flashlightActive == false)
             {
                 flashlightLight.SetActive(true);
                 _flashlightActive = true;
                 uI.FlashLightState(true);
+               
             }
             else
             {
@@ -47,6 +49,8 @@ public class FlashlightScript1 : MonoBehaviour
                 _flashlightActive = false;
                 uI.FlashLightState(false);
             }
+            AudioManager.Instance.PlaySFX("Encender_linterna");
+
         }
     }
 

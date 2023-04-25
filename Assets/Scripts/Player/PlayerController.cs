@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] FlashlightScript1 flashlight;
     [SerializeField] UI_Player playerUI;
     [SerializeField] Animator animator;
+    Nictofobia nictofobia;
 
     public float speed = 12f;
     public float runSpeed = 16f;
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            TakeDamaga();
+            TakeDamage();
 
         }
         if (Input.GetKeyDown(KeyCode.K))
@@ -138,7 +139,7 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
-    void TakeDamaga()
+    public void TakeDamage()
     {
         currentHP--;
         LifeBarStatus(currentHP);
@@ -153,6 +154,4 @@ public class PlayerController : MonoBehaviour
     {
         playerUI.LifeBar(currentHP);
     }
-
-
 }

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] FlashlightScript1 flashlight;
     [SerializeField] UI_Player playerUI;
     [SerializeField] Animator animator;
+    [SerializeField] AudioSource vida2;
+    [SerializeField] AudioSource vida1;
     Nictofobia nictofobia;
 
     public float speed = 12f;
@@ -143,7 +145,29 @@ public class PlayerController : MonoBehaviour
     {
         currentHP--;
         LifeBarStatus(currentHP);
-        
+
+        if (currentHP == maxHP)
+        {
+            vida2.Pause();
+            vida1.Pause();
+        }
+        if (currentHP == 2)
+        {
+            vida2.loop = true;
+            vida1.Pause();
+            vida2.Play();
+            
+        }
+        if (currentHP == 1)
+        {
+            vida1.loop = true;
+            vida2.Pause();
+            vida1.Play();
+            
+
+        }
+
+
         if (currentHP <= 0)
         {
 

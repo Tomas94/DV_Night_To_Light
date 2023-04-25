@@ -53,7 +53,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            currentHP--;
+            TakeDamaga();
+
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -94,10 +95,11 @@ public class PlayerController : MonoBehaviour
 
     void ObjectUse()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && cures != 0 && currentHP != maxHP)
+        if (Input.GetKeyDown(KeyCode.Q) && cures > 0 && currentHP < maxHP)
         {
             currentHP++;
             inventario.totalVendajes--;
+            LifeBarStatus(currentHP);
         }
 
         if (Input.GetKeyDown(KeyCode.R) && bats != 0)
@@ -107,10 +109,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OpenDoor()
+    /*public void OpenDoor()
     {
         if (Input.GetKeyDown(KeyCode.E)) animator.SetBool("Abierta", true);
-    }
+    }*/
 
     private void OnTriggerStay(Collider other)
     {
@@ -129,13 +131,27 @@ public class PlayerController : MonoBehaviour
            
         }
 
-        if(other.tag == "Puerta")
+        /*if(other.tag == "Puerta")
         {
             other.GetComponent<Animator>().SetBool("Abierta", true);
+        }*/
+    }
+
+    void TakeDamaga()
+    {
+        currentHP--;
+        LifeBarStatus(currentHP);
+        
+        if (currentHP <= 0)
+        {
+
         }
     }
 
-    
+    void LifeBarStatus(int vida)
+    {
+        playerUI.LifeBar(currentHP);
+    }
 
 
 }

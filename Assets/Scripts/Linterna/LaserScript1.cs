@@ -26,8 +26,8 @@ public class LaserScript1 : MonoBehaviour
     void Update()
     {
         
-        //NormalLaser();
-        ReflectLaser();
+        NormalLaser();
+        //ReflectLaser();
     }
 
     public void ReflectLaser()

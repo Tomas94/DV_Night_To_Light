@@ -5,8 +5,19 @@ using UnityEngine;
 public class Nictofobia : MonoBehaviour
 {
     public bool nictofobia;
-    [SerializeField] GameObject linterna;
+    public float startTime = 0f;
+    float endTime = 5f;
+    public PlayerController player;
 
+    private void Start()
+    {
+        nictofobia = true;
+    }
+
+    private void Update()
+    {
+        
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -19,5 +30,22 @@ public class Nictofobia : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         nictofobia = true;
+    }
+
+     public void IsFeared()
+     {
+        if (nictofobia)
+        {
+            startTime += Time.deltaTime;
+            if (startTime >= endTime)
+            {
+                startTime = 0f;
+                player.TakeDamage();
+            }
+        }
+        else
+        {
+            startTime = 0.0f;
+        }
     }
 }

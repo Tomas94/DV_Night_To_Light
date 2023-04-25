@@ -11,6 +11,7 @@ public class FlashlightScript1 : MonoBehaviour
     public float currentCharge;
     [SerializeField] float _maxChargeTime;
     public float _maxBatteryCharge;
+   [SerializeField]Nictofobia nicto;
 
 
     void Start()
@@ -39,6 +40,7 @@ public class FlashlightScript1 : MonoBehaviour
             if (_flashlightActive == false)
             {
                 flashlightLight.SetActive(true);
+                nicto.nictofobia = false;
                 _flashlightActive = true;
                 uI.FlashLightState(true);
                
@@ -46,6 +48,8 @@ public class FlashlightScript1 : MonoBehaviour
             else
             {
                 flashlightLight.SetActive(false);
+                nicto.nictofobia = true;
+                nicto.IsFeared();
                 _flashlightActive = false;
                 uI.FlashLightState(false);
             }

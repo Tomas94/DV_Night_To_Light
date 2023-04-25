@@ -16,20 +16,9 @@ public class Nictofobia : MonoBehaviour
 
     private void Update()
     {
-        if (nictofobia)
-        {
-            startTime += Time.deltaTime;
-            if (startTime >= endTime)
-            {
-                startTime = 0f;
-                player.TakeDamage();             
-            }
-        }
-        else
-        {
-            startTime = 0.0f;
-        }
+        
     }
+
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "LuzTrigger")
@@ -45,18 +34,18 @@ public class Nictofobia : MonoBehaviour
 
      public void IsFeared()
      {
-         if (nictofobia)
-         {
-             startTime += Time.deltaTime;
-             if (startTime >= endTime)
-             {
-                 startTime = 0f;
-                 player.TakeDamage();             
-             }
-         }
-         else
-         {
-             startTime = 0.0f;
-         }
-     }
+        if (nictofobia)
+        {
+            startTime += Time.deltaTime;
+            if (startTime >= endTime)
+            {
+                startTime = 0f;
+                player.TakeDamage();
+            }
+        }
+        else
+        {
+            startTime = 0.0f;
+        }
+    }
 }

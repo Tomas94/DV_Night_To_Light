@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6127624194668292951}
   - component: {fileID: -5639367222104660250}
   - component: {fileID: 4176295481740977542}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Vendaje
   m_TagString: Pickeable
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7073445785198242543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 225.99, y: 6.82, z: 35.37}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,5 +127,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.17043677, y: 0.1789094, z: 0.259073}
-  m_Center: {x: 0.06763656, y: 0.0072542666, z: -0.009604265}
+  m_Size: {x: 0.38562462, y: 0.2644414, z: 0.37631488}
+  m_Center: {x: 0.00447707, y: -0.035511732, z: -0.03365729}

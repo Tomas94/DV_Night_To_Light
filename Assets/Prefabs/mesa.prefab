@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2152740170213505197}
   - component: {fileID: 4180719854239272039}
   - component: {fileID: 8941435893442858937}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: mesa
   m_TagString: Decorado
   m_Icon: {fileID: 0}

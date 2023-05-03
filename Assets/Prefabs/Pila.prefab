@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8130859068979559707}
   - component: {fileID: 7996602184295493524}
   - component: {fileID: 6926476210926002704}
+  - component: {fileID: 1399816470466512548}
   m_Layer: 7
   m_Name: Pila
   m_TagString: Pickable
@@ -115,3 +116,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1399816470466512548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770505195983051982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0f9a7320125eb4db4f5a729b30f656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventario: {fileID: 0}
+  isVisible: 0

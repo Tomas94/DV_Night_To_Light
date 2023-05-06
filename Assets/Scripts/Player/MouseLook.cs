@@ -8,11 +8,6 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
     float xRotation = 0f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float MouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;

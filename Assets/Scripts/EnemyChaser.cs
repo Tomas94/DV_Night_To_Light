@@ -11,16 +11,18 @@ public class EnemyChaser : MonoBehaviour
 
     [SerializeField] float _distanciaPlayer;
     public int rangoVision;
+    public int rangoAtaque;
     Vector3 _direccion;
+    [SerializeField] LayerMask structures; 
     NavMeshAgent chaserNM;
     
     RaycastHit hit;
     [SerializeField] bool _detectado;
-
+    [SerializeField] bool _canAttack;
 
     void Start()
     {
-        player = GameObject.Find("PlayerCamera").GetComponent<Transform>();
+        player = GameObject.Find("DetectPoint").GetComponent<Transform>();
         chaserNM = GameObject.Find("Cultist").GetComponent<NavMeshAgent>();
     }
 
@@ -36,32 +38,46 @@ public class EnemyChaser : MonoBehaviour
 
     void DetectPlayer()
     {
-        if (Physics.Raycast(transform.position, _direccion, out hit, rangoVision, LayerMask.GetMask("Player")))
-        {
-            Debug.Log(hit.transform.name);
-            _detectado = true;
-        }
-        else
+        if (Physics.Raycast(transform.position, _direccion, out hit, rangoVision, structures) || _distanciaPlayer >= rangoVision)
         {
             _detectado = false;
-            anim.SetBool("EnRango", false);
+            return;
+        }
+        else if(Physics.Raycast(transform.position, _direccion, out hit, rangoVision, LayerMask.GetMask("Player")))
+        {
+            Debug.Log("Detectado");
+            _detectado = true;
+            anim.SetBool("EnRango", true);
         }
     }
 
     void ChasePlayer()
     {
-        if (_detectado && _distanciaPlayer <= chaserNM.stoppingDistance)
-        {
-            anim.SetBool("EnRango", false);
-            return;
-        }
         if (_detectado)
         {
-            anim.SetBool("EnRango", true);
-            chaserNM.SetDestination(player.position);
-        }      
+            if (_distanciaPlayer <= rangoAtaque)
+            {
+                //anim.SetBool("EnRango", false);
+                anim.SetBool("AtackRange", true);
+
+            }
+            else
+            {
+                //anim.SetBool("EnRango", true);
+                anim.SetBool("AtackRange", false);
+                chaserNM.SetDestination(player.position);
+            }
+        }
+        else
+        {
+            anim.SetBool("EnRango", false);
+        }
     }
 
+    void AttackPlayer()
+    {
+
+    }
 
 
 }

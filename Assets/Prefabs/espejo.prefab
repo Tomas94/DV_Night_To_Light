@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6273313383063634406}
   - component: {fileID: 4320581621495476006}
   - component: {fileID: 9148410335375580242}
-  m_Layer: 0
-  m_Name: Espejo
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: espejo
+  m_TagString: Espejo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5937915975987000565}
-  m_LocalRotation: {x: -0, y: 0.77485603, z: -0, w: 0.6321378}
+  m_LocalRotation: {x: 0, y: 0.7748562, z: 0, w: 0.6321376}
   m_LocalPosition: {x: 300.8966, y: 11.064, z: 122.1351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

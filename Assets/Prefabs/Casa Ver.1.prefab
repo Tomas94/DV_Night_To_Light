@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1939618448884438804}
   - component: {fileID: 2397347835622120672}
   - component: {fileID: 7095645735042088539}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Estructura
   m_TagString: Casa
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8291395563842749112}
   - component: {fileID: 1673337103417456119}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Casa Ver.1
   m_TagString: Casa
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4011415551104573229}
   - component: {fileID: 4589750964560388767}
   - component: {fileID: 5700417134142866330}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Techo
   m_TagString: Casa
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7628842608132425303}
   - component: {fileID: 5478557845475127288}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Casa Ver.2
   m_TagString: Casa
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 7807629808995115391}
   - component: {fileID: 4589128303450500554}
   - component: {fileID: 2497548875512356526}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Estructura
   m_TagString: Casa
   m_Icon: {fileID: 0}

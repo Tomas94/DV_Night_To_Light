@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6404782168910080135}
   - component: {fileID: 2789257371699142364}
   - component: {fileID: 2142172583424501344}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Barco
   m_TagString: Barco
   m_Icon: {fileID: 0}

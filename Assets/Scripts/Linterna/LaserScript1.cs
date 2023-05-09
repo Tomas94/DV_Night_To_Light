@@ -6,14 +6,22 @@ using UnityEngine;
 public class LaserScript1 : MonoBehaviour
 {
     [Header("Settings")]
-    public LayerMask layerMask;
+    //public LayerMask layerMask;
     public float defaultLength = 50;
     public int numOfReflections = 2;
 
     private LineRenderer _lineRenderer;
     private RaycastHit hit;
 
-    public Activada esfera1;
+    //int screenWidth= Screen.width;
+    //int screenHeight= Screen.height;
+    //Camera mainCamera = Camera.main;
+
+
+ 
+
+
+    //public Activada esfera1;
 
     private Ray ray;
     private Vector3 direction;
@@ -22,6 +30,8 @@ public class LaserScript1 : MonoBehaviour
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
+        //Vector3 screenCenter = new Vector3(screenWidth / 2f, screenHeight / 2f, mainCamera.nearClipPlane);
+        //Vector3 worldCenter = mainCamera.ScreenToWorldPoint(screenCenter);
     }
 
     // Update is called once per frame
@@ -43,11 +53,10 @@ public class LaserScript1 : MonoBehaviour
         for (int i = 0; i < numOfReflections; i++)
         {
             // Does the ray intersect any objects
-            if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, layerMask))
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, LayerMask.GetMask("Interactable")))
             {
                 if (hit.transform.tag == "Espejo")
                 {
-
                     _lineRenderer.positionCount += 1;
                     _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
 
@@ -61,21 +70,23 @@ public class LaserScript1 : MonoBehaviour
                     AudioManager.Instance.PlaySFX("Cuervos");
                     if (hit.transform.name == "Esfera1")
                     {
-                        esfera1.Activado();
-                        Destroy(esfera1.gameObject);
+                        //esfera1.Activado();
+                        //Destroy(esfera1.gameObject);
                     }
+                    return;
                 }
-                else if (hit.transform.tag == "Liso")
-                {
-                    _lineRenderer.positionCount += 1;
-                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
-                }
-                else
-                {
-                    _lineRenderer.positionCount += 1;
-                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ray.origin + (ray.direction * remainLenght));
-                }
-            }
+            }      
+        }
+        if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, LayerMask.GetMask("Surface","Ground")))
+        {
+            _lineRenderer.positionCount += 1;
+            _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+            return;
+        }
+        else
+        {
+            _lineRenderer.positionCount += 1;
+            _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ray.origin + (ray.direction * remainLenght));
         }
     }
 

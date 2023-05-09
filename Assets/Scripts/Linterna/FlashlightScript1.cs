@@ -11,7 +11,7 @@ public class FlashlightScript1 : MonoBehaviour
     public float currentCharge;
     [SerializeField] float _maxChargeTime;
     public float _maxBatteryCharge;
-   [SerializeField]Nictofobia nicto;
+    [SerializeField] PlayerStatus pStatus;
 
 
     void Start()
@@ -21,6 +21,7 @@ public class FlashlightScript1 : MonoBehaviour
         currentCharge = _maxBatteryCharge;
         flashlightLight.SetActive(false);
         laser.SetActive(false);
+        pStatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
     }
 
     void Update()
@@ -29,31 +30,31 @@ public class FlashlightScript1 : MonoBehaviour
         AmplifiedLight();
         BatteryPercent();
         uI.BatteryState(currentCharge, _maxBatteryCharge);
-
     }
 
     void FlashligthOnOff()
     {
-        if (Input.GetKeyDown(KeyCode.F) && laser.activeSelf == false)
+        if (Input.GetMouseButtonDown(0) && laser.activeSelf == false)
         {
             
             if (_flashlightActive == false)
             {
                 flashlightLight.SetActive(true);
-                nicto.nictofobia = false;
+                pStatus.isNicto= false;
                 _flashlightActive = true;
                 uI.FlashLightState(true);
-               
+                Debug.Log("Tranquilo");
             }
             else
             {
                 flashlightLight.SetActive(false);
-                nicto.nictofobia = true;
-                nicto.IsFeared();
+                pStatus.isNicto = true;
+                pStatus.IsFeared();
                 _flashlightActive = false;
                 uI.FlashLightState(false);
+                Debug.Log("Asustado");
             }
-            AudioManager.Instance.PlaySFX("Encender_linterna");
+            //AudioManager.Instance.PlaySFX("Encender_linterna");
 
         }
     }
@@ -78,5 +79,25 @@ public class FlashlightScript1 : MonoBehaviour
         {
             currentCharge -= Time.deltaTime;
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "LuzTrigger")
+        {
+            Debug.Log("En el trigger de nicto");
+            pStatus.isNicto = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "LuzTrigger")
+        {
+            Debug.Log("saliendo del trigger de nicto");
+            if (!_flashlightActive)pStatus.isNicto = true;
+            if (_flashlightActive) pStatus.isNicto = false;
+        }
+        
     }
 }

@@ -9,10 +9,17 @@ TagManager:
   - Pickable
   - Espejo
   - Boton
-  - Pickeable
   - Liso
   - Puerta
   - LuzTrigger
+  - Brasero
+  - Linterna
+  - Decorado
+  - Casa
+  - Cofre
+  - Caja
+  - Barco
+  - Enemigo
   layers:
   - Default
   - TransparentFX

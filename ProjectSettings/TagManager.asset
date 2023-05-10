@@ -20,7 +20,6 @@ TagManager:
   - Caja
   - Barco
   - Enemigo
-  - Pickeable
   - Cultista
   layers:
   - Default

@@ -78,5 +78,12 @@ public class EnemyChaser : MonoBehaviour
 
     }
 
+    public void Alertado()
+    {
+        chaserNM.SetDestination(player.position);
+        anim.SetBool("EnRango", true);
+        _detectado = true;
+    }
+
 
 }

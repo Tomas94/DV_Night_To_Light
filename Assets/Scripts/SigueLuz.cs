@@ -16,9 +16,7 @@ public class SigueLuz : MonoBehaviour
 
     void Update()
     {
-        if (luz.gameObject.activeSelf)
-            navM.SetDestination(luz.transform.position);
-            //transform.position = Vector3.MoveTowards(transform.position, luz.transform.position, velocidad * Time.deltaTime);
+        if (luz.gameObject.activeSelf)  navM.SetDestination(luz.transform.position);
     }
 }
 

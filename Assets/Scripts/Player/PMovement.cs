@@ -31,7 +31,7 @@ public class PMovement : MonoBehaviour
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
         Vector3 Direction = transform.right *hInput + transform.forward * vInput;
-        Direction.Normalize();
+        //Direction.Normalize();
         chController.Move(Direction * speed * Time.deltaTime);
     }
 

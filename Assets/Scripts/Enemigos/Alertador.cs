@@ -10,15 +10,22 @@ public class Alertador : MonoBehaviour
     Vector3 dir;
     [SerializeField] float distancia;
     [SerializeField] float rango;
-    
+    [SerializeField] GameObject[] cultistas;
+    Color colorOriginal;
+
+
     void Start()
     {
+        colorOriginal = GetComponent<Renderer>().material.color;
         playerPos = GameObject.Find("Player").GetComponent<Transform>();
-        dir = playerPos.position - transform.position;
+        
+        //GameObject[] cultistas = GameObject.FindGameObjectsWithTag("Enemigo");
     }
 
     void Update()
     {
+        dir = playerPos.position - transform.position;
+        Debug.DrawRay(transform.position, dir.normalized * rango,Color.red);
         distancia = Vector3.Distance(playerPos.position, transform.position);
         Detectar();
     }
@@ -28,15 +35,12 @@ public class Alertador : MonoBehaviour
 
         if(distancia < rango)
         {
-            GameObject[] cultistas = GameObject.FindGameObjectsWithTag("Enemigo");
-
             foreach (GameObject cultista in cultistas)
-            {
-                //Debug.Log("soy el enemigo numero " + cultista);
+            {              
                 cultista.SendMessage("Alertado");
-            }        
+            }
+            GetComponent<Renderer>().material.color = Color.red;
         }
+        else GetComponent<Renderer>().material.color = colorOriginal;
     }
-
-
 }

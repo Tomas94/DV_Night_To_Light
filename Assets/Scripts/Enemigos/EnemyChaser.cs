@@ -7,23 +7,21 @@ public class EnemyChaser : MonoBehaviour
 {
     Transform player;
     [SerializeField] Animator anim;
-
-
+    [SerializeField] LayerMask structures; 
+    [SerializeField] NavMeshAgent chaserNM;
+    RaycastHit hit;
+    
     [SerializeField] float _distanciaPlayer;
     public int rangoVision;
     public int rangoAtaque;
     Vector3 _direccion;
-    [SerializeField] LayerMask structures; 
-    NavMeshAgent chaserNM;
-    
-    RaycastHit hit;
+   
     [SerializeField] bool _detectado;
     [SerializeField] bool _canAttack;
 
     void Start()
-    {
-        player = GameObject.Find("DetectPoint").GetComponent<Transform>();
-        chaserNM = GameObject.Find("Cultist").GetComponent<NavMeshAgent>();
+    {       
+        player = GameObject.Find("DetectPoint").GetComponent<Transform>();       
     }
 
     void Update()

@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 5898752733552384530}
   - component: {fileID: 4067417610448733052}
   - component: {fileID: 5092714554213154032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cultist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,9 +2437,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4ac2b0723de8d44898c664548d493e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  structures:
+    serializedVersion: 2
+    m_Bits: 0
+  chaserNM: {fileID: 0}
   _distanciaPlayer: 0
   rangoVision: 0
+  rangoAtaque: 0
   _detectado: 0
+  _canAttack: 0
 --- !u!1 &9108239179753306575
 GameObject:
   m_ObjectHideFlags: 0

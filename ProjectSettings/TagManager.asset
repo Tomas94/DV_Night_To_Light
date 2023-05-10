@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Mirror
-  - Button
   - Pickable
   - Espejo
   - Boton
@@ -21,6 +19,7 @@ TagManager:
   - Barco
   - Enemigo
   - Cultista
+  - Pickeable
   layers:
   - Default
   - TransparentFX

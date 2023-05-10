@@ -18,5 +18,15 @@ public class SigueLuz : MonoBehaviour
     {
         if (luz.gameObject.activeSelf)  navM.SetDestination(luz.transform.position);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Boton") other.GetComponent<Renderer>().material.color = Color.green;
+    }
+
+    private void OnTriggerExit(Collider other) 
+    {
+        if (other.tag == "Boton") other.GetComponent<Renderer>().material.color = Color.red;
+    }
 }
 

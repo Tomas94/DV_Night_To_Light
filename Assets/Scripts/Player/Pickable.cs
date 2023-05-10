@@ -13,7 +13,7 @@ public class Pickable : MonoBehaviour
 
     public void PickupObject(string pickedObject)
     {
-        //Debug.Log("Pickeaste un " + pickedObject);
+        Debug.Log("Pickeaste un " + pickedObject);
 
         if (pickedObject == "Pila")
         {

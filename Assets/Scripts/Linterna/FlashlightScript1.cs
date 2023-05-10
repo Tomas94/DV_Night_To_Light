@@ -70,6 +70,7 @@ public class FlashlightScript1 : MonoBehaviour
         {
             flashlightLight.SetActive(true);
             laser.SetActive(false);
+            laser.transform.Find("LaserLight").gameObject.SetActive(false);
         }
     }
 

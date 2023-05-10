@@ -59,7 +59,6 @@ public class EnemyChaser : MonoBehaviour
             {
                 //anim.SetBool("EnRango", false);
                 anim.SetBool("AtackRange", true);
-
             }
             else
             {

@@ -13,28 +13,19 @@ public class LaserScript1 : MonoBehaviour
     private LineRenderer _lineRenderer;
     private RaycastHit hit;
 
-    //int screenWidth= Screen.width;
-    //int screenHeight= Screen.height;
-    //Camera mainCamera = Camera.main;
-
-
- 
-
+    public GameObject laserLight;
 
     //public Activada esfera1;
 
     private Ray ray;
     private Vector3 direction;
 
-    // Start is called before the first frame update
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-        //Vector3 screenCenter = new Vector3(screenWidth / 2f, screenHeight / 2f, mainCamera.nearClipPlane);
-        //Vector3 worldCenter = mainCamera.ScreenToWorldPoint(screenCenter);
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -52,7 +43,6 @@ public class LaserScript1 : MonoBehaviour
 
         for (int i = 0; i < numOfReflections; i++)
         {
-            // Does the ray intersect any objects
             if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, LayerMask.GetMask("Interactable")))
             {
                 if (hit.transform.tag == "Espejo")
@@ -81,16 +71,20 @@ public class LaserScript1 : MonoBehaviour
         {
             _lineRenderer.positionCount += 1;
             _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+            
+            laserLight.gameObject.SetActive(true);
+            laserLight.transform.position = hit.point;
             return;
         }
         else
-        {
+        {          
             _lineRenderer.positionCount += 1;
             _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, ray.origin + (ray.direction * remainLenght));
         }
+        laserLight.gameObject.SetActive(false);
     }
 
-    public void NormalLaser()
+    /*public void NormalLaser()
     {
         _lineRenderer.SetPosition(0, transform.position);
 
@@ -103,5 +97,5 @@ public class LaserScript1 : MonoBehaviour
         {
             _lineRenderer.SetPosition(1, transform.position + (transform.forward * defaultLength));
         }
-    }
+    }*/
 }

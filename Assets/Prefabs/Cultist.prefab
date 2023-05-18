@@ -1651,7 +1651,7 @@ Transform:
   m_GameObject: {fileID: 6709797790363166559}
   m_LocalRotation: {x: -0, y: -0.9995614, z: 0, w: -0.029613743}
   m_LocalPosition: {x: 10.199997, y: 0, z: 11.699997}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3.2929199, y: 3.29292, z: 3.2929199}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5555854541161140771}
@@ -2437,11 +2437,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4ac2b0723de8d44898c664548d493e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 51230585972172703}
   structures:
     serializedVersion: 2
     m_Bits: 0
-  chaserNM: {fileID: 0}
+  chaserNM: {fileID: 4067417610448733052}
   _distanciaPlayer: 0
   rangoVision: 0
   rangoAtaque: 0

@@ -108,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7628842608132425303}
   - component: {fileID: 5478557845475127288}
+  - component: {fileID: 1876216308}
   m_Layer: 8
   m_Name: Casa Ver.2
   m_TagString: Casa
@@ -148,6 +149,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!205 &1876216308
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103521599955492077}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 11.726911, y: 7.154573, z: 9.121254}
+  m_Size: 23.453821
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.33276066
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4589128303450500554}
+    - renderer: {fileID: 4589750964560388767}
+  - screenRelativeHeight: 0.09245216
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.054578677
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8488650376981127078
 GameObject:
   m_ObjectHideFlags: 0

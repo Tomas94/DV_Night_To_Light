@@ -29221,6 +29221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579000105828406099}
   - component: {fileID: 4588660540614021909}
+  - component: {fileID: 3209598531438996759}
   m_Layer: 8
   m_Name: brasero
   m_TagString: Brasero
@@ -29263,6 +29264,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!205 &3209598531438996759
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207446160518711785}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0533545, y: 1.3632957, z: 0}
+  m_Size: 2.7265794
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.06681684
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4156263559270415833}
+    - renderer: {fileID: 6245785006576331843}
+    - renderer: {fileID: 220420720}
+    - renderer: {fileID: 2145242907}
+    - renderer: {fileID: 1215788913}
+    - renderer: {fileID: 347919884}
+    - renderer: {fileID: 1333730374}
+    - renderer: {fileID: 1106131711}
+  m_Enabled: 1
 --- !u!1 &2456027718239604186
 GameObject:
   m_ObjectHideFlags: 0

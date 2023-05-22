@@ -15,7 +15,7 @@ public class LaserScript1 : MonoBehaviour
 
     public GameObject laserLight;
 
-    //public Activada esfera1;
+    public Activada espejo_roto;
 
     private Ray ray;
     private Vector3 direction;
@@ -58,10 +58,9 @@ public class LaserScript1 : MonoBehaviour
                     _lineRenderer.positionCount += 1;
                     _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
                     AudioManager.Instance.PlaySFX("Cuervos");
-                    if (hit.transform.name == "Esfera1")
+                    if (hit.transform.name == "espejo_roto")
                     {
-                        //esfera1.Activado();
-                        //Destroy(esfera1.gameObject);
+                        //espejo_roto.Activado();
                     }
                     return;
                 }

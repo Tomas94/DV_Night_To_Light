@@ -54,7 +54,7 @@ public class FlashlightScript1 : MonoBehaviour
                 uI.FlashLightState(false);
                 Debug.Log("Asustado");
             }
-            //AudioManager.Instance.PlaySFX("Encender_linterna");
+            AudioManager.Instance.PlaySFX("Encender_linterna");
 
         }
     }

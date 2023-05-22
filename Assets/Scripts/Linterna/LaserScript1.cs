@@ -23,7 +23,7 @@ public class LaserScript1 : MonoBehaviour
     void Start()
     {
         _lineRenderer = GetComponent<LineRenderer>();
-
+        laserLight.transform.Find("LaserLight");
     }
 
     void Update()

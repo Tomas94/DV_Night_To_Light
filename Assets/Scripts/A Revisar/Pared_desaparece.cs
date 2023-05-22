@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Pared_desaparece : MonoBehaviour
 {
-    public Activada esfera1;
+    public Activada espejo_roto;
 
     private void Update()
     {
-        if (esfera1.activado)
+        if (espejo_roto.activado)
         {
             Destroy(gameObject);
         }

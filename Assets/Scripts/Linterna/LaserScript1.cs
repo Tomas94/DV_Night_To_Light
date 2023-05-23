@@ -14,8 +14,7 @@ public class LaserScript1 : MonoBehaviour
     private RaycastHit hit;
 
     public GameObject laserLight;
-
-    public Activada espejo_roto;
+    public ChangeCam changecamMirror;
 
     private Ray ray;
     private Vector3 direction;
@@ -28,9 +27,9 @@ public class LaserScript1 : MonoBehaviour
 
     void Update()
     {
-        
-        //NormalLaser();
         ReflectLaser();
+        NormalLaser();
+
     }
 
     public void ReflectLaser()
@@ -56,12 +55,10 @@ public class LaserScript1 : MonoBehaviour
                 else if (hit.transform.tag == "Boton")
                 {
                     _lineRenderer.positionCount += 1;
-                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);
+                    _lineRenderer.SetPosition(_lineRenderer.positionCount - 1, hit.point);                    
                     AudioManager.Instance.PlaySFX("Cuervos");
-                    if (hit.transform.name == "espejo_roto")
-                    {
-                        //espejo_roto.Activado();
-                    }
+                    hit.transform.GetComponent<Activada>().Activado();
+                    
                     return;
                 }
             }      
@@ -83,18 +80,18 @@ public class LaserScript1 : MonoBehaviour
         laserLight.gameObject.SetActive(false);
     }
 
-    /*public void NormalLaser()
+    public void NormalLaser()
     {
-        _lineRenderer.SetPosition(0, transform.position);
-
-        // Does the ray intersect any objects
-        if (Physics.Raycast(transform.position, transform.forward, out hit, defaultLength, LayerMask.GetMask("Obstacle")))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, defaultLength, LayerMask.GetMask("Interactable")))
         {
-            _lineRenderer.SetPosition(1, hit.point);
+            if (hit.transform.tag == "Espejo")
+            {
+                changecamMirror = hit.transform.gameObject.GetComponent<ChangeCam>();
+                changecamMirror.ChangeCamera(true);
+            }
+            return;
         }
-        else
-        {
-            _lineRenderer.SetPosition(1, transform.position + (transform.forward * defaultLength));
-        }
-    }*/
+        else { changecamMirror.ChangeCamera(false); }      
+        
+    }
 }

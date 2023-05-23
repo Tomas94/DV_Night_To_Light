@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4142242631156289709}
   - component: {fileID: 4225818350446280876}
   - component: {fileID: 1607043447470073821}
+  - component: {fileID: -7478954726689914713}
   m_Layer: 7
   m_Name: Vendaje
   m_TagString: Pickeable
@@ -127,5 +128,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0f9a7320125eb4db4f5a729b30f656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventario: {fileID: 0}
-  isVisible: 0
+--- !u!205 &-7478954726689914713
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659813686986906630}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0010721684, y: 0, z: -0.21968865}
+  m_Size: 0.9086585
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.04303474
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7146415302170131923}
+  m_Enabled: 1

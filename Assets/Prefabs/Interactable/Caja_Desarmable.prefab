@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1720488633303678691}
   - component: {fileID: 1328620133100363797}
   - component: {fileID: 1762235955964047628}
+  - component: {fileID: 7983369606437181626}
   m_Layer: 8
   m_Name: Caja_Desarmable
   m_TagString: Caja
@@ -149,6 +150,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4.5, z: 4}
   m_Center: {x: 0, y: 2.3, z: 0}
+--- !u!205 &7983369606437181626
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065947058968847449}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.00000023841858, y: 2.3903427, z: 0.000333786}
+  m_Size: 4.7806854
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.103868596
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3373884950357667180}
+    - renderer: {fileID: 3251309083117760521}
+    - renderer: {fileID: 3546853797415804927}
+    - renderer: {fileID: 1696949158582222714}
+  m_Enabled: 1
 --- !u!1 &2873629203312305767
 GameObject:
   m_ObjectHideFlags: 0

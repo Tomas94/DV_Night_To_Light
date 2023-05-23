@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 760371439424708539}
   - component: {fileID: 6413865471968774524}
   - component: {fileID: 1582646278}
+  - component: {fileID: 3237920158639562338}
   m_Layer: 7
   m_Name: espejo_roto
   m_TagString: Boton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!4 &1929314251627619540
 Transform:
@@ -112,3 +113,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3369316746193770658, guid: 7ca3822b3078e2240a5d0a8a87325421, type: 3}
+--- !u!205 &3237920158639562338
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264840499511737966}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.000060796738, y: 0.1282545, z: 0.00006055832}
+  m_Size: 5.6979384
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.027527481
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 760371439424708539}
+  m_Enabled: 1

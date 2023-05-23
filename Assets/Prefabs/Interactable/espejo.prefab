@@ -12,12 +12,14 @@ GameObject:
   - component: {fileID: 6273313383063634406}
   - component: {fileID: 4320581621495476006}
   - component: {fileID: 9148410335375580242}
+  - component: {fileID: 1314721485}
+  - component: {fileID: 4852725071996471482}
   m_Layer: 7
   m_Name: espejo
   m_TagString: Espejo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &5783148711100334096
 Transform:
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5937915975987000565}
   m_LocalRotation: {x: 0, y: 0.7748562, z: 0, w: 0.6321376}
   m_LocalPosition: {x: 300.8966, y: 11.064, z: 122.1351}
-  m_LocalScale: {x: 0.018721083, y: 0.018721085, z: 0.018721083}
+  m_LocalScale: {x: 0.018721081, y: 0.018721085, z: 0.018721081}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +99,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11007174, y: 5.0588346, z: 2.6574016}
   m_Center: {x: 0.123340614, y: 0.00000023841858, z: -1.7334956e-10}
+--- !u!114 &1314721485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937915975987000565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52dde8e9110bddb408ef8a041edc3247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airCam: {fileID: 0}
+--- !u!205 &4852725071996471482
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937915975987000565}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.049969494, y: -0.0000035762787, z: 0}
+  m_Size: 5.0588346
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.17081669
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4320581621495476006}
+  m_Enabled: 1

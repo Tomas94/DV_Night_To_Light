@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 272706317694493239}
   - component: {fileID: 8643270440510128472}
+  - component: {fileID: 4344515974882973916}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Decorado
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 613343182135965837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 678.1307, y: 9.497261, z: 152.09818}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.018721087, y: 0.018721085, z: 0.018721087}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6258253715461714801}
@@ -49,6 +50,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0764234, y: 0.57266897, z: 0.52043766}
   m_Center: {x: -0.47556952, y: 0.28628185, z: 0.2397812}
+--- !u!205 &4344515974882973916
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613343182135965837}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.47439837, y: 0.27778584, z: 0.22832029}
+  m_Size: 1.0087924
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.07020325
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3427071530061597885}
+    - renderer: {fileID: 3836008433506708185}
+    - renderer: {fileID: 7177697467796318775}
+    - renderer: {fileID: 7060478078997352571}
+  m_Enabled: 1
 --- !u!1 &979634151257792655
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +88,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &6258253715461714801
 Transform:
@@ -148,7 +171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &1578050660533784928
 Transform:
@@ -231,7 +254,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &899577916621481909
 Transform:
@@ -314,7 +337,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &3414079310183326348
 Transform:

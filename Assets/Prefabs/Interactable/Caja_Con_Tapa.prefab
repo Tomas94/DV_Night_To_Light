@@ -206,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4317322840056590243}
   - component: {fileID: 4420070674869812615}
+  - component: {fileID: 841035419826772113}
   m_Layer: 8
   m_Name: Caja_Con_Tapa
   m_TagString: Untagged
@@ -246,3 +247,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!205 &841035419826772113
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504335504859510041}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.16732657, y: 1.9439013, z: 0}
+  m_Size: 6.4111876
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.09726438
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1943536885703148516}
+    - renderer: {fileID: 7426936361656728162}
+  m_Enabled: 1

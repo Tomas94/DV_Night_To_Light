@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 8896982283852586293}
   - component: {fileID: 5537094012918633104}
   - component: {fileID: 7724591328962930266}
+  - component: {fileID: 3950659757802189256}
   m_Layer: 0
   m_Name: 'Pallets '
   m_TagString: Decorado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!4 &8896982283852586293
 Transform:
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8085015295221712783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 678.3363, y: 9.49726, z: 152.66324}
-  m_LocalScale: {x: 0.07176646, y: 0.054028794, z: 0.061802186}
+  m_LocalScale: {x: 0.07176646, y: 0.0540288, z: 0.061802182}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &3950659757802189256
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085015295221712783}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000033795834, y: 0.09094846, z: -0.000045120716}
+  m_Size: 1.2007444
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.09726438
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7724591328962930266}
+  m_Enabled: 1

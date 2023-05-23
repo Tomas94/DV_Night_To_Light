@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6404782168910080135}
   - component: {fileID: 2789257371699142364}
   - component: {fileID: 2142172583424501344}
+  - component: {fileID: 2132912848708533196}
   m_Layer: 8
   m_Name: Barco
   m_TagString: Barco
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4891655776320063826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.4812016, y: 1, z: 3.439913}
+  m_LocalScale: {x: 26.473167, y: 3.5386248, z: 12.17256}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,3 +116,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!205 &2132912848708533196
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891655776320063826}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.09195638, y: -0.10368991, z: -0.0000076293945}
+  m_Size: 3.090712
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.10053963
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6404782168910080135}
+  m_Enabled: 1

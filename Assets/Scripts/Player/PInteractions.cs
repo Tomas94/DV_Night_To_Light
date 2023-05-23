@@ -5,7 +5,7 @@ using UnityEngine;
 public class PInteractions : Pickable
 {
 
-    float distance = 5f;
+   [SerializeField] float distance = 5f;
     RaycastHit hit;
 
     void Update()

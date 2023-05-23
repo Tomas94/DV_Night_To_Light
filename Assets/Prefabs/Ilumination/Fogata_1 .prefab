@@ -24230,6 +24230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4357098633783338648}
+  - component: {fileID: 5294328871036717563}
   m_Layer: 0
   m_Name: 'Fogata_1 '
   m_TagString: Untagged
@@ -24255,6 +24256,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 59.622, z: 0}
+--- !u!54 &5294328871036717563
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357098633783338647}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4357098634075830374
 GameObject:
   m_ObjectHideFlags: 0
@@ -29081,7 +29098,7 @@ GameObject:
   - component: {fileID: 1562304505317031596}
   m_Layer: 0
   m_Name: Trigger_nictofobia
-  m_TagString: Untagged
+  m_TagString: LuzTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

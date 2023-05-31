@@ -14,7 +14,7 @@ public class LaserScript1 : MonoBehaviour
     private RaycastHit hit;
 
     public GameObject laserLight;
-    public ChangeCam changecamMirror;
+    //public ChangeCam changecamMirror;
 
     private Ray ray;
     private Vector3 direction;
@@ -28,7 +28,7 @@ public class LaserScript1 : MonoBehaviour
     void Update()
     {
         ReflectLaser();
-        NormalLaser();
+       //NormalLaser();
 
     }
 
@@ -80,7 +80,7 @@ public class LaserScript1 : MonoBehaviour
         laserLight.gameObject.SetActive(false);
     }
 
-    public void NormalLaser()
+   /* public void NormalLaser()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hit, defaultLength, LayerMask.GetMask("Interactable")))
         {
@@ -93,5 +93,5 @@ public class LaserScript1 : MonoBehaviour
         }
         else { changecamMirror.ChangeCamera(false); }      
         
-    }
+    }*/
 }

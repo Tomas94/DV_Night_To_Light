@@ -7,12 +7,12 @@ public class Carga_Bateria : MonoBehaviour
     [SerializeField] RectTransform slider;
     public float maxCharge;
     public float currentCharge;
-    public float maxChargeTime;
+    //public float maxChargeTime;
 
     void Awake()
     {
-        maxCharge = maxChargeTime * 60f;
-        currentCharge = maxCharge;
+       // maxCharge = maxChargeTime * 60f;
+        //currentCharge = maxCharge;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Carga_Bateria : MonoBehaviour
     {
         if (currentCharge > 0)
         {
-            currentCharge -= Time.deltaTime;
+            //currentCharge -= Time.deltaTime;
             slider.localScale = Vector3.one * ((100 / maxCharge) * (currentCharge/100));
         }
     }

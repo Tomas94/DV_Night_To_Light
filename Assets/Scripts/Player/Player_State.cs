@@ -14,6 +14,9 @@ public class Player_State : Entity
     float startTime = 0f;
     float endTime = 5f;
 
+    [Header("Linterna")]
+    [SerializeField] Linterna linterna;
+
     private void Start()
     {
         maxHP = 3;
@@ -47,7 +50,7 @@ public class Player_State : Entity
     {
         if (Input.GetKeyDown(KeyCode.R) && /*currentCharge < maxCharge &&*/ cantidadBaterias > 0)
         {
-            //currentCharge = maxCharge;
+            linterna.currentCharge = linterna.maxCharge;
             cantidadBaterias--;
         }
     }

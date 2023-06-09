@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1690185250304772001}
   - component: {fileID: 3499378060972897131}
   m_Layer: 0
-  m_Name: muro de pasto
+  m_Name: Muro de arbustos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3139208769632342718}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 287.73685, y: 1.58836, z: 340.69043}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.017100232, y: 0.012948999, z: 0.027067188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

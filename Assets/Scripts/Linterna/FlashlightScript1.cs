@@ -6,7 +6,7 @@ public class FlashlightScript1 : MonoBehaviour
 {
     public GameObject flashlightLight;
     public GameObject laser;
-    public UI_Player uI;
+    //public UI_Player uI;
     private bool _flashlightActive = false;
     public float currentCharge;
     [SerializeField] float _maxChargeTime;
@@ -29,7 +29,7 @@ public class FlashlightScript1 : MonoBehaviour
         FlashligthOnOff();
         AmplifiedLight();
         BatteryPercent();
-        uI.BatteryState(currentCharge, _maxBatteryCharge);
+       // uI.BatteryState(currentCharge, _maxBatteryCharge);
     }
 
     void FlashligthOnOff()
@@ -42,7 +42,7 @@ public class FlashlightScript1 : MonoBehaviour
                 flashlightLight.SetActive(true);
                 pStatus.isNicto= false;
                 _flashlightActive = true;
-                uI.FlashLightState(true);
+               // uI.FlashLightState(true);
                 Debug.Log("Tranquilo");
             }
             else
@@ -51,7 +51,7 @@ public class FlashlightScript1 : MonoBehaviour
                 pStatus.isNicto = true;
                 pStatus.IsFeared();
                 _flashlightActive = false;
-                uI.FlashLightState(false);
+               // uI.FlashLightState(false);
                 Debug.Log("Asustado");
             }
             //AudioManager.Instance.PlaySFX("Encender_linterna");

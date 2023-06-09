@@ -5,106 +5,102 @@ using TMPro;
 
 public class UI_Player : MonoBehaviour
 {
-    public GameObject canvasUI;
-    [SerializeField] PlayerStatus pStatus;
-    [SerializeField] TextMeshProUGUI cantBaterias;
-    [SerializeField] TextMeshProUGUI cantVendajes;
+
+    [Header("Referencias Iconos")]
+    [SerializeField] GameObject canvasUI;
+    [SerializeField] GameObject flashlightStateIcon;
+    [SerializeField] GameObject bateriaIcon;
+    [SerializeField] GameObject vendajeIcon;
+    [SerializeField] GameObject hpIcon;
+
+    [Header("Referencias Textos")]
+    [SerializeField] TextMeshProUGUI cantBateriasTMP;
+    [SerializeField] TextMeshProUGUI cantVendajesTMP;
 
     private void Start()
     {
-        pStatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
+        //pStatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
     }
 
-    public void FlashLightState(bool encendida)
+    public void FlashLightOnOff(bool encendida)
     {
-        Transform flashLightIcon = canvasUI.transform.GetChild(1);
-
         if (encendida)
         {
-            flashLightIcon.GetChild(1).gameObject.SetActive(false);
+            flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(false);
         }
         else
         {
-            flashLightIcon.GetChild(1).gameObject.SetActive(true);
+            flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(true);
         }
     }
 
     public void BatteryState(float batPorcentaje, float maxCharge)
     {
-        GameObject batteryIcon = canvasUI.transform.GetChild(2).gameObject;
-
         switch (batPorcentaje)
         {
             case float n when n >= (maxCharge * 0.75):
-                DesactivarHijos(batteryIcon.transform.GetChild(4).gameObject, batteryIcon);
+                DesactivarHijos(bateriaIcon.transform.GetChild(4).gameObject, bateriaIcon);
                 break;
 
             case float n when n >= (maxCharge * 0.5):
-                DesactivarHijos(batteryIcon.transform.GetChild(3).gameObject, batteryIcon);
+                DesactivarHijos(bateriaIcon.transform.GetChild(3).gameObject, bateriaIcon);
                 break;
 
             case float n when n >= (maxCharge * 0.25):
-                DesactivarHijos(batteryIcon.transform.GetChild(2).gameObject, batteryIcon);
+                DesactivarHijos(bateriaIcon.transform.GetChild(2).gameObject, bateriaIcon);
                 break;
 
             case float n when n > 0:
-                DesactivarHijos(batteryIcon.transform.GetChild(1).gameObject, batteryIcon);
+                DesactivarHijos(bateriaIcon.transform.GetChild(1).gameObject, bateriaIcon);
                 break;
 
             case float n when n <= 0:
-                DesactivarHijos(batteryIcon.transform.GetChild(0).gameObject, batteryIcon);
+                DesactivarHijos(bateriaIcon.transform.GetChild(0).gameObject, bateriaIcon);
                 break;
         }
-
-
     }
 
     public void BandageState(int cantidad)
     {
-        Transform bandageIcon = canvasUI.transform.GetChild(3);
-
-        if(cantidad > 0)
+        if (cantidad > 0)
         {
-            bandageIcon.GetChild(1).gameObject.SetActive(false);
+            vendajeIcon.transform.GetChild(1).gameObject.SetActive(false);
         }
         else
         {
-            bandageIcon.GetChild(1).gameObject.SetActive(true);
+            vendajeIcon.transform.GetChild(1).gameObject.SetActive(true);
         }
     }
 
     public void LifeBarState(int vidaActual)
     {
-        GameObject life = canvasUI.transform.GetChild(5).gameObject;
-
         switch (vidaActual)
         {
             case 3:
-                DesactivarHijos(life.transform.GetChild(2).gameObject, life);
+                DesactivarHijos(hpIcon.transform.GetChild(2).gameObject, hpIcon);
                 break;
             case 2:
-                DesactivarHijos(life.transform.GetChild(1).gameObject, life);
+                DesactivarHijos(hpIcon.transform.GetChild(1).gameObject, hpIcon);
                 break;
             case 1:
-                DesactivarHijos(life.transform.GetChild(0).gameObject, life);
+                DesactivarHijos(hpIcon.transform.GetChild(0).gameObject, hpIcon);
                 break;
             case 0:
-                life.transform.GetChild(0).gameObject.SetActive(false);
+                hpIcon.transform.GetChild(0).gameObject.SetActive(false);
                 break;
         }
-
     }
 
-    public void BatteriesOnHold(int bats)
+    public void BatteriesOnHold(int batts)
     {
-        string bateriasInv = bats.ToString();
-        cantBaterias.text = bateriasInv;
+        string bateriasInv = batts.ToString();
+        cantBateriasTMP.text = bateriasInv;
     }
 
     public void BandagesOnHold(int bands)
     {
         string vendajesInv = bands.ToString();
-        cantVendajes.text = vendajesInv;
+        cantVendajesTMP.text = vendajesInv;
     }
 
     void DesactivarHijos(GameObject gO_Index, GameObject parent)

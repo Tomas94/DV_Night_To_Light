@@ -1488,9 +1488,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasUI: {fileID: 6424049888396208056}
-  pStatus: {fileID: 0}
-  cantBaterias: {fileID: 6424049887162660561}
-  cantVendajes: {fileID: 6424049887044721204}
+  flashlightStateIcon: {fileID: 6424049886992257239}
+  bateriaIcon: {fileID: 6424049887452047922}
+  vendajeIcon: {fileID: 6424049887654381236}
+  hpIcon: {fileID: 3344956809086655803}
+  cantBateriasTMP: {fileID: 6424049887162660561}
+  cantVendajesTMP: {fileID: 6424049887044721204}
 --- !u!1 &6424049888404242524
 GameObject:
   m_ObjectHideFlags: 0

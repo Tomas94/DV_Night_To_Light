@@ -31,23 +31,16 @@ public class Interactions : MonoBehaviour //Esta clase va a ser el padre de los 
 
     public void InRange(bool display)
     {
-
-
         if (display)
         {
             outline.enabled = display;
             canvasPick.SetActive(true);
-
         }
         else
         {
             outline.enabled = display;
             canvasPick.SetActive(false);
         }
-
-
-
-        //Codigo que muestre en el UI mensaje para agarrar o interactuar con un objeto
     }
 
     void OnValidate()

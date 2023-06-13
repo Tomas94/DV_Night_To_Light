@@ -5,14 +5,24 @@ using UnityEngine.UI;
 
 public class Linterna : MonoBehaviour
 {
+    [Header("Referencias")]
     [SerializeField] Player_State player;
     [SerializeField] Carga_Bateria bateriaSlider;
     [SerializeField] new Light light;
+    [SerializeField] new LineRenderer laserRenderer;
     GameObject linternalogo;
+    
+    [Header("Variables Linterna")]
     public float maxChargeTime;
     public float maxCharge;
     public float currentCharge;
     public bool isLightOn;
+
+    [Header("Variables Para Laser")]
+    Ray ray;
+    RaycastHit hit;
+    Vector3 rayDir;
+    [SerializeField] float laserLenght;
 
     private void Awake()
     {
@@ -32,6 +42,8 @@ public class Linterna : MonoBehaviour
     {
         LinternaOnOff();
         CargaRestante();
+        ActivarLaser();
+        LaserBehaviour();
     }
 
     void LinternaOnOff()
@@ -66,6 +78,46 @@ public class Linterna : MonoBehaviour
             bateriaSlider.currentCharge = currentCharge;
         }
     }
+
+    void ActivarLaser()
+    {
+        if (isLightOn)
+        {
+            if (Input.GetMouseButton(1))
+            {
+                light.enabled = false;
+                laserRenderer.enabled = true;
+            }
+            else
+            {
+                light.enabled = true;
+                laserRenderer.enabled = false;
+            }
+        }
+        else
+        {
+            light.enabled = false;
+            laserRenderer.enabled = false;
+        }
+
+
+    }
+
+    void LaserBehaviour()
+    {
+        float remainLenght = laserLenght;
+        ray = new Ray(laserRenderer.transform.position, laserRenderer.transform.forward);
+        laserRenderer.positionCount = 1;
+        laserRenderer.SetPosition(0, transform.position);
+
+        if (Physics.Raycast(ray.origin, ray.direction, out hit , remainLenght))
+        {
+            laserRenderer.positionCount += 1;
+            laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
+        }
+    }
+
+
 
 
 }

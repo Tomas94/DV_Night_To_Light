@@ -92,13 +92,16 @@ public class UI_Player : MonoBehaviour
     public void BatteriesOnHold(int batts)
     {
         string bateriasInv = batts.ToString();
-        cantBateriasTMP.text = "X " + bateriasInv;
+
+        cantBateriasTMP.text = bateriasInv;
+
+        cantBateriasTMP.text = "x " + bateriasInv;
     }
 
     public void BandagesOnHold(int bands)
     {
         string vendajesInv = bands.ToString();
-        cantVendajesTMP.text = vendajesInv;
+        cantVendajesTMP.text = "x " + vendajesInv;
     }
 
     void DesactivarHijos(GameObject gO_Index, GameObject parent)

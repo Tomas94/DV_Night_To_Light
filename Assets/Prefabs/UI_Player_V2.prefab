@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3166599655704003313}
   m_Layer: 9
-  m_Name: "Bater\xEDa_UI"
+  m_Name: "Contador_Bater\xEDa_UI"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,7 +936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6683173299190072170}
   m_Layer: 0
-  m_Name: Vidas
+  m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 8274461386239503101}
   - component: {fileID: 8274461386239503102}
   m_Layer: 9
-  m_Name: Linterna
+  m_Name: Estado_Linterna_y_Bateria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

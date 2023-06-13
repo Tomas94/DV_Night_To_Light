@@ -306,11 +306,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8349029856cc9b4b9182c2630fcfae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIPlayer: {fileID: 0}
   currentHP: 0
   cantidadBaterias: 0
   cantidadVendajes: 0
   isNicto: 0
-  linterna: {fileID: 0}
+  linterna: {fileID: 8652843414796103172}
 --- !u!1 &3575646337137724508
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +352,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575646337137724508}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -630,10 +631,12 @@ MonoBehaviour:
   player: {fileID: 7931735436944875582}
   bateriaSlider: {fileID: 0}
   light: {fileID: 3575646337137724506}
+  laserRenderer: {fileID: 8652843414354831758}
   maxChargeTime: 0.5
   maxCharge: 0
   currentCharge: 0
   isLightOn: 0
+  laserLenght: 0
 --- !u!1 &3575646337231338311
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,9 +682,10 @@ GameObject:
   - component: {fileID: 8652843414516019614}
   - component: {fileID: 4273588484656478686}
   - component: {fileID: 260247513713485552}
+  - component: {fileID: 1630311342}
   m_Layer: 9
   m_Name: PlayerCamera
-  m_TagString: Player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,6 +845,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resolution: 1
   DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
+--- !u!114 &1630311342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3575646337552053618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frustumSettings:
+    baseSettings: {fileID: 0}
+    qualitySettings: {fileID: 0}
 --- !u!1 &3575646338043905669
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8652843414354831756
 Transform:
   m_ObjectHideFlags: 0
@@ -915,7 +934,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8652843414354831757}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1014,7 +1033,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8652843414354831757}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0612ffc52663bdf41886593f4eb85342, type: 3}
   m_Name: 

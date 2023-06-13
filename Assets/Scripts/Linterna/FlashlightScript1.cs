@@ -26,13 +26,13 @@ public class FlashlightScript1 : MonoBehaviour
 
     void Update()
     {
-        FlashligthOnOff();
+       // FlashligthOnOff();
         AmplifiedLight();
-        BatteryPercent();
+       // BatteryPercent();
        // uI.BatteryState(currentCharge, _maxBatteryCharge);
     }
 
-    void FlashligthOnOff()
+   /* void FlashligthOnOff()
     {
         if (Input.GetMouseButtonDown(0) && laser.activeSelf == false)
         {
@@ -57,7 +57,7 @@ public class FlashlightScript1 : MonoBehaviour
             //AudioManager.Instance.PlaySFX("Encender_linterna");
 
         }
-    }
+    }*/
 
     void AmplifiedLight()
     {
@@ -74,13 +74,13 @@ public class FlashlightScript1 : MonoBehaviour
         }
     }
 
-    void BatteryPercent()
+  /*  void BatteryPercent()
     {
         if (_flashlightActive && currentCharge > 0)
         {
             currentCharge -= Time.deltaTime;
         }
-    }
+    }*/
 
     private void OnTriggerStay(Collider other)
     {

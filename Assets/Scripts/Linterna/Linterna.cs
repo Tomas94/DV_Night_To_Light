@@ -36,6 +36,7 @@ public class Linterna : MonoBehaviour
         currentCharge = maxCharge;
         bateriaSlider.maxCharge = maxCharge;
         bateriaSlider.currentCharge = currentCharge;
+        if (laserLenght <=0) laserLenght = 50;
     }
 
     void Update()

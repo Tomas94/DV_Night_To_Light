@@ -9,11 +9,13 @@ public class Interactions : MonoBehaviour //Esta clase va a ser el padre de los 
 {
     public float diametroTrigger = 1f;
     Outline outline;
+    GameObject canvasPick;
     
     private void Start()
     {
         outline = GetComponent<Outline>();
         outline.enabled = false;
+        canvasPick = transform.GetChild(0).gameObject;
     }
 
 
@@ -29,13 +31,19 @@ public class Interactions : MonoBehaviour //Esta clase va a ser el padre de los 
 
     public void InRange(bool display)
     {
-        
 
-        if (display) 
+
+        if (display)
         {
             outline.enabled = display;
-        }else outline.enabled = display;
+            canvasPick.SetActive(true);
 
+        }
+        else
+        {
+            outline.enabled = display;
+            canvasPick.SetActive(false);
+        }
 
 
 

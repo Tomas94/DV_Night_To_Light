@@ -310,6 +310,7 @@ MonoBehaviour:
   cantidadBaterias: 0
   cantidadVendajes: 0
   isNicto: 0
+  linterna: {fileID: 0}
 --- !u!1 &3575646337137724508
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,8 +628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7931735436944875582}
+  bateriaSlider: {fileID: 0}
   light: {fileID: 3575646337137724506}
-  maxChargeTime: 5
+  maxChargeTime: 0.5
   maxCharge: 0
   currentCharge: 0
   isLightOn: 0

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Player_State : Entity
 {
-    [Header("Referencia UI")]
-    [SerializeField] UI_Player uIPlayer;
-
     [Header("Stats")]
     public int currentHP;
     public int cantidadBaterias;
@@ -37,7 +34,7 @@ public class Player_State : Entity
     public void ObjectUse()
     {
         Heal();
-        ChangeBattery();
+        ChangeBattery();       
     }
 
     void Heal()
@@ -55,7 +52,6 @@ public class Player_State : Entity
         {
             linterna.currentCharge = linterna.maxCharge;
             cantidadBaterias--;
-            uIPlayer.BatteriesOnHold(cantidadBaterias);
         }
     }
 
@@ -81,7 +77,7 @@ public class Player_State : Entity
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "LuzTrigger")
+        if(other.tag == "LuzTrigger")
         {
             isNicto = false;
         }

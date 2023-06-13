@@ -65,12 +65,6 @@ public class Linterna : MonoBehaviour
             currentCharge -= Time.deltaTime;
             bateriaSlider.currentCharge = currentCharge;
         }
-        else
-        {
-            linternalogo.SetActive(false);
-            light.enabled = false;
-            isLightOn = false;
-        }
     }
 
 

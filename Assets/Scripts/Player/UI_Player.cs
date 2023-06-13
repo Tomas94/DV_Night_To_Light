@@ -8,8 +8,8 @@ public class UI_Player : MonoBehaviour
 
     [Header("Referencias Iconos")]
     [SerializeField] GameObject canvasUI;
-    //[SerializeField] GameObject flashlightStateIcon;
-    //[SerializeField] GameObject bateriaIcon;
+    [SerializeField] GameObject flashlightStateIcon;
+    [SerializeField] GameObject bateriaIcon;
     [SerializeField] GameObject vendajeIcon;
     [SerializeField] GameObject hpIcon;
 
@@ -17,46 +17,50 @@ public class UI_Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI cantBateriasTMP;
     [SerializeField] TextMeshProUGUI cantVendajesTMP;
 
-    #region script outdated
-    /* public void FlashLightOnOff(bool encendida)
-     {
-         if (encendida)
-         {
-             flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(false);
-         }
-         else
-         {
-             flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(true);
-         }
-     }*/
+    private void Start()
+    {
+        //pStatus = GameObject.Find("Player").GetComponent<PlayerStatus>();
+    }
 
-    /* public void BatteryState(float batPorcentaje, float maxCharge)
-     {
-         switch (batPorcentaje)
-         {
-             case float n when n >= (maxCharge * 0.75):
-                 DesactivarHijos(bateriaIcon.transform.GetChild(4).gameObject, bateriaIcon);
-                 break;
+    public void FlashLightOnOff(bool encendida)
+    {
+        if (encendida)
+        {
+            flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else
+        {
+            flashlightStateIcon.transform.GetChild(1).gameObject.SetActive(true);
+        }
+    }
 
-             case float n when n >= (maxCharge * 0.5):
-                 DesactivarHijos(bateriaIcon.transform.GetChild(3).gameObject, bateriaIcon);
-                 break;
+    public void BatteryState(float batPorcentaje, float maxCharge)
+    {
+        switch (batPorcentaje)
+        {
+            case float n when n >= (maxCharge * 0.75):
+                DesactivarHijos(bateriaIcon.transform.GetChild(4).gameObject, bateriaIcon);
+                break;
 
-             case float n when n >= (maxCharge * 0.25):
-                 DesactivarHijos(bateriaIcon.transform.GetChild(2).gameObject, bateriaIcon);
-                 break;
+            case float n when n >= (maxCharge * 0.5):
+                DesactivarHijos(bateriaIcon.transform.GetChild(3).gameObject, bateriaIcon);
+                break;
 
-             case float n when n > 0:
-                 DesactivarHijos(bateriaIcon.transform.GetChild(1).gameObject, bateriaIcon);
-                 break;
+            case float n when n >= (maxCharge * 0.25):
+                DesactivarHijos(bateriaIcon.transform.GetChild(2).gameObject, bateriaIcon);
+                break;
 
-             case float n when n <= 0:
-                 DesactivarHijos(bateriaIcon.transform.GetChild(0).gameObject, bateriaIcon);
-                 break;
-         }
-     }*/
+            case float n when n > 0:
+                DesactivarHijos(bateriaIcon.transform.GetChild(1).gameObject, bateriaIcon);
+                break;
 
-    /*public void BandageState(int cantidad)
+            case float n when n <= 0:
+                DesactivarHijos(bateriaIcon.transform.GetChild(0).gameObject, bateriaIcon);
+                break;
+        }
+    }
+
+    public void BandageState(int cantidad)
     {
         if (cantidad > 0)
         {
@@ -66,9 +70,7 @@ public class UI_Player : MonoBehaviour
         {
             vendajeIcon.transform.GetChild(1).gameObject.SetActive(true);
         }
-    }*/
-
-    #endregion
+    }
 
     public void LifeBarState(int vidaActual)
     {
@@ -92,7 +94,7 @@ public class UI_Player : MonoBehaviour
     public void BatteriesOnHold(int batts)
     {
         string bateriasInv = batts.ToString();
-        cantBateriasTMP.text = "X " + bateriasInv;
+        cantBateriasTMP.text = bateriasInv;
     }
 
     public void BandagesOnHold(int bands)

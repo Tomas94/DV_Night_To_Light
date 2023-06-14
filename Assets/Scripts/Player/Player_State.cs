@@ -8,7 +8,7 @@ public class Player_State : Entity
     [SerializeField] UI_Player uIPlayer;
 
     [Header("Stats")]
-    public int currentHP;
+    //public int currentHP;
     public int cantidadBaterias;
     public int cantidadVendajes;
 
@@ -30,6 +30,7 @@ public class Player_State : Entity
 
     private void Update()
     {
+        uIPlayer.LifeBarState(currentHP);
         ObjectUse();
         IsScared(isNicto);
     }

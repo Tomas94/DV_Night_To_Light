@@ -8,7 +8,7 @@ public class Linterna : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] Player_State player;
     [SerializeField] Carga_Bateria bateriaSlider;
-    [SerializeField] new Light light;
+    [SerializeField] Light light;
     [SerializeField] LineRenderer laserRenderer;
     GameObject linternalogo;
     
@@ -138,23 +138,11 @@ public class Linterna : MonoBehaviour
                     return;
                 }
             }
-        }
-        /*if (Physics.Raycast(ray.origin, ray.direction, out hit , remainLenght , layer))
-        {
-            laserRenderer.positionCount += 1;
-            laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
-
-            ray = new Ray(hit.transform.position, hit.transform.forward);
-        }
-        else
-        {
-            laserRenderer.positionCount += 1;
-            laserRenderer.SetPosition(laserRenderer.positionCount, this.transform.position + (this.transform.forward * laserLenght));
-            Debug.Log("Apuntando a nada");
-        }*/
+            else
+            {
+                laserRenderer.positionCount += 1;
+                laserRenderer.SetPosition(laserRenderer.positionCount - 1, ray.GetPoint(remainLenght));
+            }
+        }      
     }
-
-
-
-
 }

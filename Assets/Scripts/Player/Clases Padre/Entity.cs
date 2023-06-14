@@ -5,11 +5,18 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     protected int maxHP;
+    public int currentHP;
     protected float speed;
 
     public void TakeDamage()
     {
-        //currentHP--;
+        if (currentHP <= 0)
+        {
+            Debug.Log("Estas Muerto");
+            return;
+        }
+            currentHP--;
+            Debug.Log("Perdio Vida, hp actual: " + currentHP);     
     }
 
     public virtual void Movement()

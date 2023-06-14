@@ -9,7 +9,7 @@ public class Linterna : MonoBehaviour
     [SerializeField] Player_State player;
     [SerializeField] Carga_Bateria bateriaSlider;
     [SerializeField] new Light light;
-    [SerializeField] new LineRenderer laserRenderer;
+    [SerializeField] LineRenderer laserRenderer;
     GameObject linternalogo;
     
     [Header("Variables Linterna")]
@@ -19,9 +19,11 @@ public class Linterna : MonoBehaviour
     public bool isLightOn;
 
     [Header("Variables Para Laser")]
+    [SerializeField] float numOfReflections;
     Ray ray;
     RaycastHit hit;
     Vector3 rayDir;
+    [SerializeField] LayerMask layer;
     [SerializeField] float laserLenght;
 
     private void Awake()
@@ -117,11 +119,39 @@ public class Linterna : MonoBehaviour
         laserRenderer.positionCount = 1;
         laserRenderer.SetPosition(0, transform.position);
 
-        if (Physics.Raycast(ray.origin, ray.direction, out hit , remainLenght))
+        for (int i = 0; i < numOfReflections; i++)
+        {
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, layer))
+            {
+                if (hit.transform.tag == "Espejo")
+                {
+                    laserRenderer.positionCount += 1;
+                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
+
+                    remainLenght -= Vector3.Distance(ray.origin, hit.point);
+                    ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
+                }
+                else
+                {
+                    laserRenderer.positionCount += 1;
+                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
+                    return;
+                }
+            }
+        }
+        /*if (Physics.Raycast(ray.origin, ray.direction, out hit , remainLenght , layer))
         {
             laserRenderer.positionCount += 1;
             laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
+
+            ray = new Ray(hit.transform.position, hit.transform.forward);
         }
+        else
+        {
+            laserRenderer.positionCount += 1;
+            laserRenderer.SetPosition(laserRenderer.positionCount, this.transform.position + (this.transform.forward * laserLenght));
+            Debug.Log("Apuntando a nada");
+        }*/
     }
 
 

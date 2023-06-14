@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7768921519645579612}
   - component: {fileID: 7779549865408616100}
   - component: {fileID: 7729172365593979652}
-  - component: {fileID: 7833149954695230652}
   m_Layer: 8
   m_Name: logpile_0_LOD0
   m_TagString: Untagged
@@ -99,19 +98,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: af022346219c4654d974044c3d67a7a4, type: 3}
---- !u!65 &7833149954695230652
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755424386379304932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 3.2578144, y: 1.1690547, z: 3.8511631}
-  m_Center: {x: 0.07378054, y: 0.5010667, z: 0.21067965}
 --- !u!1 &7755456691481127160
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7758486235229271886}
   - component: {fileID: 7601301271292246806}
+  - component: {fileID: 8488086494454252726}
   m_Layer: 8
   m_Name: Pila_de_troncos
   m_TagString: Untagged
@@ -304,7 +291,7 @@ Transform:
   m_GameObject: {fileID: 7757164576932648296}
   m_LocalRotation: {x: 0, y: 0.49714056, z: 0, w: 0.86767006}
   m_LocalPosition: {x: 82.817, y: -32.6, z: 53.288}
-  m_LocalScale: {x: 3.483992, y: 2.96191, z: 2.5239685}
+  m_LocalScale: {x: 2.7448978, y: 1.199642, z: 1.9885336}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7761182461976127090}
@@ -340,3 +327,16 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7779414369289208826}
   m_Enabled: 1
+--- !u!65 &8488086494454252726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757164576932648296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.40456, y: 2.0463672, z: 4.34236}
+  m_Center: {x: 0.086802885, y: 0.5231824, z: 0.10657689}

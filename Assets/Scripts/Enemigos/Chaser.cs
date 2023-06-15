@@ -85,8 +85,8 @@ public class Chaser : MonoBehaviour
     {
         _canAttack = false;
         yield return new WaitForSeconds(2);
-        PlayerStatus player = GameObject.Find("Player").GetComponent<PlayerStatus>();
-        if (_distanciaPlayer <= rangoAtaque) player.TakeDamage();
+        //PlayerStatus player = GameObject.Find("Player").GetComponent<PlayerStatus>();
+        //if (_distanciaPlayer <= rangoAtaque) player.TakeDamage();
         yield return new WaitForSeconds(1);
         _canAttack = true;
 

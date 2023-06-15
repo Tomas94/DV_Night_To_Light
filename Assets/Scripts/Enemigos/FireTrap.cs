@@ -28,8 +28,8 @@ public class FireTrap : MonoBehaviour
         Debug.Log("Player Esta en Trigger");
         if (other.tag == "Player" && trapactive)
         {        
-            PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
-            pStatus.TakeDamage();
+            //PlayerStatus pStatus = other.GetComponent<PlayerStatus>();
+          //  pStatus.TakeDamage();
             trapactive = false;
         }
     }

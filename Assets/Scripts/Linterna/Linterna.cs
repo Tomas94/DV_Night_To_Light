@@ -23,6 +23,7 @@ public class Linterna : MonoBehaviour
     Ray ray;
     RaycastHit hit;
     Vector3 rayDir;
+    Light laserHitPoint;
     [SerializeField] LayerMask layer;
     [SerializeField] float laserLenght;
 
@@ -33,6 +34,7 @@ public class Linterna : MonoBehaviour
     }
     void Start()
     {
+        laserHitPoint = laserRenderer.GetComponentInChildren<Light>();
         linternalogo = GameObject.Find("Encendida");
         maxCharge = maxChargeTime * 60f;
         currentCharge = maxCharge;
@@ -46,7 +48,6 @@ public class Linterna : MonoBehaviour
         LinternaOnOff();
         CargaRestante();
         ActivarLaser();
-        LaserBehaviour();
     }
 
     void LinternaOnOff()
@@ -66,10 +67,10 @@ public class Linterna : MonoBehaviour
                 linternalogo.SetActive(false);
                 isLightOn = false;
                 light.enabled = false;
-            }
-
-            player.isNicto = !isLightOn;
+            }     
         }
+
+        player.isNicto = !isLightOn;
         linternalogo.SetActive(isLightOn ? true : false);
     }
 
@@ -96,11 +97,13 @@ public class Linterna : MonoBehaviour
             {
                 light.enabled = false;
                 laserRenderer.enabled = true;
+                LaserBehaviour();
             }
             else
             {
                 light.enabled = true;
                 laserRenderer.enabled = false;
+                laserHitPoint.enabled = false;
             }
         }
         else
@@ -126,8 +129,7 @@ public class Linterna : MonoBehaviour
                 if (hit.transform.tag == "Espejo")
                 {
                     laserRenderer.positionCount += 1;
-                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
-
+                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);                 
                     remainLenght -= Vector3.Distance(ray.origin, hit.point);
                     ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
                 }
@@ -135,7 +137,8 @@ public class Linterna : MonoBehaviour
                 {
                     laserRenderer.positionCount += 1;
                     laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
-                    return;
+                    laserHitPoint.enabled = true;                   
+                    laserHitPoint.transform.position = hit.point;
                 }
             }
             else
@@ -143,6 +146,7 @@ public class Linterna : MonoBehaviour
                 laserRenderer.positionCount += 1;
                 laserRenderer.SetPosition(laserRenderer.positionCount - 1, ray.GetPoint(remainLenght));
             }
-        }      
+        }
+        
     }
 }

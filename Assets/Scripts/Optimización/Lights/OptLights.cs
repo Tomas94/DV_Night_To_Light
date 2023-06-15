@@ -5,7 +5,8 @@ using UnityEngine;
 public class OptLights : MonoBehaviour
 {
     Transform _cam;
-
+    
+    [Header("Distancia mínima")]
     public float minDist;
 
     [Header("Referencia automática")] 

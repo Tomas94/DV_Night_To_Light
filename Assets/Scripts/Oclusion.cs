@@ -64,15 +64,14 @@ public class Oclusion : MonoBehaviour
         int ocultos = 0;
         foreach (GameObject staticobj in staticObjects)
         {
-            if(Vector3.Distance(staticobj.transform.position, player.transform.position) < minDist)
+            if(Vector3.Distance(staticobj.transform.position, player.transform.position) <= minDist)
             {
-                staticobj.SetActive(true);
-                ocultos++;
+                staticobj.SetActive(true);              
             }
             else
             {
                 staticobj.SetActive(false);
-
+                ocultos++;
             }
         }
         objetosOcultos = ocultos;

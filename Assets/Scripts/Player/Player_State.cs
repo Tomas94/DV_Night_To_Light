@@ -50,11 +50,12 @@ public class Player_State : Entity
         }
     }
 
-    void ChangeBattery()
+    public void ChangeBattery()
     {
-        if (Input.GetKeyDown(KeyCode.R) && /*currentCharge < maxCharge &&*/ cantidadBaterias > 0)
+        if (Input.GetKeyDown(KeyCode.R) && cantidadBaterias > 0)
         {
             linterna.currentCharge = linterna.maxCharge;
+            linterna.bateriaSlider.currentCharge = linterna.currentCharge;
             cantidadBaterias--;
             uIPlayer.BatteriesOnHold(cantidadBaterias);
         }

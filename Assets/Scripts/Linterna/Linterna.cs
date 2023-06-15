@@ -7,7 +7,7 @@ public class Linterna : MonoBehaviour
 {
     [Header("Referencias")]
     [SerializeField] Player_State player;
-    [SerializeField] Carga_Bateria bateriaSlider;
+    public Carga_Bateria bateriaSlider;
     [SerializeField] Light light;
     [SerializeField] LineRenderer laserRenderer;
     GameObject linternalogo;
@@ -85,7 +85,7 @@ public class Linterna : MonoBehaviour
         {
             linternalogo.SetActive(false);
             light.enabled = false;
-            isLightOn = false;
+            isLightOn = false;           
         }
     }
 

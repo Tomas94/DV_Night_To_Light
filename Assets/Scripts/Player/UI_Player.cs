@@ -8,8 +8,6 @@ public class UI_Player : MonoBehaviour
 
     [Header("Referencias Iconos")]
     [SerializeField] GameObject canvasUI;
-    //[SerializeField] GameObject flashlightStateIcon;
-    //[SerializeField] GameObject bateriaIcon;
     [SerializeField] GameObject vendajeIcon;
     [SerializeField] GameObject hpIcon;
 

@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df025444e93c4345bfd4b46fc8f7903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diametroTrigger: 5
+  diametroTrigger: 7
   player_UI: {fileID: 0}
   playerInventory: {fileID: 0}
   canPick: 0

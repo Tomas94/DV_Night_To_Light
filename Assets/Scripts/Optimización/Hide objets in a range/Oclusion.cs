@@ -51,8 +51,7 @@ public class Oclusion : MonoBehaviour
         {
             if (obj.isStatic)
             {
-                staticObjects.Add(obj);
-                
+                if(obj.name != "Terrain") staticObjects.Add(obj);
             }
         }
         objetosOcultos = staticObjects.Count;

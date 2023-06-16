@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_State : Entity
 {
@@ -71,14 +72,46 @@ public class Player_State : Entity
                 startTime = 0f;
                 TakeDamage();
             }
-            Debug.Log("A Oscuras");
+            //Debug.Log("A Oscuras");
         }
         else
         {
             startTime = 0.0f;
-            Debug.Log("En la Luz");
+            //Debug.Log("En la Luz");
         }
     }
+
+    public override void TakeDamage()
+    {
+        base.TakeDamage();
+        
+        if (currentHP <= 0)
+        {
+            StartCoroutine(GameOver());
+        }
+    }
+
+    IEnumerator GameOver()
+    {
+        CharacterController playerCH = GetComponent<CharacterController>();
+        playerCH.enabled = false;
+        CanvasGroup fadeScreen = GetComponentInChildren<CanvasGroup>();
+        float timeToFade = 0;
+        float fadeDuration = 0.5f;
+
+        while(timeToFade < fadeDuration)
+        {
+            float alpha = Mathf.Lerp(0, 1, timeToFade / fadeDuration);
+            fadeScreen.alpha = alpha;
+            timeToFade += Time.deltaTime;
+            yield return null;
+        }
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        fadeScreen.alpha = 1;
+        SceneManager.LoadScene("Moriste");
+    }
+
 
 
     private void OnTriggerStay(Collider other)

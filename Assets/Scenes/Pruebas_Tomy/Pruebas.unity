@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 5499299a3bd441b44bb0ff3228b446af, type: 2}
 --- !u!1001 &1588659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3567,6 +3567,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173457856}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &177374804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4067417610448733052, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067417610448733052, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067417610448733052, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 789.75665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5613384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 379.971
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.029613743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9995614
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -183.394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709797790363166559, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_Name
+      value: Cultist
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
 --- !u!1001 &185159985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3659,6 +3728,10 @@ PrefabInstance:
     - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_Name
       value: 'Casa Ver.3 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
@@ -4568,6 +4641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Caba\xF1a_puzzle"
       objectReference: {fileID: 0}
+    - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
 --- !u!4 &212409479 stripped
@@ -4861,7 +4938,7 @@ Transform:
   - {fileID: 1533622690}
   - {fileID: 1532018657}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221499148
 MonoBehaviour:
@@ -4969,7 +5046,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh387426
+  m_Name: pb_Mesh28534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7813,6 +7890,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743000820}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -9353,6 +9434,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743000820}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -11346,6 +11431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa Ver.3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -12396,6 +12485,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 121752211}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver.2
@@ -13126,6 +13219,7 @@ MonoBehaviour:
   objetosScene: []
   staticObjects: []
   minDist: 200
+  objetosOcultos: 0
 --- !u!4 &624749502
 Transform:
   m_ObjectHideFlags: 0
@@ -13139,7 +13233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &625877628
 PrefabInstance:
@@ -14008,7 +14102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6569712318071520882, guid: 8f748d7e2e4912241b1c659a13414c0d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6569712318071520882, guid: 8f748d7e2e4912241b1c659a13414c0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15169,6 +15263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 335168538}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -16678,7 +16776,7 @@ Transform:
   - {fileID: 1423577569}
   - {fileID: 1428143470}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &817931514
 PrefabInstance:
@@ -16690,6 +16788,10 @@ PrefabInstance:
     - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_Name
       value: Pila_de_troncos
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7758486235229271886, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_RootOrder
@@ -16767,6 +16869,10 @@ PrefabInstance:
     - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_Name
       value: Casa Ver.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
@@ -17148,7 +17254,7 @@ Transform:
   - {fileID: 1461011421}
   - {fileID: 1574643514}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &834946744
 PrefabInstance:
@@ -18177,6 +18283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 335168538}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -19055,12 +19165,12 @@ GameObject:
   - component: {fileID: 930707949}
   - component: {fileID: 930707948}
   - component: {fileID: 930707947}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!154 &930707947
 TerrainCollider:
@@ -19946,6 +20056,10 @@ PrefabInstance:
     - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_Name
       value: Pila_de_troncos
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7758486235229271886, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_RootOrder
@@ -21962,6 +22076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa Ver.3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22310,6 +22428,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 335168538}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -24221,6 +24343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casa Ver.3
       objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24389,6 +24515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pila_de_troncos
       objectReference: {fileID: 0}
+    - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7758486235229271886, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24527,7 +24657,7 @@ Transform:
   - {fileID: 1217782526}
   - {fileID: 1398955899}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142883977
 GameObject:
@@ -27906,6 +28036,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 335168538}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -28557,6 +28691,10 @@ PrefabInstance:
     - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
       propertyPath: m_Name
       value: "Caba\xF1a_puzzle"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
@@ -40712,7 +40850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 786883285251304693, guid: 09b08f54dd8c5174a8b28eefb4289999, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 786883285251304693, guid: 09b08f54dd8c5174a8b28eefb4289999, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41050,6 +41188,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743000820}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -42475,7 +42617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3166599657128573422, guid: f1d90b6a897924345b241c3a0e4992f7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3166599657128573422, guid: f1d90b6a897924345b241c3a0e4992f7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -43360,7 +43502,7 @@ PrefabInstance:
       objectReference: {fileID: 14231268}
     - target: {fileID: 8315340385687422652, guid: 16180dfbddd2bcd4bbc165f13338d65a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8315340385687422652, guid: 16180dfbddd2bcd4bbc165f13338d65a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45230,6 +45372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Pila_de_troncos '
       objectReference: {fileID: 0}
+    - target: {fileID: 7757164576932648296, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7758486235229271886, guid: 2132e70d0787be24bb09fb9887c4d132, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -45801,6 +45947,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743000820}
     m_Modifications:
+    - target: {fileID: 2830106992843189470, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7103521599955492077, guid: 7b084e9d5ede15b4ba38238fab2d4104, type: 3}
       propertyPath: m_Name
       value: Casa Ver2
@@ -47762,6 +47912,10 @@ PrefabInstance:
     - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
       propertyPath: m_Name
       value: "Caba\xF1a_puzzle"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
@@ -50190,6 +50344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Casa Ver.3 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5009785845891086957, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5678340955458920663, guid: 4041d225482b4bb4eafb5ab5df91bdd8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -50569,6 +50727,10 @@ PrefabInstance:
     - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
       propertyPath: m_Name
       value: "Caba\xF1a_puzzle"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399727438329295914, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a084e8b7ab8c134ca4ff6b52232da5b, type: 3}
@@ -51355,7 +51517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 786883285251304693, guid: 09b08f54dd8c5174a8b28eefb4289999, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 786883285251304693, guid: 09b08f54dd8c5174a8b28eefb4289999, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53427,7 +53589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3575646336489000709, guid: 3e8a6f1556dadad4e87175116fa3ff36, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3575646336489000709, guid: 3e8a6f1556dadad4e87175116fa3ff36, type: 3}
       propertyPath: m_LocalPosition.x

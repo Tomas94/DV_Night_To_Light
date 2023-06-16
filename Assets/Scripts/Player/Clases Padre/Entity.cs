@@ -8,13 +8,8 @@ public class Entity : MonoBehaviour
     public int currentHP;
     protected float speed;
 
-    public void TakeDamage()
-    {
-        if (currentHP <= 0)
-        {
-            Debug.Log("Estas Muerto");
-            return;
-        }
+    public virtual void TakeDamage()
+    {       
             currentHP--;
             Debug.Log("Perdio Vida, hp actual: " + currentHP);     
     }

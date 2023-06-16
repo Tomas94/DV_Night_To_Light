@@ -75,7 +75,7 @@ public class Chaser : MonoBehaviour
         }
         else
         {
-            chaserNM.isStopped = true;
+            //chaserNM.isStopped = true;
             Debug.Log("Fuera de Rango");
             anim.SetBool("EnRango", false);
         }

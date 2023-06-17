@@ -71,10 +71,16 @@ public class Chaser : Entity
         }
     }
 
-    void Estado()
+    public override void TakeDamage()
     {
+        base.TakeDamage();
 
-        
+        if(currentHP <= 0)
+        {
+            GetComponentInParent<Animator>().enabled = false;
+            GetComponentInParent<NavMeshAgent>().enabled = false;
+            Destroy(gameObject);
+        }
     }
 
 

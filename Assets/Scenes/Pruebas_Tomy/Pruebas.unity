@@ -3574,6 +3574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3242407063596527246, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4067417610448733052, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
       propertyPath: m_AngularSpeed
       value: 1500
@@ -3585,6 +3589,10 @@ PrefabInstance:
     - target: {fileID: 4067417610448733052, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511698910076305783, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6221209579913248229, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
       propertyPath: m_RootOrder
@@ -3634,7 +3642,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cultist
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6709797790363166559, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: m_TagString
+      value: Cultista
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453758137363429156, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+      propertyPath: currentHP
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1856836213, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
+    - {fileID: 1856836214, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18974eaba1cc3804083a7d911e78b9f6, type: 3}
 --- !u!1001 &185159985
 PrefabInstance:
@@ -5046,7 +5064,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28534
+  m_Name: pb_Mesh714600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -10,8 +10,7 @@ public class Entity : MonoBehaviour
 
     public virtual void TakeDamage()
     {       
-            currentHP--;
-            Debug.Log("Perdio Vida, hp actual: " + currentHP);     
+            currentHP--;     
     }
 
     public virtual void Movement()

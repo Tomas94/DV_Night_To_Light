@@ -11,12 +11,15 @@ public class Linterna : MonoBehaviour
     [SerializeField] Light light;
     [SerializeField] LineRenderer laserRenderer;
     GameObject linternalogo;
-    
+
+
     [Header("Variables Linterna")]
     public float maxChargeTime;
     public float maxCharge;
     public float currentCharge;
     public bool isLightOn;
+    public bool canLaserAttack;
+
 
     [Header("Variables Para Laser")]
     [SerializeField] float numOfReflections;
@@ -40,7 +43,8 @@ public class Linterna : MonoBehaviour
         currentCharge = maxCharge;
         bateriaSlider.maxCharge = maxCharge;
         bateriaSlider.currentCharge = currentCharge;
-        if (laserLenght <=0) laserLenght = 50;
+        if (laserLenght <= 0) laserLenght = 50;
+        canLaserAttack = true;
     }
 
     void Update()
@@ -53,7 +57,7 @@ public class Linterna : MonoBehaviour
     void LinternaOnOff()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.F))
         {
 
             if (!isLightOn)
@@ -67,7 +71,7 @@ public class Linterna : MonoBehaviour
                 linternalogo.SetActive(false);
                 isLightOn = false;
                 light.enabled = false;
-            }     
+            }
         }
 
         player.isNicto = !isLightOn;
@@ -85,7 +89,7 @@ public class Linterna : MonoBehaviour
         {
             linternalogo.SetActive(false);
             light.enabled = false;
-            isLightOn = false;           
+            isLightOn = false;
         }
     }
 
@@ -129,15 +133,23 @@ public class Linterna : MonoBehaviour
                 if (hit.transform.tag == "Espejo")
                 {
                     laserRenderer.positionCount += 1;
-                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);                 
+                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
                     remainLenght -= Vector3.Distance(ray.origin, hit.point);
                     ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
+                }
+                else if (hit.transform.tag == "Cultista")
+                {
+                    if (Input.GetMouseButtonDown(0)) StartCoroutine(LaserAttack(hit.transform.gameObject));
+                    laserRenderer.positionCount += 1;
+                    laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
+                    laserHitPoint.enabled = true;
+                    laserHitPoint.transform.position = hit.point;
                 }
                 else
                 {
                     laserRenderer.positionCount += 1;
                     laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
-                    laserHitPoint.enabled = true;                   
+                    laserHitPoint.enabled = true;
                     laserHitPoint.transform.position = hit.point;
                 }
             }
@@ -147,6 +159,50 @@ public class Linterna : MonoBehaviour
                 laserRenderer.SetPosition(laserRenderer.positionCount - 1, ray.GetPoint(remainLenght));
             }
         }
-        
+
+    }
+
+    IEnumerator LaserAttack(GameObject enemy)
+    {
+        if (canLaserAttack)
+        {
+            canLaserAttack = false;
+
+            Debug.Log(enemy.name);
+            List<Material> skinMaterials = new List<Material>();
+            Renderer[] skinRenderer = enemy.GetComponentsInChildren<Renderer>();
+            Chaser chaser = enemy.GetComponentInChildren<Chaser>();
+            float isdead = chaser.currentHP;
+
+
+            foreach (Renderer skin in skinRenderer)
+            {
+                Material[] materials = skin.materials;
+                skinMaterials.AddRange(materials);
+            }
+
+            if (isdead == 3)
+            {
+                skinMaterials[0].color = new Color(0.6f, 0.6f, 0.6f, 1);
+                skinMaterials[1].color = new Color(0.6f, 0.6f, 0.6f, 1);
+                Debug.Log("enemigo dañano, le quedan 2 de hp");
+            }
+            else if (isdead == 2)
+            {
+                skinMaterials[0].color = new Color(0.3f, 0.3f, 0.3f, 1);
+                skinMaterials[1].color = new Color(0.3f, 0.3f, 0.3f, 1);
+                Debug.Log("enemigo dañano, le quedan 1 de hp");
+            }
+            else if (isdead == 1)
+            {
+                Debug.Log("enemigo dañano, le quedan 0 de hp");
+                skinMaterials[0].color = Color.black;
+                skinMaterials[1].color = Color.black;
+            }
+
+            chaser.TakeDamage();
+            yield return new WaitForSeconds(2.5f);
+            canLaserAttack = true;
+        }
     }
 }

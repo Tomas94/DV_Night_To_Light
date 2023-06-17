@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8554972237791044576}
   - component: {fileID: 5193420575526659032}
   - component: {fileID: 1441927356428836796}
+  - component: {fileID: 1042467161}
+  - component: {fileID: 1042467160}
   m_Layer: 8
   m_Name: silla
   m_TagString: Decorado
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7906528315005108789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.018721085, y: 0.018721085, z: 0.018721085}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,3 +122,29 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8554972237791044576}
   m_Enabled: 1
+--- !u!65 &1042467161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906528315005108789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3698452, y: 1.6661333, z: 1.4560283}
+  m_Center: {x: -0.00000011920929, y: 0.83306664, z: 0.034653127}
+--- !u!65 &1042467160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906528315005108789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3698452, y: 1.3927772, z: 0.3878504}
+  m_Center: {x: -0.00000011920929, y: 2.3027773, z: 0.5687421}

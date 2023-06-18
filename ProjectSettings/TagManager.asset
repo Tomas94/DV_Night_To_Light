@@ -7,19 +7,10 @@ TagManager:
   - Pickable
   - Espejo
   - Boton
-  - Liso
-  - Puerta
   - LuzTrigger
-  - Brasero
   - Linterna
-  - Decorado
-  - Casa
-  - Cofre
-  - Caja
-  - Barco
   - Enemigo
   - Cultista
-  - Pickeable
   layers:
   - Default
   - TransparentFX
@@ -32,7 +23,7 @@ TagManager:
   - Surface
   - Player
   - Limits
-  - 
+  - UI
   - 
   - 
   - 

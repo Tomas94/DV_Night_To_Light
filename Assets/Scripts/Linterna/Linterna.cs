@@ -53,6 +53,10 @@ public class Linterna : MonoBehaviour
         CargaRestante();
         ActivarLaser();
     }
+    private void LateUpdate()
+    {
+        //ActivarLaser();
+    }
 
     void LinternaOnOff()
     {
@@ -152,6 +156,7 @@ public class Linterna : MonoBehaviour
                     laserHitPoint.enabled = true;
                     laserHitPoint.transform.position = hit.point;
                 }
+                
             }
             else
             {

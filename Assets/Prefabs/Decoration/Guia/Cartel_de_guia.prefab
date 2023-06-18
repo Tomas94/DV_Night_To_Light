@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375813008}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Objeto_para_mover_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 841993933}
   - component: {fileID: 841993935}
   - component: {fileID: 841993934}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 968205966}
   - component: {fileID: 968205965}
   - component: {fileID: 968205964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas_texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 5012708247855329254}
   - component: {fileID: 7154033741960415275}
   - component: {fileID: 2042857580615664919}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas_texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7538970693562027635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Objeto_para_mover_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 5538612133602900547}
   - component: {fileID: 4424185411130042170}
   - component: {fileID: 3854138102367853192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 2646855477394134955}
   - component: {fileID: 4788645942130337739}
   - component: {fileID: 1702410135496409903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas_texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 6950759138054785215}
   - component: {fileID: 7298512691520189759}
   - component: {fileID: 9146657622163296375}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 7827971130139605954}
   - component: {fileID: 9102640718584923538}
   - component: {fileID: 6189430526154667694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7138667129537494592}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cartel_de_guia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 3891307463397650182}
   - component: {fileID: 6238110394658411280}
   - component: {fileID: 5716788095137124554}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 3839292976583856737}
   - component: {fileID: 4881391468814624698}
   - component: {fileID: 8420329980758848826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7820842207719253613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Objeto_para_mover_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 6434161440420551424}
   - component: {fileID: 2566229040203505192}
   - component: {fileID: 4396882085153705998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

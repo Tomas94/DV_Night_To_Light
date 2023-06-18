@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8347396900513994370}
   - component: {fileID: 2641511723367093743}
   - component: {fileID: 3251309083117760521}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Laterales1
-  m_TagString: Caja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 1328620133100363797}
   - component: {fileID: 1762235955964047628}
   - component: {fileID: 7983369606437181626}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Caja_Desarmable
-  m_TagString: Caja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,9 +183,9 @@ GameObject:
   - component: {fileID: 4933613282388085278}
   - component: {fileID: 749668199905447201}
   - component: {fileID: 3373884950357667180}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Laterales2
-  m_TagString: Caja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,9 +266,9 @@ GameObject:
   - component: {fileID: 3185739031851093633}
   - component: {fileID: 9110328713064141367}
   - component: {fileID: 1696949158582222714}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Base
-  m_TagString: Caja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,9 +349,9 @@ GameObject:
   - component: {fileID: 3927455460639774783}
   - component: {fileID: 7435447609828512516}
   - component: {fileID: 3546853797415804927}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Superior
-  m_TagString: Caja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

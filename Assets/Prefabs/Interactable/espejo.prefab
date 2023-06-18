@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9148410335375580242}
   - component: {fileID: 1314721485}
   - component: {fileID: 4852725071996471482}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: espejo
   m_TagString: Espejo
   m_Icon: {fileID: 0}

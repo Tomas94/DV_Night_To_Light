@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3336960125236812772}
   - component: {fileID: 7611419676793322861}
   - component: {fileID: 2315886911512796069}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Caja_Abierta
-  m_TagString: Cofre
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8939432226844339338}
   - component: {fileID: 1666575587008004129}
   - component: {fileID: 359240199242045904}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6609269307795165366}
   - component: {fileID: 2174142657174972063}
   - component: {fileID: 2696783348409216550}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Tapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}

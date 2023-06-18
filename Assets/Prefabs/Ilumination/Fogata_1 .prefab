@@ -29096,7 +29096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3580525092887071431}
   - component: {fileID: 1562304505317031596}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger_nictofobia
   m_TagString: LuzTrigger
   m_Icon: {fileID: 0}

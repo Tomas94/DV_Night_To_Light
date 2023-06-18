@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2098482447880609928}
   - component: {fileID: 8721314077532377067}
   - component: {fileID: 8745381446248658398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 181453130654284362}
   - component: {fileID: 3620622516164974039}
   - component: {fileID: 3434384507505044706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4626315309652094783}
   - component: {fileID: 7697274078253668019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: valla_entera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 6452370458241715953}
   - component: {fileID: 8500421057227624243}
   - component: {fileID: 1031466973732824953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: vallas_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 7487038033053401353}
   - component: {fileID: 7573600111130788804}
   - component: {fileID: 70808806755802345}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: valla_entrrea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

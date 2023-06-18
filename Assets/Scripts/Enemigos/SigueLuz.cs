@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SigueLuz : MonoBehaviour
+public class SigueLuz : Entity
 {
-    public GameObject luz; //Referencia a la luz
+    public Light luz; //Referencia a la luz
     public float velocidad; //Velocidad de seguimiento del objeto
     NavMeshAgent navM;
 
@@ -14,11 +14,13 @@ public class SigueLuz : MonoBehaviour
     private void Start()
     {
         navM = GetComponent<NavMeshAgent>();
+        currentHP = 1;
     }
 
     void Update()
     {
         FollowLight();
+      //  OnDrawGizmos();
     }
 
     private void OnTriggerStay(Collider other)
@@ -41,7 +43,7 @@ public class SigueLuz : MonoBehaviour
     void FollowLight()
     {
         float distanceToLight = Vector3.Distance(luz.transform.position, transform.position);
-        if (luz.gameObject.activeSelf && distanceToLight <= range) navM.SetDestination(luz.transform.position);
+        if (luz.enabled && distanceToLight <= range) navM.SetDestination(luz.transform.position);
     }
 }
 

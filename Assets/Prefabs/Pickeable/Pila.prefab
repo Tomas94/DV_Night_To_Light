@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 614932522}
   - component: {fileID: 614932524}
   - component: {fileID: 614932523}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Flecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1251367046}
   - component: {fileID: 1251367045}
   - component: {fileID: 1251367048}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Canvas_texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6dc9f69de5f494da36057f3b0ad2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
 --- !u!1 &1673477260
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,13 +201,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673477261}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CanvasHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1673477261
 Transform:
   m_ObjectHideFlags: 0
@@ -236,7 +235,7 @@ GameObject:
   - component: {fileID: 1965108417}
   - component: {fileID: 1965108419}
   - component: {fileID: 1965108418}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +370,7 @@ GameObject:
   - component: {fileID: 2118803853}
   - component: {fileID: 2118803855}
   - component: {fileID: 2118803854}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +449,7 @@ GameObject:
   - component: {fileID: 750388809090025617}
   - component: {fileID: 2315888835659558022}
   - component: {fileID: 2315888835659558021}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Pila
   m_TagString: Pickable
   m_Icon: {fileID: 0}

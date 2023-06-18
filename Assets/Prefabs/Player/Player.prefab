@@ -41,16 +41,16 @@ Light:
   m_GameObject: {fileID: 260247514651794693}
   m_Enabled: 0
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 25
-  m_Range: 100
+  m_Intensity: 100
+  m_Range: 1
   m_SpotAngle: 3
   m_InnerSpotAngle: 3
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -83,7 +83,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1556962660445284228}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GameOverScreenHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6498302194697422926}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: DetectPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 4969749388226987229}
   - component: {fileID: 7879737105354504291}
   - component: {fileID: 1488297997405412225}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 3575646336489000710}
   - component: {fileID: 7931735436944875553}
   - component: {fileID: 7931735436944875582}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -339,9 +339,9 @@ GameObject:
   - component: {fileID: 3575646337137724507}
   - component: {fileID: 3575646337137724506}
   - component: {fileID: 260247513278078603}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Spot Light
-  m_TagString: Linterna
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,9 +460,9 @@ GameObject:
   - component: {fileID: 3575646337144359850}
   - component: {fileID: 3575646337144359848}
   - component: {fileID: 3575646337144359849}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Body
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,9 +545,9 @@ GameObject:
   - component: {fileID: 3575646337161414654}
   - component: {fileID: 260247514247238072}
   - component: {fileID: 8652843414796103172}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Flashlight
-  m_TagString: Linterna
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,6 +652,7 @@ MonoBehaviour:
   maxCharge: 0
   currentCharge: 0
   isLightOn: 0
+  canLaserAttack: 0
   numOfReflections: 5
   layer:
     serializedVersion: 2
@@ -666,7 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3575646337231338310}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +704,7 @@ GameObject:
   - component: {fileID: 4273588484656478686}
   - component: {fileID: 260247513713485552}
   - component: {fileID: 1630311342}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -889,9 +890,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3575646338043905668}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FlashLightHolder
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +926,7 @@ GameObject:
   - component: {fileID: 1284252965490605942}
   - component: {fileID: 7150162832175231446}
   - component: {fileID: 8609952745754986353}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GameOverScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1039,7 @@ GameObject:
   - component: {fileID: 8652843414354831758}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Linterna
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1099,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 546370155
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}

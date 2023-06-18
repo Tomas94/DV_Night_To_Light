@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 584242845062433917}
   - component: {fileID: 4590432806228558808}
   - component: {fileID: 1752050995625293586}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Asiento
   m_TagString: Untagged
   m_Icon: {fileID: 0}

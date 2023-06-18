@@ -4,26 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pickable
-  - Espejo
-  - Boton
+  - Barco
   - LuzTrigger
-  - Linterna
-  - Enemigo
-  - Cultista
+  - Pickable
+  - Cofre
+  - Caja
+  - Boton
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Solido
   - Water
   - UI
-  - PostPro
-  - Interactable
-  - Surface
-  - Player
-  - Limits
-  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -47,7 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Player
-    uniqueID: 546370155
     locked: 0

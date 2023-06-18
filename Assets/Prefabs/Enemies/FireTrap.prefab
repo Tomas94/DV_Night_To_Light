@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 624686250467833670}
   - component: {fileID: 624686250467833673}
   - component: {fileID: 624686250467833672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FireTrap
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 10.516991, z: 1}
-  m_Center: {x: 0, y: 4.7584944, z: 0}
+  m_Size: {x: 1, y: 1.8119669, z: 1}
+  m_Center: {x: 0, y: 0.4059825, z: 0}
 --- !u!114 &624686250467833672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,9 +120,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 624686250467833668}
     m_Modifications:
+    - target: {fileID: 4357098632382822029, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098632817511390, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098632952011101, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098632975527783, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098633033029323, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098633138578640, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098633485200843, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098633678310316, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4357098633783338647, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
       propertyPath: m_Name
       value: FuegoTrampa
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098633783338647, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4357098633783338647, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
       propertyPath: m_IsActive
@@ -171,6 +207,14 @@ PrefabInstance:
     - target: {fileID: 4357098633783338648, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357098634075830374, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752799519702188921, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3091f92e46e373345b790e9da5b25ecd, type: 3}

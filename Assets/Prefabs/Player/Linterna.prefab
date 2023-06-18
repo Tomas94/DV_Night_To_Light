@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2086618536596298350}
   - component: {fileID: 3124076565900449227}
   - component: {fileID: 918176168347083009}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Linterna
-  m_TagString: Linterna
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

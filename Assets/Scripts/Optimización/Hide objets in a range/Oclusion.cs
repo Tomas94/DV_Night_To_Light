@@ -4,26 +4,6 @@ using UnityEngine;
 
 public class Oclusion : MonoBehaviour
 {
-    /*Transform playerCam;
-
-    float minDist;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public virtual void OclusionDistance()
-    {
-        if(Vector3.Distance(playerCam.position, transform.position ) < minDist)
-    }*/
-
    [SerializeField] GameObject player;
    [SerializeField] GameObject[] objetosScene;
    [SerializeField] List<GameObject> staticObjects;

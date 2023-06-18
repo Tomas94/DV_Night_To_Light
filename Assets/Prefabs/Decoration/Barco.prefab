@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2789257371699142364}
   - component: {fileID: 2142172583424501344}
   - component: {fileID: 2132912848708533196}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Barco
-  m_TagString: Barco
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126

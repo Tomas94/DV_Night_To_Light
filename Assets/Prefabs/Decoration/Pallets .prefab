@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5537094012918633104}
   - component: {fileID: 7724591328962930266}
   - component: {fileID: 3950659757802189256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'Pallets '
-  m_TagString: Decorado
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127

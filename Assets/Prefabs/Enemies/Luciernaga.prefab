@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8338098731512803271}
   - component: {fileID: 8338098731512803270}
   - component: {fileID: 8338098731512803269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ojo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,9 +111,9 @@ GameObject:
   - component: {fileID: 8338098732297384851}
   - component: {fileID: 8338098732297384847}
   - component: {fileID: 8338098732297384840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Luciernaga
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,8 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b981a8689e368649822223c6e3b00df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHP: 0
   luz: {fileID: 0}
   velocidad: 5
+  range: 0
 --- !u!195 &8338098732297384840
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -246,7 +248,7 @@ GameObject:
   - component: {fileID: 8338098732580975756}
   - component: {fileID: 8338098732580975763}
   - component: {fileID: 8338098732580975762}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ojo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

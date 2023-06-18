@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4180719854239272039}
   - component: {fileID: 8941435893442858937}
   - component: {fileID: 6819046168410641410}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: mesa
-  m_TagString: Decorado
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126

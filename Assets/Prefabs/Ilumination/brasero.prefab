@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 30102783}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fuego (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 220420719}
   - component: {fileID: 220420721}
   - component: {fileID: 220420720}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 347919883}
   - component: {fileID: 347919885}
   - component: {fileID: 347919884}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9670,7 +9670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026237520}
   - component: {fileID: 1026237519}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger_nictofobia
   m_TagString: LuzTrigger
   m_Icon: {fileID: 0}
@@ -9716,7 +9716,7 @@ GameObject:
   - component: {fileID: 1106131710}
   - component: {fileID: 1106131712}
   - component: {fileID: 1106131711}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14526,7 +14526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204001643}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fuego_Brasero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14561,7 +14561,7 @@ GameObject:
   - component: {fileID: 1215788912}
   - component: {fileID: 1215788914}
   - component: {fileID: 1215788913}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19373,7 +19373,7 @@ GameObject:
   - component: {fileID: 1333730373}
   - component: {fileID: 1333730375}
   - component: {fileID: 1333730374}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24184,7 +24184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973629356}
   - component: {fileID: 1973629357}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Iluminacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24277,7 +24277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2029949792}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24312,7 +24312,7 @@ GameObject:
   - component: {fileID: 2145242906}
   - component: {fileID: 2145242908}
   - component: {fileID: 2145242907}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29125,9 +29125,9 @@ GameObject:
   - component: {fileID: 2335722848635289091}
   - component: {fileID: 4156263559270415833}
   - component: {fileID: 278486703944214201}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Base
-  m_TagString: Brasero
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126
@@ -29222,9 +29222,9 @@ GameObject:
   - component: {fileID: 1579000105828406099}
   - component: {fileID: 4588660540614021909}
   - component: {fileID: 3209598531438996759}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: brasero
-  m_TagString: Brasero
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -29302,9 +29302,9 @@ GameObject:
   - component: {fileID: 5127117029031301092}
   - component: {fileID: 6245785006576331843}
   - component: {fileID: 8375008069346228366}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Top Metalico
-  m_TagString: Brasero
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126

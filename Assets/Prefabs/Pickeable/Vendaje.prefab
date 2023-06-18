@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6dc9f69de5f494da36057f3b0ad2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
 --- !u!1 &2527352541438205447
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +374,7 @@ GameObject:
   - component: {fileID: -7478954726689914713}
   - component: {fileID: 1578433042}
   - component: {fileID: 1578433043}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Vendaje
   m_TagString: Pickable
   m_Icon: {fileID: 0}

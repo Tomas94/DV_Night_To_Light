@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7768921519645579612}
   - component: {fileID: 7779549865408616100}
   - component: {fileID: 7729172365593979652}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: logpile_0_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7758076763006215396}
   - component: {fileID: 7769458236523757140}
   - component: {fileID: 7779776039449634344}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: logpile_0_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 7758500401941479966}
   - component: {fileID: 7772443678544818624}
   - component: {fileID: 7779414369289208826}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: logpile_0_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 7758486235229271886}
   - component: {fileID: 7601301271292246806}
   - component: {fileID: 8488086494454252726}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Pila_de_troncos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

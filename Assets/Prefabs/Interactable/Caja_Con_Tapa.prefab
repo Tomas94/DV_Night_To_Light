@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5812833714971452637}
   - component: {fileID: 1943536885703148516}
   - component: {fileID: 519025818011592524}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Tapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 1072094273028340409}
   - component: {fileID: 7426936361656728162}
   - component: {fileID: 4860246790726290712}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 4317322840056590243}
   - component: {fileID: 4420070674869812615}
   - component: {fileID: 841035419826772113}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Caja_Con_Tapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}

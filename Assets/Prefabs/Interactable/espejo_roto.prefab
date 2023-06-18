@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 1929314251627619540}
   - component: {fileID: 3272312090464086897}
   - component: {fileID: 760371439424708539}
-  - component: {fileID: 6413865471968774524}
   - component: {fileID: 1582646278}
   - component: {fileID: 3237920158639562338}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: espejo_roto
-  m_TagString: Boton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
@@ -86,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6413865471968774524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264840499511737966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ff92abb4a9fbe4cb643785d281b042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activado: 0
 --- !u!64 &1582646278
 MeshCollider:
   m_ObjectHideFlags: 0

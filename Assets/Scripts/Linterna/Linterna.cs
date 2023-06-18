@@ -134,6 +134,7 @@ public class Linterna : MonoBehaviour
         {
             if (Physics.Raycast(ray.origin, ray.direction, out hit, remainLenght, layer))
             {
+                Debug.Log(hit.transform.name);
                 if (hit.transform.tag == "Espejo")
                 {
                     laserRenderer.positionCount += 1;
@@ -141,7 +142,7 @@ public class Linterna : MonoBehaviour
                     remainLenght -= Vector3.Distance(ray.origin, hit.point);
                     ray = new Ray(hit.point, Vector3.Reflect(ray.direction, hit.normal));
                 }
-                else if (hit.transform.tag == "Cultista")
+                else if (hit.transform.tag == "Enemy")
                 {
                     if (Input.GetMouseButtonDown(0)) StartCoroutine(LaserAttack(hit.transform.gameObject));
                     laserRenderer.positionCount += 1;
@@ -164,7 +165,6 @@ public class Linterna : MonoBehaviour
                 laserRenderer.SetPosition(laserRenderer.positionCount - 1, ray.GetPoint(remainLenght));
             }
         }
-
     }
 
     IEnumerator LaserAttack(GameObject enemy)

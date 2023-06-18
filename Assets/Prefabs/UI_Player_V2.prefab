@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2669910988035418955}
   - component: {fileID: 8600784333324784203}
   - component: {fileID: 1098242624984712774}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Tecla_Q
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3166599655704003313}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: "Contador_Bater\xEDa_UI"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3166599655722899685}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Vendaje_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 3166599656298522764}
   - component: {fileID: 3166599656298522754}
   - component: {fileID: 3166599656298522755}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: "Cantidad_Bater\xEDas"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 3166599656315257959}
   - component: {fileID: 3166599656315257957}
   - component: {fileID: 3166599656315257958}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Cantidad_Vendas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 3166599656544717826}
   - component: {fileID: 3166599656544717824}
   - component: {fileID: 3166599656544717825}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Vendaje_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,9 +513,9 @@ GameObject:
   - component: {fileID: 3166599657128573416}
   - component: {fileID: 3166599657128573417}
   - component: {fileID: 6683173298393629105}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: UI_Player_V2
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 3166599657136774669}
   - component: {fileID: 3166599657136774659}
   - component: {fileID: 3166599657136774668}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: "Bater\xEDa"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 6683173297562406673}
   - component: {fileID: 6683173297562406767}
   - component: {fileID: 6683173297562406672}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 6683173298133292055}
   - component: {fileID: 6683173298133292053}
   - component: {fileID: 6683173298133292054}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fondo_vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 6683173298260142167}
   - component: {fileID: 6683173298260142165}
   - component: {fileID: 6683173298260142166}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6683173299190072170}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 6683173299578340675}
   - component: {fileID: 6683173299578340673}
   - component: {fileID: 6683173299578340674}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 8274461385036383640}
   - component: {fileID: 8274461385036383642}
   - component: {fileID: 8274461385036383641}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Encendida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 8274461385167841532}
   - component: {fileID: 8274461385167841534}
   - component: {fileID: 8274461385167841533}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Apagada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: 8274461385408533399}
   - component: {fileID: 8274461385408533393}
   - component: {fileID: 8274461385408533392}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 8274461385419451335}
   - component: {fileID: 8274461385419451329}
   - component: {fileID: 8274461385419451328}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Click_Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 8274461385728918273}
   - component: {fileID: 8274461385728918275}
   - component: {fileID: 8274461385728918274}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1432,7 +1432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8274461386239503101}
   - component: {fileID: 8274461386239503102}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Estado_Linterna_y_Bateria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1490,7 @@ GameObject:
   - component: {fileID: 8274461386336015147}
   - component: {fileID: 8274461386336015141}
   - component: {fileID: 8274461386336015140}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Tecla_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 1441927356428836796}
   - component: {fileID: 1042467161}
   - component: {fileID: 1042467160}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: silla
-  m_TagString: Decorado
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 126

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1205271306076404141}
   - component: {fileID: 1774559824040133663}
   - component: {fileID: 9171031860776513742}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 2290715742274556999}
   - component: {fileID: 8681545828072387026}
   - component: {fileID: 4759835416367528125}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Estructura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5678340955458920663}
   - component: {fileID: 7119161369641429150}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Casa Ver.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,6 +408,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5678340955458920663}
     m_Modifications:
+    - target: {fileID: 146606940, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 318229397, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 318229399, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
       propertyPath: m_Range
       value: 7.423523
@@ -416,9 +424,45 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 356712545, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 516106993, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139302644, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373667621, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450421688, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518591108, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934255025, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979977506, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6935733428740607776, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
       propertyPath: m_Name
       value: Vela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935733428740607776, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7713395551283352986, guid: 1b5c710f9f99d8d4e84fec3b741cc52c, type: 3}
       propertyPath: m_RootOrder

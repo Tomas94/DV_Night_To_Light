@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 272706317694493239}
   - component: {fileID: 8643270440510128472}
   - component: {fileID: 4344515974882973916}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Radio
-  m_TagString: Decorado
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6258253715461714801}
   - component: {fileID: 3912294676688850791}
   - component: {fileID: 3427071530061597885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 1578050660533784928}
   - component: {fileID: 5653777384815773878}
   - component: {fileID: 7060478078997352571}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCylinder10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 899577916621481909}
   - component: {fileID: 2200686389676956133}
   - component: {fileID: 3836008433506708185}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 3414079310183326348}
   - component: {fileID: 2065793445040899672}
   - component: {fileID: 7177697467796318775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pCylinder6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

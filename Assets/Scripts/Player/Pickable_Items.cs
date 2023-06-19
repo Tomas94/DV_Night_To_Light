@@ -16,7 +16,7 @@ public class Pickable_Items : Interactions
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canPick) AddObjectToInventory(transform.name);    
+        if (Input.GetKeyDown(KeyCode.E) && canPick) AddObjectToInventory(transform.name);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,6 +58,7 @@ public class Pickable_Items : Interactions
             playerInventory.cantidadVendajes++;
             player_UI.BandagesOnHold(playerInventory.cantidadVendajes);
         }
+        AudioManager.Instance.PlaySFX("Pickear");
 
         InRange(false);
         Destroy(gameObject);

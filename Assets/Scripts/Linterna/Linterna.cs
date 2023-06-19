@@ -76,6 +76,7 @@ public class Linterna : MonoBehaviour
                 isLightOn = false;
                 light.enabled = false;
             }
+            AudioManager.Instance.PlaySFX("Encender_linterna");
         }
 
         player.isNicto = !isLightOn;

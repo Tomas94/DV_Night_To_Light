@@ -4,28 +4,41 @@ using UnityEngine;
 
 public class Puzzle3 : MonoBehaviour
 {
-    int puntos;
-    public GameObject[] botonescorrectos;
-    public GameObject[] botonesIncorrectos;
-    int contador;
+
+    [SerializeField] Transform ObjetoAfectado;
+    [SerializeField] Camera camaraPuzzle;
+
+    Camera mainCam;
+    float tiempodemovimiento = 4f;
+
+
+    public int puntosNecesarios;
+    public int puntos;
 
     void Start()
     {
-        contador = 0;
+        mainCam = Camera.main;
+        puntos = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (puntos >= puntosNecesarios)
+        {
+            StartCoroutine(CompletedPuzzle3());
+        }
+
     }
 
-    private void OnTriggerStay(Collider other)
+    IEnumerator CompletedPuzzle3()
     {
-        
+        mainCam.enabled = false;
+        float time = Time.deltaTime;
+        ObjetoAfectado.position = new Vector3(ObjetoAfectado.transform.position.x, Mathf.Lerp(ObjetoAfectado.transform.position.y, ObjetoAfectado.transform.position.y - 50, time / tiempodemovimiento), ObjetoAfectado.transform.position.z);
+        yield return new WaitForSeconds(tiempodemovimiento);
+        puntos = 0;
+        mainCam.enabled = true;
+        Destroy(gameObject);
     }
-
-
-
-
 }

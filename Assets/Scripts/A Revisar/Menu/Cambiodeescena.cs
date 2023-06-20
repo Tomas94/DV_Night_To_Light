@@ -10,7 +10,8 @@ public class Cambiodeescena : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             SceneManager.LoadScene(sceneName);
         }
     }

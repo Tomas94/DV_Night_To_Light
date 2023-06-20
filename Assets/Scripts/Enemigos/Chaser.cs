@@ -9,6 +9,7 @@ public class Chaser : Entity
     [SerializeField] Animator anim;
     [SerializeField] LayerMask structures;
     [SerializeField] NavMeshAgent chaserNM;
+    [SerializeField] Player_State playerhp;
     RaycastHit hit;
 
     [SerializeField] float _distanciaPlayer;
@@ -54,6 +55,8 @@ public class Chaser : Entity
             }
             else
             {
+                //if(_canAttack)playerhp.TakeDamage();
+                player.forward = new Vector3(transform.position.x, transform.position.y, Mathf.Lerp(transform.position.z, transform.forward.z * -10, 0.1f));
                 Debug.Log("En modo ATAQUE");
                 anim.SetBool("EnRango", false);
                 chaserNM.velocity = Vector3.zero;
@@ -67,7 +70,6 @@ public class Chaser : Entity
             anim.SetBool("EnRango", false);
             chaserNM.velocity = Vector3.zero;
             chaserNM.isStopped = true;
-
         }
     }
 
@@ -79,7 +81,7 @@ public class Chaser : Entity
         {
             GetComponentInParent<Animator>().enabled = false;
             GetComponentInParent<NavMeshAgent>().enabled = false;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

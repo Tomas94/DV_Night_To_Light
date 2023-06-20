@@ -28,7 +28,7 @@ public class Pickable_Items : Interactions
         if (player_UI.textWindow.activeSelf && Input.GetMouseButtonDown(0))
         {
             player_UI.textWindow.SetActive(false);
-            player.enabled = true;
+            //player.enabled = true;
         }
 
         if (testeo)
@@ -66,7 +66,7 @@ public class Pickable_Items : Interactions
     {
         if(objeto == "Nota")
         {
-            player.enabled = false;
+            //player.enabled = false;
             player_UI.textWindow.SetActive(true);
             contenedorTexto.text = texto;
             return;

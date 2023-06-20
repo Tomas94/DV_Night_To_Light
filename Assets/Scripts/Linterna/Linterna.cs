@@ -11,7 +11,7 @@ public class Linterna : MonoBehaviour
     [SerializeField] Light light;
     [SerializeField] LineRenderer laserRenderer;
     GameObject linternalogo;
-
+    public ChangeCam aircm;
 
     [Header("Variables Linterna")]
     public float maxChargeTime;

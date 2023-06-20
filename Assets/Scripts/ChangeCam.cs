@@ -21,11 +21,14 @@ public class ChangeCam : MonoBehaviour
     {
         if (change)
         {
-            airCam.depth = 3;
+            airCam.gameObject.SetActive(true);
+            //airCam.depth = 3;
         }
         else
         {
-            airCam.depth = 0;
+            airCam.gameObject.SetActive(true);
+            //airCam.depth = 0;
         }
     } 
+
 }

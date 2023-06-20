@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player_Movement : Entity
@@ -28,6 +29,13 @@ public class Player_Movement : Entity
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("MenuInicial");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+
         Movement();
     }
 

@@ -34,6 +34,13 @@ public class Player_State : Entity
         uIPlayer.LifeBarState(currentHP);
         ObjectUse();
         IsScared(isNicto);
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            linterna.currentCharge = linterna.maxCharge;
+            currentHP++;
+            
+        }
     }
 
     public void ObjectUse()

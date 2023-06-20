@@ -74,16 +74,16 @@ public class UI_Player : MonoBehaviour
         switch (vidaActual)
         {
             case 3:
-                DesactivarHijos(hpIcon.transform.GetChild(3).gameObject, hpIcon);
-                break;
-            case 2:
                 DesactivarHijos(hpIcon.transform.GetChild(2).gameObject, hpIcon);
                 break;
-            case 1:
+            case 2:
                 DesactivarHijos(hpIcon.transform.GetChild(1).gameObject, hpIcon);
                 break;
+            case 1:
+                DesactivarHijos(hpIcon.transform.GetChild(0).gameObject, hpIcon);
+                break;
             case 0:
-                hpIcon.transform.GetChild(1).gameObject.SetActive(false);
+                hpIcon.transform.GetChild(0).gameObject.SetActive(false);
                 break;
         }
     }

@@ -287,7 +287,7 @@ CharacterController:
   m_Height: 4
   m_Radius: 1
   m_SlopeLimit: 45
-  m_StepOffset: 1.3
+  m_StepOffset: 2
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 2, z: 0}
@@ -354,7 +354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575646337137724508}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.758, y: -0, z: 0}
+  m_LocalPosition: {x: -0.442, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560,8 +560,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575646337161414529}
   m_LocalRotation: {x: -0, y: 0.6882294, z: -0, w: 0.7254932}
-  m_LocalPosition: {x: 0.722, y: -0.482, z: 0.289}
-  m_LocalScale: {x: 1.10454, y: 0.90095, z: 0.9162362}
+  m_LocalPosition: {x: 0.723, y: 0.172, z: 0.261}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3575646337137724507}
@@ -657,7 +657,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 1929
-  laserLenght: 0
+  laserLenght: 250
 --- !u!1 &3575646337231338311
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 4273588484656478686}
   - component: {fileID: 260247513713485552}
   - component: {fileID: 1630311342}
+  - component: {fileID: 1798827825368485876}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -873,7 +874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575646337552053618}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
   m_Name: 
@@ -881,6 +882,23 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 0}
     qualitySettings: {fileID: 0}
+--- !u!114 &1798827825368485876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3575646337552053618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44788c24f2633548b5e63c93fbcedbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3575646336489000711}
+  objetosScene: []
+  staticObjects: []
+  minDist: 90
+  objetosOcultos: 0
 --- !u!1 &3575646338043905669
 GameObject:
   m_ObjectHideFlags: 0

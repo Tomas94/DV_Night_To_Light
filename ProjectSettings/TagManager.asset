@@ -10,6 +10,9 @@ TagManager:
   - Cofre
   - Caja
   - Boton
+  - Espejo
+  - Enemy
+  - Puzzle
   layers:
   - Default
   - TransparentFX

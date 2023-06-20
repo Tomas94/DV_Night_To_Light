@@ -51,11 +51,12 @@ public class Linterna : MonoBehaviour
     {
         LinternaOnOff();
         CargaRestante();
-        ActivarLaser();
+        //
+        //ActivarLaser();
     }
     private void LateUpdate()
     {
-        //ActivarLaser();
+        ActivarLaser();
     }
 
     void LinternaOnOff()
@@ -150,6 +151,10 @@ public class Linterna : MonoBehaviour
                     laserRenderer.SetPosition(laserRenderer.positionCount - 1, hit.point);
                     laserHitPoint.enabled = true;
                     laserHitPoint.transform.position = hit.point;
+                }
+                else if (hit.transform.tag == "Boton")
+                {
+                    hit.transform.GetComponent<Puzzles>().puzzleCompleto = true;
                 }
                 else
                 {

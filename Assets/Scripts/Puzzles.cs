@@ -6,7 +6,7 @@ public class Puzzles : MonoBehaviour
 {
     [SerializeField] Transform ObjetoAfectado;
     public bool puzzleCompleto = false;
-    [SerializeField] Camera camaraPuzzle;
+    [SerializeField] GameObject camaraPuzzle;
 
     Camera mainCam;
     float tiempodemovimiento = 2f;
@@ -34,6 +34,7 @@ public class Puzzles : MonoBehaviour
 
     IEnumerator Completed()
     {
+        camaraPuzzle.SetActive(true);
         mainCam.enabled = false;
         float time = Time.deltaTime;
         ObjetoAfectado.position = new Vector3(ObjetoAfectado.transform.position.x, Mathf.Lerp(ObjetoAfectado.transform.position.y, ObjetoAfectado.transform.position.y - 11, time / tiempodemovimiento), ObjetoAfectado.transform.position.z);

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle3 : MonoBehaviour
+public class Puzzle2 : MonoBehaviour
 {
 
     [SerializeField] Transform ObjetoAfectado;
@@ -10,33 +10,40 @@ public class Puzzle3 : MonoBehaviour
 
     Camera mainCam;
     float tiempodemovimiento = 4f;
-
+    float time = 0f;
+    Quaternion rotacionInicial;
+    Quaternion rotacionObjetivo;
 
     public int puntosNecesarios;
     public int puntos;
 
     void Start()
     {
+        rotacionInicial = transform.rotation;
+        rotacionObjetivo = Quaternion.Euler(0, 135, 0);
+
         mainCam = Camera.main;
         puntos = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (puntos >= puntosNecesarios)
         {
-            StartCoroutine(CompletedPuzzle3());
+            StartCoroutine(CompletedPuzzle2());
         }
 
     }
 
-    IEnumerator CompletedPuzzle3()
+    IEnumerator CompletedPuzzle2()
     {
         camaraPuzzle.SetActive(true);
-        mainCam.enabled = false;    
-        float time = Time.deltaTime;
-        ObjetoAfectado.position = new Vector3(ObjetoAfectado.transform.position.x, Mathf.Lerp(ObjetoAfectado.transform.position.y, ObjetoAfectado.transform.position.y - 50, time / tiempodemovimiento), ObjetoAfectado.transform.position.z);
+        mainCam.enabled = false;
+
+        time += Time.deltaTime;
+        float tiempoNormalizado = Mathf.Clamp01(time / tiempodemovimiento);
+        Quaternion rotacionInterpolada = Quaternion.Lerp(rotacionInicial, rotacionObjetivo, tiempoNormalizado);
+        ObjetoAfectado.rotation = rotacionInterpolada;
         yield return new WaitForSeconds(tiempodemovimiento);
         puntos = 0;
         mainCam.enabled = true;

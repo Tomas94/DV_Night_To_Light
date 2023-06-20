@@ -10,6 +10,7 @@ public class UI_Player : MonoBehaviour
     [SerializeField] GameObject canvasUI;
     [SerializeField] GameObject vendajeIcon;
     [SerializeField] GameObject hpIcon;
+    public GameObject textWindow;
 
     [Header("Referencias Textos")]
     [SerializeField] TextMeshProUGUI cantBateriasTMP;

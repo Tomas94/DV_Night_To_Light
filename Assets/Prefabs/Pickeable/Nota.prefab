@@ -282,7 +282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1986579671
 Transform:
   m_ObjectHideFlags: 0
@@ -313,7 +313,8 @@ GameObject:
   - component: {fileID: 3077772684418383420}
   - component: {fileID: 1157676430}
   - component: {fileID: 21153675901697931}
-  m_Layer: 3
+  - component: {fileID: 8945495068990284012}
+  m_Layer: 2
   m_Name: Nota
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -439,3 +440,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &8945495068990284012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793773336942699720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df025444e93c4345bfd4b46fc8f7903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diametroTrigger: 3
+  player_UI: {fileID: 0}
+  playerInventory: {fileID: 0}
+  canPick: 0
+  contenedorTexto: {fileID: 0}
+  texto: Nota 1

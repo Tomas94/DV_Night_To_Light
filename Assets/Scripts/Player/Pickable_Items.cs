@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Pickable_Items : Interactions
 {
     [SerializeField] UI_Player player_UI;
     [SerializeField] Player_State playerInventory;
     [SerializeField] bool canPick = false;
+    [SerializeField] CharacterController player;
+    public TextMeshProUGUI contenedorTexto;
+    public string texto;
+
 
     private void Awake()
-    {
+    {      
         diametroTrigger = 5f;
         CreateTrigger();
     }
@@ -17,6 +21,11 @@ public class Pickable_Items : Interactions
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canPick) AddObjectToInventory(transform.name);
+        if (player_UI.textWindow.activeSelf && Input.GetMouseButtonDown(0))
+        {
+            player_UI.textWindow.SetActive(false);
+            player.enabled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,6 +56,9 @@ public class Pickable_Items : Interactions
     {
         if(objeto == "Nota")
         {
+            player.enabled = false;
+            player_UI.textWindow.SetActive(true);
+            contenedorTexto.text = texto;
             return;
         }
          

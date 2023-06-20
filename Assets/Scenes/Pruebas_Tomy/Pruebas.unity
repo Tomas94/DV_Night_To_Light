@@ -27652,9 +27652,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1430e2c099799b741adee38c836080d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ObjetoAfectado: {fileID: 0}
+  camaraPuzzle: {fileID: 0}
+  puntosNecesarios: 4
   puntos: 0
-  botonescorrectos: []
-  botonesIncorrectos: []
 --- !u!1001 &763491081
 PrefabInstance:
   m_ObjectHideFlags: 0

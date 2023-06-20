@@ -45,6 +45,11 @@ public class Pickable_Items : Interactions
 
     void AddObjectToInventory(string objeto)
     {
+        if(objeto == "Nota")
+        {
+            return;
+        }
+         
         if (objeto == "Pila")
         {
             Debug.Log("Pickeaste una " + objeto);

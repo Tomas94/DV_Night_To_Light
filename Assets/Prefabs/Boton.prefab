@@ -110,5 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47d96b8010acc64f97fd020565ad1b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonCorrecto: 1
+  botonCorrecto: 0
   puzzleContador: {fileID: 0}
+  pisadoCorrecto: {fileID: 2100000, guid: 31f2d681b42972f4799a3f2750b97551, type: 2}
+  pisadoIncorrecto: {fileID: 2100000, guid: 9df31559b17f1454c92d2c5ccb0ace28, type: 2}
+  sinPisar: {fileID: 2100000, guid: 8ceb14819f265f8429386473b4056035, type: 2}

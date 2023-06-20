@@ -33,6 +33,7 @@ public class Pickable_Items : Interactions
 
         if (testeo)
         {
+            playerInventory.isNicto = false;
             contenedorTexto.text = texto;
         }
     }

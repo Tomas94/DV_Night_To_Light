@@ -318,7 +318,7 @@ GameObject:
   m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &786883285251304693
 Transform:
@@ -436,3 +436,7 @@ MonoBehaviour:
   player_UI: {fileID: 0}
   playerInventory: {fileID: 0}
   canPick: 0
+  player: {fileID: 0}
+  contenedorTexto: {fileID: 0}
+  testeo: 0
+  texto: 

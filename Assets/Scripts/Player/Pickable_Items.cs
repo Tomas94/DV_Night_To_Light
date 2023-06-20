@@ -9,6 +9,10 @@ public class Pickable_Items : Interactions
     [SerializeField] bool canPick = false;
     [SerializeField] CharacterController player;
     public TextMeshProUGUI contenedorTexto;
+
+    public bool testeo;
+
+    [TextArea(5, 15)]
     public string texto;
 
 
@@ -25,6 +29,11 @@ public class Pickable_Items : Interactions
         {
             player_UI.textWindow.SetActive(false);
             player.enabled = true;
+        }
+
+        if (testeo)
+        {
+            contenedorTexto.text = texto;
         }
     }
 

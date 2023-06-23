@@ -79,12 +79,12 @@ public class Player_State : Entity
                 startTime = 0f;
                 TakeDamage();
             }
-            //Debug.Log("A Oscuras");
+            Debug.Log("A Oscuras");
         }
         else
         {
             startTime = 0.0f;
-            //Debug.Log("En la Luz");
+            Debug.Log("En la Luz");
         }
     }
 

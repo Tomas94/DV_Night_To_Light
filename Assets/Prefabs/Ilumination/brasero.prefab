@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2f29df2f48250704d9cd3026dbf01897, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4952,6 +4952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026237520}
   - component: {fileID: 1026237519}
+  - component: {fileID: 713644364}
   m_Layer: 2
   m_Name: Trigger_nictofobia
   m_TagString: LuzTrigger
@@ -4967,7 +4968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026237518}
   m_LocalRotation: {x: -0, y: -0.9701417, z: -0, w: 0.24253914}
-  m_LocalPosition: {x: 14.6, y: 2.6040003, z: -4.27}
+  m_LocalPosition: {x: 18.11, y: 2.6040003, z: -6.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4985,8 +4986,24 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10.618971
-  m_Center: {x: 14.403616, y: -0.35760117, z: 3.5811558}
+  m_Radius: 14.515252
+  m_Center: {x: 18.299906, y: -0.35760117, z: 3.5811675}
+--- !u!54 &713644364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026237518}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1106131709
 GameObject:
   m_ObjectHideFlags: 0
@@ -14750,7 +14767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834e05c4166ecb845b1361705b71aeaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDist: 60
+  minDist: 80
   light: {fileID: 0}
 --- !u!1 &2029949791
 GameObject:

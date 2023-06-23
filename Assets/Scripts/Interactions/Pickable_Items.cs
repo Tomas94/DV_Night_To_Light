@@ -18,7 +18,7 @@ public class Pickable_Items : Interactions
 
     private void Awake()
     {      
-        diametroTrigger = 5f;
+        //diametroTrigger = 5f;
         CreateTrigger();
     }
 
@@ -66,6 +66,7 @@ public class Pickable_Items : Interactions
     {
         if(objeto == "Nota")
         {
+            AudioManager.Instance.PlaySFX("Sonido_hoja");
             //player.enabled = false;
             player_UI.textWindow.SetActive(true);
             contenedorTexto.text = texto;
@@ -74,6 +75,7 @@ public class Pickable_Items : Interactions
          
         if (objeto == "Pila")
         {
+            AudioManager.Instance.PlaySFX("Pickear");
             Debug.Log("Pickeaste una " + objeto);
             playerInventory.cantidadBaterias++;
             player_UI.BatteriesOnHold(playerInventory.cantidadBaterias);
@@ -81,12 +83,12 @@ public class Pickable_Items : Interactions
 
         if (objeto == "Vendaje")
         {
+            AudioManager.Instance.PlaySFX("Pickear");
             Debug.Log("Pickeaste un " + objeto);
             playerInventory.cantidadVendajes++;
             player_UI.BandagesOnHold(playerInventory.cantidadVendajes);
         }
-        AudioManager.Instance.PlaySFX("Pickear");
-
+        
         InRange(false);
         Destroy(gameObject);
     }

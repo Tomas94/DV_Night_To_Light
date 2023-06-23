@@ -32,7 +32,6 @@ public class Puzzle2 : MonoBehaviour
         {
             StartCoroutine(CompletedPuzzle2());
         }
-
     }
 
     IEnumerator CompletedPuzzle2()

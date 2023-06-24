@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.SceneManagement;
 
 
@@ -16,7 +17,7 @@ public class Player_Movement : Entity
     [SerializeField] bool isCrouch;
     Vector3 fallingSpeedVector = Vector3.zero;
 
-
+    public Animator animator;
 
     void Start()
     {
@@ -51,10 +52,25 @@ public class Player_Movement : Entity
     #region Funciones Relacionadas al Movimiento
 
     public void Walk()
-        { if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) speed = walkingSpeed; }
+    { 
+        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl))
+        {
+            speed = walkingSpeed;
+            animator.SetBool("WALK", true);
+        }
+        else { animator.SetBool("WALK", false); } 
+    }
+
 
     public void Run()
-        { if (Input.GetKey(KeyCode.LeftShift) && !isCrouch) speed = runSpeed; }
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && !isCrouch)
+        {
+            speed = runSpeed;
+            animator.SetBool("RUN", true);
+        }
+        else { animator.SetBool("RUN", false); }
+    }
 
     public void Crouch()
     {

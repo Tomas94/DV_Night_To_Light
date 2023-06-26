@@ -66,7 +66,7 @@ public class Player_Movement : Entity
 
     public void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && !isCrouch)
+        if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) /*!isCrouch*/)
         {
             speed = runSpeed;
             PlayerState((int)playerState.Running);

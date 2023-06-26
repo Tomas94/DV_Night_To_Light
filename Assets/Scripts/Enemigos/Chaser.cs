@@ -7,7 +7,7 @@ public class Chaser : Entity
 {
     Transform player;
     [SerializeField] Animator anim;
-    [SerializeField] LayerMask structures;
+    //[SerializeField] LayerMask structures;
     [SerializeField] NavMeshAgent chaserNM;
     [SerializeField] Player_State playerhp;
     RaycastHit hit;

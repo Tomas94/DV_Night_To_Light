@@ -23,6 +23,7 @@ public class Player_State : Entity
 
     private void Start()
     {
+        isNicto = false;
         maxHP = 3;
         currentHP = maxHP;
         cantidadBaterias = 0;
@@ -134,7 +135,7 @@ public class Player_State : Entity
 
         if (other.tag == "LuzTrigger")
         {
-            isNicto = true;
+            if(!linterna.isLightOn) isNicto = true;
         }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Player_Movement : Entity
 {
     [Header("Movimiento")]
-    
+
     [SerializeField] CharacterController chController;
     [SerializeField] Transform groundCheck;
     [SerializeField] float runSpeed;
@@ -45,20 +45,22 @@ public class Player_Movement : Entity
         base.Movement();
         Walk();
         Run();
-        Crouch();
+        //Crouch();
         Fall();
     }
 
     #region Funciones Relacionadas al Movimiento
 
+
     public void Walk()
-    { 
-        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl))
+    {
+        //if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D)) { PlayerState((int)playerState.Idle); }
+        if (!Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) /*&& !Input.GetKey(KeyCode.LeftControl)*/)
         {
             speed = walkingSpeed;
-            animator.SetBool("WALK", true);
+            PlayerState((int)playerState.Walking);
         }
-        else { animator.SetBool("WALK", false); } 
+        else { PlayerState((int)playerState.Idle); }
     }
 
 
@@ -67,12 +69,12 @@ public class Player_Movement : Entity
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouch)
         {
             speed = runSpeed;
-            animator.SetBool("RUN", true);
+            PlayerState((int)playerState.Running);
         }
-        else { animator.SetBool("RUN", false); }
+        //else { PlayerState((int)playerState.Walking); }
     }
 
-    public void Crouch()
+    /*public void Crouch()
     {
 
         if (Input.GetKey(KeyCode.LeftControl))
@@ -86,7 +88,7 @@ public class Player_Movement : Entity
             isCrouch = false;
             chController.height = Mathf.Lerp(chController.height, 4f, 1 * Time.deltaTime );
         }
-    }
+    }*/
 
     public void Fall()
     {
@@ -103,6 +105,36 @@ public class Player_Movement : Entity
 
         chController.Move(fallingSpeedVector * Time.deltaTime);
     }
+
+    enum playerState
+    {
+        Idle,
+        Walking,
+        Running
+    }
+
+    void PlayerState(int estado)
+    {
+        if (estado == 0)//IDLE
+        {
+            animator.SetBool("IDLE", true);
+            animator.SetBool("WALK", false);
+            animator.SetBool("RUN", false);
+        }
+        else if (estado == 1)
+        {
+            animator.SetBool("IDLE", false);
+            animator.SetBool("WALK", true);
+            animator.SetBool("RUN", false);
+        }
+        else
+        {
+            animator.SetBool("IDLE", false);
+            animator.SetBool("WALK", false);
+            animator.SetBool("RUN", true);
+        }
+    }
+
 
     #endregion
 

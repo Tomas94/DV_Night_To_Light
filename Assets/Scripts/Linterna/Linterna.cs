@@ -70,17 +70,19 @@ public class Linterna : MonoBehaviour
                 linternalogo.SetActive(true);
                 isLightOn = true;
                 light.enabled = true;
+                player.isNicto = !isLightOn;
             }
             else
             {
                 linternalogo.SetActive(false);
                 isLightOn = false;
                 light.enabled = false;
+                player.isNicto = !isLightOn;
             }
             AudioManager.Instance.PlaySFX("Encender_linterna");
         }
 
-        player.isNicto = !isLightOn;
+        //player.isNicto = !isLightOn;
         linternalogo.SetActive(isLightOn ? true : false);
     }
 

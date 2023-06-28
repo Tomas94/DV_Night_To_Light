@@ -56,7 +56,6 @@ public class Player_State : Entity
         {
             currentHP++;
             cantidadVendajes--;
-            uIPlayer.BandagesOnHold(cantidadVendajes);
         }
     }
 

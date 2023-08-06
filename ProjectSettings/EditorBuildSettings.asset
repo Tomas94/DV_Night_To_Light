@@ -14,11 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menues/Controles.unity
     guid: 2a295f4ee6091bf46bd3c1402941fdd1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Programacion_II/Nivel Parcial 2/Nivel Segundo Parcial Programacion
       II.unity
     guid: 7fab8c883d800ea488ecab862baa93fc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Nivel 1/Nuevo_Nivel_1_Bosque.unity
     guid: e626b1ec234c133438c1445deb117bb3
   - enabled: 1

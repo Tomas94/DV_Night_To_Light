@@ -7,7 +7,7 @@ public class Pickable_Items : Interactions
     [SerializeField] UI_Player player_UI;
     [SerializeField] Player_State playerInventory;
     [SerializeField] bool canPick = false;
-    [SerializeField] CharacterController player;
+    //[SerializeField] CharacterController player;
     public TextMeshProUGUI contenedorTexto;
 
     public bool testeo;

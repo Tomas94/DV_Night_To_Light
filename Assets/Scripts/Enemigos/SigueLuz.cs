@@ -8,27 +8,30 @@ public class SigueLuz : Entity
     public Light luz; //Referencia a la luz
     public float velocidad; //Velocidad de seguimiento del objeto
     NavMeshAgent navM;
+    Animator anim;
+    Vector3 destiny;
 
     [SerializeField] float range;
 
     private void Start()
     {
         navM = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         currentHP = 1;
     }
 
     void Update()
     {
         FollowLight();
-      //  OnDrawGizmos();
+        //  OnDrawGizmos();
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Boton") other.GetComponent<Renderer>().material.color = Color.green;
+        if (other.tag == "Boton") other.GetComponent<Renderer>().material.color = Color.green;
     }
 
-    private void OnTriggerExit(Collider other) 
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Boton") other.GetComponent<Renderer>().material.color = Color.red;
     }
@@ -43,7 +46,17 @@ public class SigueLuz : Entity
     void FollowLight()
     {
         float distanceToLight = Vector3.Distance(luz.transform.position, transform.position);
-        if (luz.enabled && distanceToLight <= range) navM.SetDestination(luz.transform.position);
+        
+        if (luz.enabled && distanceToLight <= range)
+        {
+            destiny = luz.transform.position;
+            navM.SetDestination(destiny);
+            anim.SetBool("Caminando", true);
+        }
+        if(Vector3.Distance(destiny, transform.position) <= 3 && !luz.enabled)
+        {
+            anim.SetBool("Caminando", false);
+        }
     }
 }
 

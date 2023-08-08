@@ -17,7 +17,7 @@ public class Player_Movement : Entity
     [SerializeField] bool isCrouch;
     Vector3 fallingSpeedVector = Vector3.zero;
 
-    public Animator animator;
+    //public Animator animator;
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class Player_Movement : Entity
         base.Movement();
         Walk();
         Run();
-        //Crouch();
+        Crouch();
         Fall();
     }
 
@@ -58,9 +58,9 @@ public class Player_Movement : Entity
         if (!Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) /*&& !Input.GetKey(KeyCode.LeftControl)*/)
         {
             speed = walkingSpeed;
-            PlayerState((int)playerState.Walking);
+            //PlayerState((int)playerState.Walking);
         }
-        else { PlayerState((int)playerState.Idle); }
+        //else { PlayerState((int)playerState.Idle); }
     }
 
 
@@ -69,12 +69,12 @@ public class Player_Movement : Entity
         if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) /*!isCrouch*/)
         {
             speed = runSpeed;
-            PlayerState((int)playerState.Running);
+            //PlayerState((int)playerState.Running);
         }
         //else { PlayerState((int)playerState.Walking); }
     }
 
-    /*public void Crouch()
+    public void Crouch()
     {
 
         if (Input.GetKey(KeyCode.LeftControl))
@@ -88,7 +88,7 @@ public class Player_Movement : Entity
             isCrouch = false;
             chController.height = Mathf.Lerp(chController.height, 4f, 1 * Time.deltaTime );
         }
-    }*/
+    }
 
     public void Fall()
     {
@@ -106,7 +106,7 @@ public class Player_Movement : Entity
         chController.Move(fallingSpeedVector * Time.deltaTime);
     }
 
-    enum playerState
+    /*enum playerState
     {
         Idle,
         Walking,
@@ -133,7 +133,7 @@ public class Player_Movement : Entity
             animator.SetBool("WALK", false);
             animator.SetBool("RUN", true);
         }
-    }
+    }*/
 
 
     #endregion

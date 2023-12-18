@@ -703,8 +703,8 @@ GameObject:
   - component: {fileID: 8652843414516019614}
   - component: {fileID: 4273588484656478686}
   - component: {fileID: 260247513713485552}
-  - component: {fileID: 1630311342}
   - component: {fileID: 1798827825368485876}
+  - component: {fileID: 1987636309}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -867,21 +867,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resolution: 1
   DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
---- !u!114 &1630311342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3575646337552053618}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frustumSettings:
-    baseSettings: {fileID: 0}
-    qualitySettings: {fileID: 0}
 --- !u!114 &1798827825368485876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,6 +884,21 @@ MonoBehaviour:
   staticObjects: []
   minDist: 90
   objetosOcultos: 0
+--- !u!114 &1987636309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3575646337552053618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcd06815c47d30489f70df42db56a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frustumSettings:
+    baseSettings: {fileID: 0}
+    qualitySettings: {fileID: 0}
 --- !u!1 &3575646338043905669
 GameObject:
   m_ObjectHideFlags: 0

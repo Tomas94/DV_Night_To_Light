@@ -30,7 +30,7 @@ public class Chaser : Entity
     {
         //Debug.Log("remaining: " + chaserNM.remainingDistance + " soppingDist: " + chaserNM.stoppingDistance);
         DistanceAndDirection();
-        Movement();
+        //Movement();
 
     }
 
@@ -40,7 +40,7 @@ public class Chaser : Entity
         _direccion = (player.position - transform.position).normalized;
     }
 
-    public override void Movement()
+    /*public override void Movement()
     {
 
         if (_distanciaPlayer <= rangoVision)
@@ -71,7 +71,7 @@ public class Chaser : Entity
             chaserNM.velocity = Vector3.zero;
             chaserNM.isStopped = true;
         }
-    }
+    }*/
 
     public override void TakeDamage()
     {

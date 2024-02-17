@@ -69,7 +69,7 @@ public class UI_Player : MonoBehaviour
 
     #endregion
 
-    public void LifeBarState(int vidaActual)
+    public void LifeBarState(float vidaActual)
     {
         switch (vidaActual)
         {

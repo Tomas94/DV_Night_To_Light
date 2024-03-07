@@ -6,24 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menues/MenuInicial.unity
+    path: Assets/Original/Scenes/Menues/MenuInicial.unity
     guid: b6052dd63c31b04449a4ec7d4d83b7cb
   - enabled: 1
-    path: Assets/Scenes/Menues/Creditos.unity
-    guid: 2b32133b3e43a2c4db17035d6c0e02dc
-  - enabled: 1
-    path: Assets/Scenes/Menues/Controles.unity
-    guid: 2a295f4ee6091bf46bd3c1402941fdd1
-  - enabled: 1
-    path: Assets/Scenes/Niveles/Tutorial/Tutorial.unity
+    path: Assets/Original/Scenes/Niveles/Tutorial/Tutorial.unity
     guid: b9efbad26b3efac47836678fb5aea19a
   - enabled: 1
-    path: Assets/Scenes/Niveles/Nivel_1/Nuevo_Nivel_1_Bosque.unity
+    path: Assets/Original/Scenes/Niveles/Nivel_1/Nuevo_Nivel_1_Bosque.unity
     guid: e626b1ec234c133438c1445deb117bb3
   - enabled: 1
-    path: Assets/Scenes/Menues/Escena_Proximamente_Nivel_2.unity
+    path: Assets/Original/Scenes/Menues/Escena_Proximamente_Nivel_2.unity
     guid: 9d829fb3a5c1ec14381142a19ac23c2f
   - enabled: 1
-    path: Assets/Scenes/Menues/Moriste.unity
+    path: Assets/Original/Scenes/Menues/Moriste.unity
     guid: 4fbaa4b0e6aefcf4fa55b8c69757c4f7
   m_configObjects: {}

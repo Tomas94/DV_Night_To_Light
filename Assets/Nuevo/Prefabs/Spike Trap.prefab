@@ -65,7 +65,7 @@ BoxCollider:
   m_GameObject: {fileID: 2990063712655478411}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 33, y: 92.54025, z: 35}
   m_Center: {x: 0, y: 58.000004, z: 0}
@@ -84,7 +84,8 @@ MonoBehaviour:
   _spikeHitbox: {fileID: 378206500703909008}
   _startingTime: 0.1
   _damage: 20
-  _deactivated: 1
+  _deactivated: 0
+  _distance: 1
 --- !u!1 &4608597880243932676
 GameObject:
   m_ObjectHideFlags: 0

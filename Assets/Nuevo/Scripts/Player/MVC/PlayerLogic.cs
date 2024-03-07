@@ -202,7 +202,7 @@ public class PlayerLogic : Entity
     public override void TakeDamage(float dmgValue)
     {
         base.TakeDamage(dmgValue);
-        // GameManager.Instance.playerUI.UpdateUIStatus();
+        _interface.UpdateUIStatus();
     }
 
 

@@ -41,13 +41,12 @@ public class PuzzleRotation : Puzzles
             _barrier.rotation = rotacionInterpolada;
             yield return null;
         }
-        
+
         _barrier.rotation = _finishingRotation;
 
         yield return new WaitForSeconds(_waitingDuration);
-        _mainCam.gameObject.SetActive(true);
         
         Destroy(_barrierCamera.gameObject);
-        Destroy(gameObject);
+        _mainCam.gameObject.SetActive(true);
     }
 }

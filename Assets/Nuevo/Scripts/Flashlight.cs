@@ -19,6 +19,7 @@ public class Flashlight : MonoBehaviour
     [Header("Tipos de Luz")]
     Color _normalLight = new Color(183 / 255f, 183 / 255f, 183 / 255f, 47 / 255f);
     Color _uvLight = new Color(72 / 255f, 0 / 255f, 135 / 255f, 47 / 255f);
+    BoxCollider _uvTrigger;
 
     public bool focuseActive = false;
 
@@ -41,6 +42,7 @@ public class Flashlight : MonoBehaviour
         _pointLight = GetComponentInChildren<Light>();
         _laser = GetComponentInChildren<LineRenderer>();
         _laserHitPoint = transform.GetChild(1).GetComponentInChildren<Light>();
+        _uvTrigger = _pointLight.GetComponent<BoxCollider>();
 
         _currentChargeAmount = MaxChargeAmount;
         _pointLight.color = _normalLight;
@@ -160,7 +162,24 @@ public class Flashlight : MonoBehaviour
 
     public void UvLightOnOff()
     {
-        _pointLight.color = _pointLight.color == _normalLight ? _uvLight : _normalLight;
+        if(_pointLight.color == _normalLight)
+        {
+            _pointLight.color = _uvLight;
+            _uvTrigger.enabled = true;
+        }
+        else
+        {
+            _uvTrigger.enabled = false;
+            _pointLight.color = _normalLight;
+        }
+        
+        //_pointLight.color = _pointLight.color == _normalLight ? _uvLight : _normalLight;
+        
         _uInterface.SwitchLightMode();
     }
+
+    public bool isUVActive()
+    {
+        return _pointLight.color == _uvLight;
+    } 
 }

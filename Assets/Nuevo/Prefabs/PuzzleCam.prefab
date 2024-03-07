@@ -12,15 +12,14 @@ GameObject:
   - component: {fileID: 3578328984747842242}
   - component: {fileID: 3942715295199307139}
   - component: {fileID: 1999578029595644704}
-  - component: {fileID: 2789780762658346298}
   - component: {fileID: 8885532104533720133}
   m_Layer: 0
   m_Name: PuzzleCam
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8218993210708898348
 Transform:
   m_ObjectHideFlags: 0
@@ -153,23 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resolution: 1
   DefaultSpotCookie: {fileID: 2800000, guid: 5157bf6d690b6df458f6c0ce0c06d329, type: 3}
---- !u!114 &2789780762658346298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6309868742496281277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f44788c24f2633548b5e63c93fbcedbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  objetosScene: []
-  staticObjects: []
-  minDist: 90
-  objetosOcultos: 0
 --- !u!114 &8885532104533720133
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public class FireTrap : MonoBehaviour
         }
         _material.SetColor("_EmissionColor", Color.white);
         _firePS.Play();
+        AudioManager.Instance.PlaySFX("Fuego_fogatas");
 
         _boxCollider.enabled = true;
         yield return new WaitForSeconds(_firePS.main.duration);

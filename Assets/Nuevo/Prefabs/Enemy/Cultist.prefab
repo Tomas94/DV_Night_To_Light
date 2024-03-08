@@ -704,14 +704,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2847090764296131440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd4ac2b0723de8d44898c664548d493e, type: 3}
+  m_Script: {fileID: 11500000, guid: bcea4133d5c51a84e85624a1e16779c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 50
   currentHP: 0
   _maxStamina: 0
   currentStamina: 0
-  speed: 1000
+  speed: 10
   _viewRadius: 0
   _viewAngle: 0
   _interactLayer:
@@ -719,7 +719,7 @@ MonoBehaviour:
     m_Bits: 0
   _anim: {fileID: 0}
   _chaserNM: {fileID: 0}
-  _attackRange: 5
+  _attackRange: 10
   _damage: 20
   _detectado: 0
   _canAttack: 0

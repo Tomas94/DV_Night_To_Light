@@ -8,12 +8,9 @@ public class UVObjects : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Hizo trigger con " + other.name);
         Flashlight uvLight = other.GetComponentInParent<Flashlight>();
-        if (uvLight == null) Debug.Log("nada");
         if (uvLight != null)
         {
-            Debug.Log("se encontro una linterna");
             if (uvLight.isUVActive()) _hidenObject.SetActive(true);
             else
             {

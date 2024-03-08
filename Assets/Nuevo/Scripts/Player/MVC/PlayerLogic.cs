@@ -11,13 +11,15 @@ public class PlayerLogic : Entity
     UI_InGame _interface;
 
     [Header("Inventario")]
-    [SerializeField]public Transform _interactionPoint;
+    [SerializeField] public Transform _interactionPoint;
     public Inventory _inventory = new Inventory();
 
     [Header("Linterna y Nictofobia")]
     [SerializeField] Flashlight _flashlight;
+    [SerializeField] bool _nictoActive;
     [SerializeField] bool _scared;
-    [SerializeField] float _scaredTime;
+    [SerializeField] float _currentScaredTimer;
+    [SerializeField] float _scareResistanceTime;
 
     [Header("Movimiento")]
     [SerializeField] Transform _groundCheck;
@@ -42,7 +44,7 @@ public class PlayerLogic : Entity
 
         _chController = GetComponent<CharacterController>();
         _controller = GetComponent<PlayerController>();
-        
+
         currentHP = _maxHP;
         currentStamina = _maxStamina;
         speed = _walkSpeed;
@@ -60,6 +62,7 @@ public class PlayerLogic : Entity
     {
         _controller.UpdateKeys();
         Fall();
+        IsScared();
     }
 
     #region Movimiento (Correr, Stamina Refill y Caida )
@@ -123,7 +126,39 @@ public class PlayerLogic : Entity
     {
         _flashlight.TurnOnOffFocusedLight(activate);
     }
-    
+
+    void IsScared()
+    {
+        if (_scared && !_nictoActive)
+        {
+            _currentScaredTimer += Time.deltaTime;
+            if (_currentScaredTimer >= _scareResistanceTime)
+            {
+                StartCoroutine(AfraidDamage());
+            }
+            Debug.Log("A Oscuras");
+        }
+        else if (_currentScaredTimer == 0f) return;
+        else
+        {
+            _currentScaredTimer = 0f;
+            Debug.Log("En la Luz");
+        }
+    }
+
+    IEnumerator AfraidDamage()
+    {
+        _nictoActive = true;
+        while (_scared)
+        {
+            yield return new WaitForSeconds(1);
+            TakeDamage(5);
+            yield return null;
+        }
+        _nictoActive = false;
+    }
+
+
     public void UpdateNictoStatus()
     {
         _scared = !_flashlight.IsLigthOn;
@@ -202,7 +237,7 @@ public class PlayerLogic : Entity
     public override void TakeDamage(float dmgValue)
     {
         base.TakeDamage(dmgValue);
-        _interface.UpdateUIStatus();    
+        _interface.UpdateUIStatus();
     }
 
     public override void Die()
@@ -217,7 +252,21 @@ public class PlayerLogic : Entity
         currentStamina = MaxStamina;
         _flashlight.RestoreFullCharge();
     }
-    
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "LuzTrigger")
+        {
+            _scared = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "LuzTrigger" && !_flashlight.IsLigthOn) _scared = true;
+    }
+
     #region OnDrawGizmos
 
     void OnDrawGizmos()

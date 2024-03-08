@@ -22,12 +22,9 @@ public abstract class Entity : MonoBehaviour
 
     public virtual void TakeDamage(float dmgValue)
     {
-        currentHP -= dmgValue;
-        
+        currentHP -= dmgValue;      
         if (currentHP <= 0)
         {
-            //Death()
-            Debug.Log("Moriste, pete");
             Die();
         }
     }

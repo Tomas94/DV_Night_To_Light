@@ -183,7 +183,7 @@ public class Linterna : MonoBehaviour
             Debug.Log(enemy.name);
             List<Material> skinMaterials = new List<Material>();
             Renderer[] skinRenderer = enemy.GetComponentsInChildren<Renderer>();
-            Chaser chaser = enemy.GetComponentInChildren<Chaser>();
+            Cultist chaser = enemy.GetComponentInChildren<Cultist>();
             float isdead = chaser.currentHP;
 
 

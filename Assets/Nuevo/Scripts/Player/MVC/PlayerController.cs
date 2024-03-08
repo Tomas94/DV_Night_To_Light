@@ -34,24 +34,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F)) _model.FlashlightClick();                      //Prender o Apagar Linterna
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            //model.Cambiar entre UV y normal
-        }
-
         if (Input.GetMouseButton(1))                                                    //Prender Laser
         {
             _model.FlashlightFocusedLight(true);
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                //model. Destello.
-            }
         }
 
         if (Input.GetMouseButtonUp(1)) _model.FlashlightFocusedLight(false);            //Apagar Laser
 
-        if (Input.GetMouseButtonDown(2)) _model.SwitchLight();
+        if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.Q)) _model.SwitchLight();
     }
     
     

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     [SerializeField] UI_InGame _uInterface;
-    PlayerLogic _playerInventory;
+    PlayerLogic _player;
 
     [Header("Variables Linterna")]
     Light _pointLight;                          //Referencia Luz
@@ -30,6 +30,11 @@ public class Flashlight : MonoBehaviour
     [HideInInspector] public Light _laserHitPoint;
     [SerializeField] float _laserLenght = 30;
 
+    [Header("Variables Ataque Laser")]
+    [SerializeField] float _laserDmg;
+    [SerializeField] float _cd;
+    [SerializeField] bool _canLaserAttack;
+
     public bool IsLigthOn { get { return _isLigthOn; } }
     public float MaxChargeAmount { get { return _maxChargeAmount; } }
     public float CurrentChargeAmount { get { return _currentChargeAmount; } }
@@ -43,7 +48,9 @@ public class Flashlight : MonoBehaviour
 
         _currentChargeAmount = MaxChargeAmount;
         _pointLight.color = _normalLight;
+        _canLaserAttack = true;
         UpdateFlashlightState();
+
 
         GameManager.Instance.SetFlashlightRef(this);
     }
@@ -51,7 +58,7 @@ public class Flashlight : MonoBehaviour
     private void Start()
     {
         _uInterface = GameManager.Instance.UI;
-        _playerInventory = GameManager.Instance.Player;
+        _player = GameManager.Instance.Player;
     }
 
     private void Update()
@@ -88,6 +95,7 @@ public class Flashlight : MonoBehaviour
         _isLigthOn = !_isLigthOn;
         _pointLight.enabled = _isLigthOn;
         _uInterface._flashlightIcon.enabled = _isLigthOn;
+        AudioManager.Instance.PlaySFX("ClickLinterna");
     }
 
     public void TurnOnOffFocusedLight(bool isOn)
@@ -103,8 +111,9 @@ public class Flashlight : MonoBehaviour
 
     public void ChangeBattery()
     {
-        if (CurrentChargeAmount >= MaxChargeAmount || _playerInventory._inventory.battery <= 0) return;
-        _playerInventory._inventory.battery--;
+        if (CurrentChargeAmount >= MaxChargeAmount || _player._inventory.battery <= 0) return;
+        AudioManager.Instance.PlaySFX("RecargarBatería");
+        _player._inventory.battery--;
         _currentChargeAmount = Mathf.Clamp(_currentChargeAmount + (_maxChargeAmount * .5f), 0, _maxChargeAmount);
     }
 
@@ -137,6 +146,14 @@ public class Flashlight : MonoBehaviour
             }
             else if (Physics.Raycast(_ray.origin, _ray.direction, out lastHit, remainLenght))
             {
+                if (Input.GetMouseButtonDown(0) && _canLaserAttack && lastHit.transform.CompareTag("Enemy"))
+                {
+                    Entity enemy = lastHit.transform.GetComponentInChildren<Entity>();
+                    if (enemy != null)
+                    {
+                        if (_currentChargeAmount > _maxChargeAmount * 0.1f) StartCoroutine(LaserAttack(enemy));
+                    }
+                }
                 count++;
                 _laser.SetPosition(_laser.positionCount - 1, lastHit.point);
                 _laserHitPoint.enabled = true;
@@ -152,6 +169,15 @@ public class Flashlight : MonoBehaviour
         }
 
         focuseActive = true;
+    }
+
+    IEnumerator LaserAttack(Entity enemy)
+    {
+        _currentChargeAmount -= _maxChargeAmount * .1f;
+        _canLaserAttack = false;
+        enemy.TakeDamage(_laserDmg);
+        yield return new WaitForSeconds(_cd);
+        _canLaserAttack = true;
     }
 
     public void UvLightOnOff()

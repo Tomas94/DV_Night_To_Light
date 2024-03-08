@@ -1,5 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Aura2API;
+using System;
+
 public class PUVision : PowerUp
 {
+    [SerializeField] AuraCamera _camera;
+
+    private void Start()
+    {
+        _camera = GetComponentInChildren<AuraCamera>();
+    }
+
     public override void UsePowerUp()
     {
         if (_player._pUVisionActive == true) return;

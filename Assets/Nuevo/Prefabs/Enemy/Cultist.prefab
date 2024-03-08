@@ -707,22 +707,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcea4133d5c51a84e85624a1e16779c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 50
+  _maxHP: 30
   currentHP: 0
   _maxStamina: 0
   currentStamina: 0
   speed: 10
-  _viewRadius: 0
+  _viewRadius: 13
   _viewAngle: 0
   _interactLayer:
     serializedVersion: 2
     m_Bits: 0
   _anim: {fileID: 0}
-  _chaserNM: {fileID: 0}
-  _attackRange: 10
-  _damage: 20
+  _cultistNavM: {fileID: 0}
+  _attackRange: 5
+  _damage: 60
   _detectado: 0
   _canAttack: 0
+  _deadBody: {fileID: 2100000, guid: d8c6f9ca954143040b25803b793ec381, type: 2}
+  _deadMask: {fileID: 2100000, guid: 66e081249e3dee44ba3dc976ba4d84ed, type: 2}
+  _body: {fileID: 7274603139124359383}
+  _mask: {fileID: 6687918557142655376}
 --- !u!135 &2847090764296131441
 SphereCollider:
   m_ObjectHideFlags: 0

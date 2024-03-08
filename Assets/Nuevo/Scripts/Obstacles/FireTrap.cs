@@ -6,6 +6,7 @@ public class FireTrap : MonoBehaviour
     Renderer _render;
     Material _material;
     [SerializeField] ParticleSystem _firePS;
+    [SerializeField] AudioSource _audio;
     BoxCollider _boxCollider;
 
     [SerializeField] float _cooldown = 2f;
@@ -16,6 +17,7 @@ public class FireTrap : MonoBehaviour
     {
         _boxCollider = GetComponent<BoxCollider>();
         _render = GetComponent<Renderer>();
+        _audio = GetComponentInChildren<AudioSource>();
         _material = _render.material;
         StartCoroutine(nameof(Encender));
     }
@@ -41,10 +43,12 @@ public class FireTrap : MonoBehaviour
         }
         _material.SetColor("_EmissionColor", Color.white);
         _firePS.Play();
-        AudioManager.Instance.PlaySFX("Fuego_fogatas");
+        _audio.Play();
+        //AudioManager.Instance.PlaySFX("Fuego_fogatas");
 
         _boxCollider.enabled = true;
         yield return new WaitForSeconds(_firePS.main.duration);
+        _audio.Stop();
         _boxCollider.enabled = false;
         _isBurning = false;
 

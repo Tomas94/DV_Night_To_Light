@@ -12,7 +12,7 @@ public abstract class Pickable_Object : MonoBehaviour
 
     public PlayerLogic _player;
     [SerializeField] UI_InGame _uInteface;
-    [SerializeField][Range(0.1f, 5)] float _detectionRadiusTrigger = 1f;
+    [SerializeField][Range(0.1f, 5)] float _detectionRadiusTrigger = 3f;
     [SerializeField] protected string _sFXName;
 
     private void Awake()

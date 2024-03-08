@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firePS: {fileID: 8938348861314355302}
   _cooldown: 2
-  _damage: 0
+  _damage: 0.25
   _isBurning: 0
 --- !u!65 &1990817197432194885
 BoxCollider:

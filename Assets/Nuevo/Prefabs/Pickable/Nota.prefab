@@ -387,8 +387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5
+  outlineColor: {r: 0.89047825, g: 1, b: 0, a: 1}
+  outlineWidth: 7
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -419,7 +419,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2247284216179395626
 MonoBehaviour:
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
   _uInteface: {fileID: 0}
-  _detectionRadiusTrigger: 1
+  _detectionRadiusTrigger: 3
   _sFXName: 
   entry:
     title: 

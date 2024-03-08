@@ -56,6 +56,8 @@ public class PlayerLogic : Entity
     {
         _flashlight = GameManager.Instance.Flashlight;
         _interface = GameManager.Instance.UI;
+
+        if (_flashlight.IsLigthOn) _scared = false; else _scared = true;
     }
 
     private void Update()

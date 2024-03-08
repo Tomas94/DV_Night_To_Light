@@ -50,14 +50,18 @@ public class Flashlight : MonoBehaviour
         _pointLight.color = _normalLight;
         _canLaserAttack = true;
         UpdateFlashlightState();
-
-
+        
         GameManager.Instance.SetFlashlightRef(this);
+        
+        //opcional
+        _isLigthOn = _pointLight.enabled;
+
     }
 
     private void Start()
     {
         _uInterface = GameManager.Instance.UI;
+        _uInterface._flashlightIcon.enabled = _isLigthOn;
         _player = GameManager.Instance.Player;
     }
 

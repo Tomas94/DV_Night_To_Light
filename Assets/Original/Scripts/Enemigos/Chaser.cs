@@ -1,174 +1,102 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-using Obsoleto;
-
 public class Chaser : Entity
 {
-    Transform player;
-    [SerializeField] Animator anim;
-    //[SerializeField] LayerMask structures;
-    [SerializeField] NavMeshAgent chaserNM;
-    [SerializeField] Player_State playerhp;
-    RaycastHit hit;
+    PlayerLogic _player;
+    [SerializeField] Animator _anim;
+    [SerializeField] NavMeshAgent _chaserNM;
 
-    [SerializeField] float _distanciaPlayer;
-    public int rangoVision;
-    public int rangoAtaque;
-    Vector3 _direccion;
+    [SerializeField] int _attackRange;
+    [SerializeField] float _damage;
 
     [SerializeField] bool _detectado;
     [SerializeField] bool _canAttack;
 
     void Start()
     {
-        player = GameObject.Find("DetectPoint").GetComponent<Transform>();
+        _anim = GetComponentInParent<Animator>();
+        _chaserNM = GetComponentInParent<NavMeshAgent>();
+        _player = GameManager.Instance.Player;
+        _chaserNM.speed = speed;
         _canAttack = true;
     }
 
-    private void Update()
+    void DetectPlayer()
     {
-        //Debug.Log("remaining: " + chaserNM.remainingDistance + " soppingDist: " + chaserNM.stoppingDistance);
-        DistanceAndDirection();
-        //Movement();
-
+        _detectado = true;
+        _anim.SetBool("EnRango", true);
     }
 
-    void DistanceAndDirection()
+    void LostPlayer()
     {
-        _distanciaPlayer = Vector3.Distance(player.position, transform.position);
-        _direccion = (player.position - transform.position).normalized;
+        _detectado = false;
+        _anim.SetBool("EnRango", false);
+        _anim.SetBool("AtackRange", false);
+        _chaserNM.isStopped = true;
     }
 
-    /*public override void Movement()
+    void ChasePlayer()
     {
-
-        if (_distanciaPlayer <= rangoVision)
+        if (GetDistance() <= _attackRange)
         {
-            if (_distanciaPlayer >= rangoAtaque)
+            _chaserNM.isStopped = true;
+
+            if (_canAttack)
             {
-                chaserNM.isStopped = false;
-                anim.SetBool("EnRango", true);
-                chaserNM.SetDestination(player.position);
-                Debug.Log("En modo PERSEGUIR");
-                return;
+                _anim.SetBool("AtackRange", true);
+                StartCoroutine(AttackPlayer());
             }
-            else
-            {
-                //if(_canAttack)playerhp.TakeDamage();
-                player.forward = new Vector3(transform.position.x, transform.position.y, Mathf.Lerp(transform.position.z, transform.forward.z * -10, 0.1f));
-                Debug.Log("En modo ATAQUE");
-                anim.SetBool("EnRango", false);
-                chaserNM.velocity = Vector3.zero;
-                chaserNM.isStopped = true;
-                return;
-            }
+            _anim.SetBool("EnRango", false);
         }
         else
         {
-            Debug.Log("En modo iDLE");
-            anim.SetBool("EnRango", false);
-            chaserNM.velocity = Vector3.zero;
-            chaserNM.isStopped = true;
+            _chaserNM.isStopped = false;
+            _anim.SetBool("AtackRange", false);
+            _anim.SetBool("EnRango", true);
+            _chaserNM.SetDestination(_player._interactionPoint.transform.position);
         }
-    }*/
+    }
 
-    /*public override void TakeDamage()
+    public IEnumerator AttackPlayer()
     {
-        base.TakeDamage();
+        _canAttack = false;
+        yield return new WaitForSeconds(2);
+        _player.TakeDamage(_damage);
+        yield return new WaitForSeconds(1);
+        _canAttack = true;
+    }
 
-        if(currentHP <= 0)
-        {
-            GetComponentInParent<Animator>().enabled = false;
-            GetComponentInParent<NavMeshAgent>().enabled = false;
-            //Destroy(gameObject);
-        }
-    }*/
+    float GetDistance()
+    {
+        Vector3 distanceVector = _player._interactionPoint.transform.position - transform.position;
+        float distanceSquared = distanceVector.sqrMagnitude;
+        return Mathf.Sqrt(distanceSquared); //distancia
+    }
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        DetectPlayer();
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (_detectado) ChasePlayer();
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        LostPlayer();
+    }
 
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
+    }
 
-
-
-
-
-
-    /* void Update()
-     {
-         _direccion = player.position - transform.position;
-         _distanciaPlayer = Vector3.Distance (player.position, transform.position);
-         Debug.DrawRay(transform.position, _direccion.normalized * rangoVision);
-
-         DetectPlayer();
-         CultistState();
-     }
-
-     void DetectPlayer()
-     {
-         if (Physics.Raycast(transform.position, _direccion, out hit, rangoVision, structures) || _distanciaPlayer >= rangoVision)
-         {
-             _detectado = false;
-             Debug.Log("Perdido");
-         }
-         else if(Physics.Raycast(transform.position, _direccion, out hit, rangoVision, LayerMask.GetMask("Player")))
-         {
-             Debug.Log("Detectado");
-             _detectado = true;
-             anim.SetBool("EnRango", true);
-         }
-     }
-
-     void CultistState()
-     {
-         if (_detectado)
-         {
-             if (_distanciaPlayer <= rangoAtaque)
-             {
-                 chaserNM.isStopped = true;
-                 Debug.Log("En Rango de Ataque");
-
-                 if (_canAttack)
-                 {
-                     StartCoroutine(AttackPlayer());
-                 }
-
-                 anim.SetBool("AtackRange", true);
-                 anim.SetBool("EnRango", false);
-             }
-             else
-             {
-                 Alertado();
-                 Debug.Log("En Rango de Persecucion");
-            }
-         }
-         else
-         {
-             //chaserNM.isStopped = true;
-             Debug.Log("Fuera de Rango");
-             anim.SetBool("EnRango", false);
-         }
-     }
-
-     public IEnumerator AttackPlayer()
-     {
-         _canAttack = false;
-         yield return new WaitForSeconds(2);
-         //PlayerStatus player = GameObject.Find("Player").GetComponent<PlayerStatus>();
-         //if (_distanciaPlayer <= rangoAtaque) player.TakeDamage();
-         yield return new WaitForSeconds(1);
-         _canAttack = true;
-
-     }
-
-     public void Alertado()
-     {
-         chaserNM.isStopped = false;
-         _detectado = true;
-         anim.SetBool("AtackRange", false);
-         anim.SetBool("EnRango", true);
-         chaserNM.SetDestination(player.position);
-     }
- */
+    //Vector3 GetDirection()
+    //{
+    //    return _player._interactionPoint.transform.position - transform.position;
+    //}
 }

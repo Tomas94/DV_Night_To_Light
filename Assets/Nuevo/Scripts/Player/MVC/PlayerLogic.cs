@@ -10,9 +10,8 @@ public class PlayerLogic : Entity
     public CharacterController _chController;
     UI_InGame _interface;
 
-
     [Header("Inventario")]
-    [SerializeField] Transform _interactionPoint;
+    [SerializeField]public Transform _interactionPoint;
     public Inventory _inventory = new Inventory();
 
     [Header("Linterna y Nictofobia")]
@@ -152,6 +151,7 @@ public class PlayerLogic : Entity
         {
             foreach (Collider collider in colliders)
             {
+                Debug.Log(collider.name);
                 if (InFieldOfView(collider.transform.position))
                 {
                     if (closest == null) closest = collider;
@@ -202,10 +202,22 @@ public class PlayerLogic : Entity
     public override void TakeDamage(float dmgValue)
     {
         base.TakeDamage(dmgValue);
-        _interface.UpdateUIStatus();
+        _interface.UpdateUIStatus();    
     }
 
+    public override void Die()
+    {
+        GameManager.Instance.Checkpoint.LoadStatus(this);
+        Restore();
+    }
 
+    void Restore()
+    {
+        currentHP = MaxHP;
+        currentStamina = MaxStamina;
+        _flashlight.RestoreFullCharge();
+    }
+    
     #region OnDrawGizmos
 
     void OnDrawGizmos()
@@ -226,6 +238,7 @@ public class PlayerLogic : Entity
         float angle = angleInDegrees + transform.eulerAngles.y;
         return new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad), 0, Mathf.Cos(angle * Mathf.Deg2Rad));
     }
+
 
     #endregion
 }

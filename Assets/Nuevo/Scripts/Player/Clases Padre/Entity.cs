@@ -28,9 +28,11 @@ public abstract class Entity : MonoBehaviour
         {
             //Death()
             Debug.Log("Moriste, pete");
-            //moriste
+            Die();
         }
     }
+
+    public abstract void Die();
 
     public bool InFieldOfView(Vector3 target)
     {

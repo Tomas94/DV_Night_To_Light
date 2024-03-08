@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -9,10 +7,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] UI_InGame _uInterface;
     [SerializeField] PlayerLogic _player;
     [SerializeField] Flashlight _flashlight;
+    [SerializeField] Checkpoint _checkpoint;
+    [SerializeField] Notas_UI _noteBox;
+
 
     public PlayerLogic Player { get { return _player; } }
     public UI_InGame UI { get { return _uInterface; } }
     public Flashlight Flashlight { get { return _flashlight; } }
+    public Checkpoint Checkpoint { get { return _checkpoint; } set { _checkpoint = value; } }
+    public Notas_UI NoteBox { get {  return _noteBox; } }
 
     private void Awake()
     {
@@ -26,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayerRef(PlayerLogic player)
     {
-       _player = player;
+        _player = player;
     }
 
     public void SetUIRef(UI_InGame ui)
@@ -37,6 +40,11 @@ public class GameManager : MonoBehaviour
     public void SetFlashlightRef(Flashlight flashlight)
     {
         _flashlight = flashlight;
+    }
+
+    public void SetTextUIBox(Notas_UI textBox)
+    {
+        _noteBox = textBox;
     }
 
     #region Lo anterior

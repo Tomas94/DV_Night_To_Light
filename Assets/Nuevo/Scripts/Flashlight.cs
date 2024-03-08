@@ -6,7 +6,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     [SerializeField] UI_InGame _uInterface;
-    Inventory _playerInventory;
+    PlayerLogic _playerInventory;
 
     [Header("Variables Linterna")]
     Light _pointLight;                          //Referencia Luz
@@ -25,13 +25,10 @@ public class Flashlight : MonoBehaviour
 
     [Header("Variables Laser")]
     [SerializeField] LayerMask _reflectiveMask;
-    [SerializeField] LayerMask _lightInteractableMask;
     LineRenderer _laser;                        //Referencia Laser
     Ray _ray;
-    Light _laserHitPoint;
-    float _laserLenght = 30;
-    float _reflectionsCount;
-
+    [HideInInspector] public Light _laserHitPoint;
+    [SerializeField] float _laserLenght = 30;
 
     public bool IsLigthOn { get { return _isLigthOn; } }
     public float MaxChargeAmount { get { return _maxChargeAmount; } }
@@ -54,7 +51,7 @@ public class Flashlight : MonoBehaviour
     private void Start()
     {
         _uInterface = GameManager.Instance.UI;
-        _playerInventory = GameManager.Instance.Player._inventory;
+        _playerInventory = GameManager.Instance.Player;
     }
 
     private void Update()
@@ -100,13 +97,14 @@ public class Flashlight : MonoBehaviour
         _pointLight.enabled = !isOn;
         _laser.enabled = isOn;
         ActivateLaser();
+        if (!isOn) _laserHitPoint.enabled = false;
 
     }
 
     public void ChangeBattery()
     {
-        if (CurrentChargeAmount >= MaxChargeAmount || _playerInventory.battery <= 0) return;
-        _playerInventory.battery--;
+        if (CurrentChargeAmount >= MaxChargeAmount || _playerInventory._inventory.battery <= 0) return;
+        _playerInventory._inventory.battery--;
         _currentChargeAmount = Mathf.Clamp(_currentChargeAmount + (_maxChargeAmount * .5f), 0, _maxChargeAmount);
     }
 
@@ -144,15 +142,11 @@ public class Flashlight : MonoBehaviour
                 _laserHitPoint.enabled = true;
                 _laserHitPoint.transform.position = lastHit.point;
                 remainLenght = 0;
-                if (_lightInteractableMask == (_lightInteractableMask | (1 << lastHit.collider.gameObject.layer)))
-                {
-                    
-
-                }
             }
             else
             {
                 _laser.SetPosition(_laser.positionCount - 1, _ray.GetPoint(remainLenght));
+                _laserHitPoint.enabled = false;
                 remainLenght = 0;
             }
         }
@@ -162,7 +156,7 @@ public class Flashlight : MonoBehaviour
 
     public void UvLightOnOff()
     {
-        if(_pointLight.color == _normalLight)
+        if (_pointLight.color == _normalLight)
         {
             _pointLight.color = _uvLight;
             _uvTrigger.enabled = true;
@@ -172,14 +166,19 @@ public class Flashlight : MonoBehaviour
             _uvTrigger.enabled = false;
             _pointLight.color = _normalLight;
         }
-        
+
         //_pointLight.color = _pointLight.color == _normalLight ? _uvLight : _normalLight;
-        
+
         _uInterface.SwitchLightMode();
     }
 
     public bool isUVActive()
     {
         return _pointLight.color == _uvLight;
-    } 
+    }
+
+    public void RestoreFullCharge()
+    {
+        _currentChargeAmount = _maxChargeAmount;
+    }
 }

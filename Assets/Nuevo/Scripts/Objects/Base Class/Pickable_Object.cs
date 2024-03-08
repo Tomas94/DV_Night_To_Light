@@ -22,6 +22,12 @@ public abstract class Pickable_Object : MonoBehaviour
         CreateDetectionTrigger();
     }
 
+    protected virtual void Start()
+    {
+        _player = GameManager.Instance.Player;
+        _uInteface = GameManager.Instance.UI;
+    }
+
     public void CreateDetectionTrigger()
     {
         SphereCollider _sphereTrigger = gameObject.GetComponent<SphereCollider>();
@@ -67,7 +73,7 @@ public abstract class Pickable_Object : MonoBehaviour
         {
             if (TryGetComponent<SphereCollider>(out var collider))
             {
-                collider.radius = _detectionRadiusTrigger / 2f;                // Actualizar el diámetro del collider
+                collider.radius = _detectionRadiusTrigger;                // Actualizar el diámetro del collider
             }
         }
     }
